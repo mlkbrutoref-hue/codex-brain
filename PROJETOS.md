@@ -1,16 +1,13 @@
-# Índice de projetos
+# Índice de projetos conectados ao cérebro Codex
 
-Cadastre aqui os repositórios que usam o cérebro central.
-
-| Projeto | Repositório | Contexto local | Estado |
+| Projeto | Repositório | Arquivos de contexto | Status |
 |---|---|---|---|
-| Exemplo (substituir) | owner/repositorio | AGENTS.md, MEMORIA.md, ESTADO.md | Pendente |
+| ProjetoPraticoLP2 | https://github.com/mlkbrutoref-hue/ProjetoPraticoLP2 | AGENTS.md, MEMORIA.md, ESTADO.md | Estrutura criada; contexto técnico pendente |
+| CRIADOR-DE-VIDEOS | https://github.com/mlkbrutoref-hue/CRIADOR-DE-VIDEOS | AGENTS.md, MEMORIA.md, ESTADO.md | Estrutura criada; contexto técnico pendente |
 
-## Como cadastrar
-1. Confira qual repositório corresponde ao projeto.
-2. Inclua em sua raiz um AGENTS.md e os arquivos MEMORIA.md e ESTADO.md.
-3. Adapte as regras de GLOBAL.md ao AGENTS.md local.
-4. Atualize este índice com o link correto.
-5. Registre as alterações em commit/PR.
-
-> Este índice não autoriza acesso automático entre repositórios nem sincroniza conteúdo sozinho.
+## Como funciona
+- Cada projeto guarda seus próprios registros, versionados junto ao código.
+- GLOBAL.md é a referência geral, mas **não é carregado automaticamente** entre repositórios.
+- Para aplicar novas preferências globais em cada projeto, copie/adapte seu conteúdo para AGENTS.md ou configure uma sincronização explícita.
+- O Codex Cloud precisa de acesso ao repositório pelo GitHub e as mudanças precisam ser incorporadas no branch usado.
+- Não armazene senhas, tokens, credenciais ou dados privados.
