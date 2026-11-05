@@ -8,6 +8,7 @@ Estrutura central de instruções e documentação para continuidade de trabalho
 - [PROJETOS.md](PROJETOS.md): índice dos projetos conectados.
 - [MEMORIA.md](MEMORIA.md): decisões gerais versionadas.
 - [modelos/](modelos/): modelos de AGENTS.md, MEMORIA.md e ESTADO.md para novos projetos.
+- [skills/](skills/): catálogo de skills reutilizáveis, incluindo [UGC Realista](skills/ugc-realista/SKILL.md).
 
 ## Como continuar de outro computador
 1. Entre em https://chatgpt.com/codex com sua conta.
@@ -15,6 +16,9 @@ Estrutura central de instruções e documentação para continuidade de trabalho
 3. Peça ao Codex para ler AGENTS.md, MEMORIA.md e ESTADO.md antes de trabalhar.
 4. Revise e incorpore commits/PRs para preservar mudanças no GitHub.
 5. Na próxima sessão, consulte os arquivos atualizados.
+
+## Skills
+Consulte [skills/README.md](skills/README.md). Guardar uma skill neste repositório não a instala automaticamente em todo ambiente Codex; sua ativação depende do ambiente e do mecanismo de descoberta de skills.
 
 ## Limites
 Esta estrutura **não sincroniza automaticamente conversas locais, histórico completo nem arquivos que não foram enviados ao GitHub**. GLOBAL.md não é lido automaticamente em outros repositórios. Para aplicar instruções gerais em cada projeto, incorpore-as no AGENTS.md local.
