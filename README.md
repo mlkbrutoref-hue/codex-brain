@@ -25,3 +25,11 @@ Esta estrutura **não sincroniza automaticamente conversas locais, histórico co
 
 ## Privacidade
 Este repositório está **público**. Altere a visibilidade para privada antes de adicionar informações pessoais ou confidenciais. Nunca armazene segredos no Git.
+
+## Contexto do criador
+- [PERFIL_CRIATIVO.md](PERFIL_CRIATIVO.md): estilo de trabalho e preferências operacionais.
+- [FLUXOS_POSTAGENS.md](FLUXOS_POSTAGENS.md): processos de imagem, vídeo, Flow e Higgsfield.
+- [PERSONAGEM_NINA.md](PERSONAGEM_NINA.md): consistência visual da personagem.
+- [CODEX_CONTINUIDADE.md](CODEX_CONTINUIDADE.md): como recuperar e atualizar contexto em novas sessões.
+
+**Nota:** estes materiais descrevem processos, não incluem arquivos de referência de rosto e não funcionam como memória automática de outros chats.
