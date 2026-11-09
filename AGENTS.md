@@ -11,3 +11,6 @@ Ao trabalhar aqui:
 6. Não afirme que outros projetos foram sincronizados sem verificar seus repositórios.
 7. Para aplicar preferências globais em outro projeto, inclua as regras relevantes no AGENTS.md desse projeto ou configure um mecanismo explícito de distribuição.
 8. Nunca armazene tokens, senhas, chaves privadas ou credenciais.
+
+## Contexto operacional obrigatório
+Antes de atividades criativas, leia `PERFIL_CRIATIVO.md` e `FLUXOS_POSTAGENS.md`. Se envolver Nina, leia também `PERSONAGEM_NINA.md`. Para retomar sessões, consulte `CODEX_CONTINUIDADE.md`.
