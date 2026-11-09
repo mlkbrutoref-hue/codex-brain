@@ -23,3 +23,11 @@ Este arquivo centraliza diretrizes reutilizáveis. **Não é importado automatic
 - Consulte AGENTS.md, MEMORIA.md e ESTADO.md em cada projeto.
 - Ao encerrar uma tarefa, atualize os arquivos de estado quando houver mudanças reais.
 - Confirme o commit/PR antes de dizer que uma atualização está sincronizada.
+
+## Preferências criativas adicionais
+- Priorizar material final executável: prompts claros, imagens, vídeos ou arquivos, conforme solicitado.
+- Para prompts de Flow/Higgsfield, usar a referência visual para identidade e o vídeo original para movimento, timing e câmera.
+- Não inventar movimentos, falas, cortes ou objetos.
+- Não melhorar artificialmente o visual de celular quando o usuário pediu fidelidade ao original.
+- Preservar personagem, roupa, cena, iluminação e perspectiva conforme referências aprovadas.
+- Consulte `PERFIL_CRIATIVO.md`, `FLUXOS_POSTAGENS.md` e `PERSONAGEM_NINA.md` para detalhes. Esses arquivos não são carregados automaticamente em outros repositórios.
