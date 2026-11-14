@@ -1,0 +1,12 @@
+{
+  "experiment_id":"E-01",
+  "name":"Action Complexity",
+  "research_question":"Does current Google Flow execute one atomic physical action more reliably than a dependent multi-step sequence in the same continuous clip?",
+  "hypothesis":"ATOMIC will improve completion, physical plausibility and hand correctness without reducing product fidelity.",
+  "independent_variable":"action complexity only",
+  "conditions":{"ATOMIC":"grip -> open -> hold","MULTI_STEP":"grip -> open -> release -> remove P1 -> replace same P1 -> re-grip -> close -> hold"},
+  "screening":{"runs_per_condition":2,"total_outputs":4,"blind":true},
+  "controls":"product, black variant, initial state, three props, hand assignment, scene, camera, lighting, reference, model, mode, duration, aspect ratio and output count",
+  "hard_failure_precedence":true,
+  "status":"PREFLIGHT_READY_NOT_RUN"
+}

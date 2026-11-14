@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nina Reels Content Director"
+  short_description: "Cria roteiros narrativos e pacotes criativos para Reels da Nina"
+  default_prompt: "Use $nina-reels-content-director para transformar Product, ProductFacts, Platform e ContentGoal em um CreativePackage seguro para Reel da Nina."

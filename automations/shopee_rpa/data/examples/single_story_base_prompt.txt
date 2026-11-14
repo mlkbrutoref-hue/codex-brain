@@ -1,0 +1,13 @@
+Use case: product-mockup
+Asset type: clean base image for one final Instagram Story, with deterministic typography added later
+Primary request: Create a photorealistic vertical lifestyle product photograph featuring the exact square black beauty cushion compact and its black mushroom-shaped applicator from the reference image. Preserve the product's square geometry, black casing, colorful floral lid artwork, pale cushion surface, black applicator shape, scale relationship, materials and visible product identity. Remove the marketplace ad layout, badges, captions, shade swatches, faces, before/after panels and promotional claims from the reference.
+Scene/backdrop: warm feminine editorial vanity scene in a real contemporary apartment; cream stone or light warm wood surface; very few subtle lifestyle props at the far edges only
+Subject: the open compact and mushroom applicator as the only hero subjects
+Style/medium: natural smartphone/editorial product photography, Pinterest lifestyle mood, believable social content, no artificial commercial CGI polish
+Composition/framing: vertical 9:16. Keep the product large and fully visible in the lower-right/central area. Reserve clean low-detail negative space in the upper-left and upper-center for a pill and headline, a smaller clean zone below it for supporting copy, and a clean lower-left zone for a benefit box. Keep the extreme bottom clear for a small CTA. Do not put important product details in those text-safe zones.
+Lighting/mood: soft natural window light from upper left, warm neutral mood, coherent contact shadows and subtle realistic reflections
+Color palette: warm cream, white, blush pink accents, deep espresso brown, authentic product colors
+Materials/textures: natural stone or wood grain, realistic matte black plastic, printed floral lid, soft applicator foam, subtle photographic grain
+Text: no added text, no captions, no labels outside the authentic product packaging, no watermark
+Constraints: one standalone image, one product setup, preserve product fidelity, plausible geometry and physics, correct shadows and reflections, strong but natural separation from background
+Avoid: AI look, CGI look, 3D render, deformed compact, changed floral artwork, invented packaging, warped applicator, floating objects, impossible reflections, excessive props, hands, people, faces, before-and-after imagery, split panels, collage, carousel, typography, badges, logos added outside the real packaging, promotional text

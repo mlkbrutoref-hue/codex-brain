@@ -1,0 +1,3 @@
+# Required only by the workspace skill frontmatter validator (quick_validate.py).
+PyYAML
+Pillow>=10,<13

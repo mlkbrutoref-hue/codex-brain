@@ -1,0 +1,13 @@
+{
+  "identity": {"item_id":"58267960935","shop_id":"1234187269","title":"Prateleira Deslizante 2 Andares Organizador Armário Gaveta Corrediça Cozinha Banheiro Preto Branco","status":"VERIFIED_LIVE"},
+  "variant": {"color":"black","status":"FROZEN"},
+  "function": {"value":"two-tier organizer with sliding lower tray","status":"VERIFIED_AS_LISTING_FACT"},
+  "moving_part": {"value":"lower sliding tray","status":"VERIFIED"},
+  "static_parts": {"value":"upper tray, four posts and guide/base structure","status":"VERIFIED"},
+  "interaction_direction": {"value":"linear translation along depth axis","status":"VERIFIED"},
+  "grip_zone": {"value":"outer front-left lip of lower tray","status":"VERIFIED"},
+  "initial_state": {"value":"lower tray retracted","status":"VERIFIED"},
+  "open_state": {"value":"lower tray visibly extended","status":"VERIFIED"},
+  "numeric_travel": {"value":null,"status":"UNKNOWN_NOT_INVENTED"},
+  "forbidden_claims":["load capacity","durability","water resistance","performance superiority","numeric travel distance"]
+}

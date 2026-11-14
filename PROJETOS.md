@@ -3,6 +3,7 @@
 | Projeto | Repositório | Arquivos de contexto | Status |
 |---|---|---|---|
 | Shopee Reels Automation | automations/shopee_reels | README.md, batch_produce_10_videos.py | Esteira ativa: mineração de reels virais, IA Zero Rostos, FFmpeg Full HD e Shopee Afiliados |
+| Shopee RPA | automations/shopee_rpa | README.md, scripts/publish_shopee_android.py | RPA Android para Shopee Vídeo: busca em alta, download CDN oficial, vinculação Minhas Curtidas e postagem |
 | ProjetoPraticoLP2 | https://github.com/mlkbrutoref-hue/ProjetoPraticoLP2 | AGENTS.md, MEMORIA.md, ESTADO.md | Estrutura criada; contexto técnico pendente |
 | CRIADOR-DE-VIDEOS | https://github.com/mlkbrutoref-hue/CRIADOR-DE-VIDEOS | AGENTS.md, MEMORIA.md, ESTADO.md | Estrutura criada; contexto técnico pendente |
 

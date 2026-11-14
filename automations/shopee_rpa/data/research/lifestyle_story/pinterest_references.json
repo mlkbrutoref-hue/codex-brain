@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-09-26",
+  "usage_policy": "Use only pose, camera, lighting, setting, behavior and mood. Never copy the original person, text, product or signature.",
+  "references": [
+    {
+      "time_of_day": "MORNING",
+      "url": "https://in.pinterest.com/pin/skin-care-routine-aesthetic-clean-girl-morning-routine--608971180879045809/",
+      "source": "Pinterest",
+      "adaptation": "soft morning light, domestic mirror context, fresh skin and casual routine framing"
+    },
+    {
+      "time_of_day": "AFTERNOON",
+      "url": "https://in.pinterest.com/pin/mirror-selfie-living-room-aesthetic-minimal-living-room-casual-outfit-jeans-and-a-white-tshirt--614530311681146007/",
+      "source": "Pinterest",
+      "adaptation": "living-room mirror selfie, jeans and white T-shirt, casual posture and everyday setting"
+    },
+    {
+      "time_of_day": "NIGHT",
+      "url": "https://in.pinterest.com/pin/everyday-personal-care-skincare-daily-routine-girl-stands-in-front-of-a-mirror-in-the-bathroom-and-looks-at-herself-in-2025--1057783031335258991/",
+      "source": "Pinterest",
+      "adaptation": "bathroom mirror, personal-care action, warm domestic light and relaxed end-of-day mood"
+    }
+  ]
+}

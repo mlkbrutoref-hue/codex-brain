@@ -1,0 +1,19 @@
+{
+  "task_id": "b14b1b20-5f0a-49c7-8311-28d4af3f3335",
+  "bridge_status": "completed",
+  "working_directory": "C:\\Users\\GAMER\\Documents\\SHOPEE AUTOMATION\\ai-commerce-content-factory\\docs\\publishing\\audit",
+  "timeout_seconds": 240,
+  "conversation_id": "c8d53692-afaa-4d8c-970a-8e531381784b",
+  "created_at": 1791310079.2755692,
+  "started_at": 1791310079.3321009,
+  "completed_at": 1791310275.3187933,
+  "events_seen": 30,
+  "bridge_error": null,
+  "result": "",
+  "artifacts": [],
+  "verified_deliverable_status": "FAILED_NO_ARTIFACTS",
+  "review_file_found": false,
+  "independent_review_claimed": false,
+  "credits_used": null,
+  "credits_status": "UNKNOWN"
+}

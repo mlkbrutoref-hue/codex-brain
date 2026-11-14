@@ -1,0 +1,197 @@
+{
+  "acquisition_id": "E01-PRODUCT-EVIDENCE-2026-09-23",
+  "acquired_at": "2026-09-23",
+  "source_policy": "Shopee Affiliate live provider first; exact PDP and official listing media used only when available; no fixtures",
+  "api_source": "Shopee Affiliate productOfferV2 via ShopeeLiveProductProvider, exact item_id_shop_id lookup",
+  "time_sensitive_fields": [
+    "price",
+    "discount_percentage",
+    "rating_star",
+    "sales_count",
+    "listing_availability"
+  ],
+  "candidates": [
+    {
+      "selected": true,
+      "product_name": "Prateleira Deslizante 2 Andares Organizador Armário Gaveta Corrediça Cozinha Banheiro Preto Branco",
+      "item_id": "58267960935",
+      "shop_id": "1234187269",
+      "seller_name": "Bravuuz Store",
+      "product_url": "https://shopee.com.br/product/1234187269/58267960935",
+      "affiliate_url": "https://s.shopee.com.br/5LC9BNgtwf",
+      "api_main_image": "https://cf.shopee.com.br/file/sg-11134201-8259c-msztupjyr85cca",
+      "official_listing_media": [
+        "https://down-br.img.susercontent.com/file/sg-11134201-8259c-msztupjyr85cca",
+        "https://down-br.img.susercontent.com/file/sg-11134201-8258t-mszturpw6k94b2",
+        "https://down-br.img.susercontent.com/file/sg-11134201-825bb-msztut8obw90b7",
+        "https://down-br.img.susercontent.com/file/sg-11134201-82592-msztuv5n5gy086",
+        "https://mms.vod.susercontent.com/api/v4/11110106/mms/sg-11110106-6vcbv-msztv15xlfr4da.16000081789145929.mp4"
+      ],
+      "live_api_snapshot": {
+        "price": 95.9,
+        "discount_percentage": 0.0,
+        "rating_star": 0.0,
+        "sales_count": 0,
+        "category_ids": [100636, 100721, 101258]
+      },
+      "pdp_facts_observed": {
+        "brand": "Globalmix",
+        "material": "Metal com pintura eletrostática e plástico PP",
+        "dimensions": "22 cm altura x 40 cm largura x 35 cm profundidade",
+        "package_quantity": 1,
+        "function": "Organizador de dois níveis com bandeja deslizante/corrediça para acesso aos itens",
+        "moving_part": "Bandeja inferior corrediça",
+        "static_part": "Estrutura de dois níveis, bandeja superior e quatro montantes/base-guia",
+        "interaction_direction": "Translação linear da bandeja inferior ao longo da profundidade, para fora/para dentro",
+        "plausible_grip": "Borda/lábio frontal-lateral externo da bandeja inferior"
+      },
+      "gate": {
+        "product_identity": "VERIFIED",
+        "product_geometry": "VERIFIED",
+        "product_function": "VERIFIED",
+        "moving_parts": "VERIFIED",
+        "static_parts": "VERIFIED",
+        "interaction_direction": "VERIFIED",
+        "plausible_grip": "VERIFIED",
+        "start_state": "VERIFIED",
+        "end_state": "VERIFIED",
+        "fact_gate": "PASS",
+        "visual_gate": "PASS",
+        "mechanism_verified": true
+      },
+      "uncertainties": [
+        "Não há especificação do curso máximo em centímetros; o experimento usará apenas os limites visíveis fechado/aberto.",
+        "A listagem tinha zero vendas e nenhuma avaliação no snapshot; isso não afeta o mecanismo, mas a disponibilidade deve ser revalidada no novo pre-flight.",
+        "Cor branca ou preta ainda deve ser escolhida e congelada no novo pre-flight."
+      ]
+    },
+    {
+      "selected": false,
+      "product_name": "Aprimorada Estante com Gaveta Deslizante de Duas Camadas Caixa Organizadora Cosméticos, Bancadas Cozinha Armazenamento",
+      "item_id": "23994169502",
+      "shop_id": "1541583636",
+      "product_url": "https://shopee.com.br/product/1541583636/23994169502",
+      "api_main_image": "https://cf.shopee.com.br/file/br-11134207-7r98o-mbicj6lzpw8oa2",
+      "mechanism_type": "Gaveta/bandeja deslizante de duas camadas",
+      "moving_part": "PARTIAL — uma ou ambas as bandejas, não determinado",
+      "static_part": "PARTIAL — montantes e base aparentes",
+      "plausible_grip": "VERIFIED — recortes frontais visíveis",
+      "gate": {
+        "product_identity": "VERIFIED",
+        "product_geometry": "VERIFIED",
+        "product_function": "PARTIAL",
+        "moving_parts": "PARTIAL",
+        "static_parts": "PARTIAL",
+        "interaction_direction": "UNKNOWN",
+        "plausible_grip": "VERIFIED",
+        "start_state": "UNKNOWN",
+        "end_state": "UNKNOWN",
+        "fact_gate": "FAIL",
+        "visual_gate": "FAIL",
+        "mechanism_verified": false
+      },
+      "uncertainties": [
+        "A imagem principal não mostra a bandeja em dois estados nem identifica qual nível desliza.",
+        "O título não basta para definir eixo, curso e partes fixas."
+      ]
+    },
+    {
+      "selected": false,
+      "product_name": "Caixa Organizadora Acrílica com Tampa Articulada Multiuso 20x10x5cm",
+      "item_id": "23994292057",
+      "shop_id": "1097907243",
+      "product_url": "https://shopee.com.br/product/1097907243/23994292057",
+      "api_main_image": "https://cf.shopee.com.br/file/br-11134207-820li-mrj4ypza8rno0b",
+      "mechanism_type": "Tampa articulada em dobradiça traseira",
+      "moving_part": "VERIFIED — tampa",
+      "static_part": "VERIFIED — caixa/base",
+      "plausible_grip": "UNKNOWN",
+      "gate": {
+        "product_identity": "VERIFIED",
+        "product_geometry": "VERIFIED",
+        "product_function": "VERIFIED",
+        "moving_parts": "VERIFIED",
+        "static_parts": "VERIFIED",
+        "interaction_direction": "VERIFIED",
+        "plausible_grip": "UNKNOWN",
+        "start_state": "UNKNOWN",
+        "end_state": "VERIFIED",
+        "fact_gate": "FAIL",
+        "visual_gate": "FAIL",
+        "mechanism_verified": false
+      },
+      "uncertainties": [
+        "A imagem oficial mostra apenas o estado aberto.",
+        "Não há zona de grip demonstrada nem cobertura suficiente do estado fechado."
+      ]
+    },
+    {
+      "selected": false,
+      "product_name": "Caixa 30x20x5cm organizadora acrilica multiuso transparente tampa flip articulada",
+      "item_id": "16492446347",
+      "shop_id": "934477521",
+      "product_url": "https://shopee.com.br/product/934477521/16492446347",
+      "api_main_image": "https://cf.shopee.com.br/file/br-11134201-23010-gbry3elhnimv6b",
+      "mechanism_type": "Tampa flip articulada",
+      "moving_part": "VERIFIED — tampa",
+      "static_part": "VERIFIED — caixa/base",
+      "plausible_grip": "VERIFIED — borda frontal da tampa mostrada na mão",
+      "gate": {
+        "product_identity": "VERIFIED",
+        "product_geometry": "VERIFIED",
+        "product_function": "VERIFIED",
+        "moving_parts": "VERIFIED",
+        "static_parts": "VERIFIED",
+        "interaction_direction": "VERIFIED",
+        "plausible_grip": "VERIFIED",
+        "start_state": "UNKNOWN",
+        "end_state": "VERIFIED",
+        "fact_gate": "FAIL",
+        "visual_gate": "FAIL",
+        "mechanism_verified": false
+      },
+      "uncertainties": [
+        "Só o estado aberto foi encontrado na imagem oficial consultada.",
+        "A relação entre tampa e base no fechamento permanece sem cobertura visual suficiente."
+      ]
+    },
+    {
+      "selected": false,
+      "product_name": "Pote Tampa Trava Hermético para Alimentos Clink de Acrílico Redondo - 450ML",
+      "item_id": "22037882615",
+      "shop_id": "979666716",
+      "product_url": "https://shopee.com.br/product/979666716/22037882615",
+      "api_main_image": "https://cf.shopee.com.br/file/br-11134207-820lp-mmkjduf60pon0c",
+      "mechanism_type": "Tampa com trava, mecanismo exato não demonstrado",
+      "moving_part": "PARTIAL — tampa/trava",
+      "static_part": "VERIFIED — recipiente",
+      "plausible_grip": "UNKNOWN",
+      "gate": {
+        "product_identity": "VERIFIED",
+        "product_geometry": "PARTIAL",
+        "product_function": "VERIFIED",
+        "moving_parts": "PARTIAL",
+        "static_parts": "VERIFIED",
+        "interaction_direction": "UNKNOWN",
+        "plausible_grip": "UNKNOWN",
+        "start_state": "UNKNOWN",
+        "end_state": "UNKNOWN",
+        "fact_gate": "FAIL",
+        "visual_gate": "FAIL",
+        "mechanism_verified": false
+      },
+      "uncertainties": [
+        "A imagem principal mostra apenas potes fechados e não demonstra como a trava opera.",
+        "A direção de abertura, a zona de grip e os estados de transição não podem ser inferidos do título."
+      ]
+    }
+  ],
+  "decision": {
+    "selected_item_id": "58267960935",
+    "selected_shop_id": "1234187269",
+    "fact_gate": "PASS",
+    "visual_gate": "PASS",
+    "ready_to_repeat_e01_preflight": true,
+    "safe_to_execute_e01": false
+  }
+}

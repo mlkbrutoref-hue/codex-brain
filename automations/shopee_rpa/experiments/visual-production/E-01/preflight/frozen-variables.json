@@ -1,0 +1,76 @@
+{
+  "experiment_id": "E-01",
+  "independent_variable": "action_complexity",
+  "controls": {
+    "product": "Shopee item 58267960935 / shop 1234187269",
+    "variant": "black",
+    "product_state_at_first_frame": "lower tray fully retracted",
+    "scene": "minimal laundry/utility countertop; warm-neutral wall and softly blurred washer in background; clean, uncluttered",
+    "product_placement": "organizer fixed on countertop, centered slightly right, entire base and guide path visible",
+    "props": [
+      {
+        "id": "P1_DESIGNATED",
+        "description": "small opaque matte-white rectangular bottle with plain unbranded face and blue cap",
+        "start_position": "front-center of lower tray, upright, label face toward camera",
+        "role": "the only removable prop in MULTI_STEP; untouched in ATOMIC"
+      },
+      {
+        "id": "P2_CONTROL",
+        "description": "small teal cylindrical bottle with plain unbranded face",
+        "start_position": "back-left of lower tray, upright",
+        "role": "must remain stationary in both conditions"
+      },
+      {
+        "id": "P3_CONTROL",
+        "description": "small beige rectangular carton with plain unbranded face",
+        "start_position": "back-right of lower tray, upright",
+        "role": "must remain stationary in both conditions"
+      }
+    ],
+    "nina_visibility": {
+      "decision": "right hand and forearm only; face, torso and all identifying features remain out of frame; no Nina identity reference",
+      "why": "GS-C measures mechanism and physics. Full identity would add an unrelated fidelity variable without improving observability."
+    },
+    "person_position": "off-camera left; only the right hand/forearm enters from frame-left",
+    "hand_assignment": {
+      "right_hand_role": "all tray grip/pull/hold contacts and, in MULTI_STEP only, P1 removal/replacement and tray re-grip/close",
+      "left_hand_role": "absent and never visible"
+    },
+    "camera": {
+      "format": "vertical 9:16",
+      "shot": "static medium-close three-quarter front-left view at lower-tray height",
+      "distance": "approximately 0.9 m",
+      "movement": "none",
+      "handheld_amount": "none",
+      "framing": "whole organizer, outer front-left lip, guide axis and full open travel remain visible; hand may not occlude rail or product identity",
+      "focus": "continuous stable focus on organizer; moderate depth of field",
+      "product_frame_coverage": "approximately 60% of frame height while retaining the entire base, upper tier and travel path"
+    },
+    "lighting": {
+      "primary_light_source": "single soft daylight source",
+      "ambient_light": "weak neutral room fill",
+      "light_direction": "camera-left at roughly 45 degrees",
+      "light_quality": "soft and diffused",
+      "shadow_behavior": "soft, stable and directionally consistent; no flicker",
+      "product_visibility": "black tray edges, posts and guide remain separated from background without clipped highlights or crushed shadows"
+    },
+    "style": "photorealistic smartphone UGC demonstration, one continuous take, no cuts, no text overlays, no logos added, no speech and no audio requirement",
+    "duration_seconds": 8,
+    "flow_reference_set": ["assets/original/product-primary-black.jpg"],
+    "flow_configuration_file": "flow-configuration.json"
+  },
+  "conditions": {
+    "ATOMIC": {
+      "initial_state": "lower tray retracted; three props stationary",
+      "events": ["contact/grip", "linear pull outward", "visible open stop", "final open hold"],
+      "final_state": "tray visibly open and still held",
+      "forbidden": ["release tray", "touch any prop", "close tray", "extra gesture"]
+    },
+    "MULTI_STEP": {
+      "initial_state": "identical to ATOMIC",
+      "events": ["contact/grip", "linear pull/open", "release tray", "grasp P1_DESIGNATED", "remove P1_DESIGNATED", "replace same prop in same pose", "re-grasp same tray lip", "linear push/close", "final closed hold"],
+      "final_state": "tray visibly retracted; all three props in original pose",
+      "forbidden": ["touch P2_CONTROL", "touch P3_CONTROL", "swap hands", "change camera", "change product structure"]
+    }
+  }
+}

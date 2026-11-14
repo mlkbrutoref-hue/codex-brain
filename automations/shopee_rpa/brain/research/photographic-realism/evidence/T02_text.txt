@@ -1,0 +1,1466 @@
+Light Scattering from Human Hair Fibers
+Stephen R. Marschner
+Cornell University
+Henrik Wann Jensen
+University of California—San Diego
+Mike Cammarano
+Stanford University
+Steve Worley
+Worley Laboratories
+Pat Hanrahan
+Stanford University
+Abstract
+Light scattering from hair is normally simulated in computer graph-
+ics using Kajiya and Kay’s classic phenomenological model. We
+have made new measurements of scattering from individual hair
+ﬁbers that exhibit visually signiﬁcant effects not predicted by Ka-
+jiya and Kay’s model. Our measurements go beyond previous hair
+measurements by examining out-of-plane scattering, and together
+with this previous work they show a multiple specular highlight and
+variation in scattering with rotation about the ﬁber axis. We explain
+the sources of these effects using a model of a hair ﬁber as a trans-
+parent elliptical cylinder with an absorbing interior and a surface
+covered with tilted scales. Based on an analytical scattering func-
+tion for a circular cylinder, we propose a practical shading model
+for hair that qualitatively matches the scattering behavior shown in
+the measurements. In a comparison between a photograph and ren-
+dered images, we demonstrate the new model’s ability to match the
+appearance of real hair.
+CR Categories:
+I.3.7 [Computer Graphics]: Three-Dimensional
+Graphics and Realism—Shading
+Keywords: hair, ﬁbers, optical scattering, rendering
+1
+Introduction
+Realistically rendering hair is essential to portraying people and an-
+imals, but achieving realism means confronting many challenges
+inherent in the structure and behavior of hair. The geometry of
+thousands to millions of strands must be determined; the scattering
+of light from the ﬁbers must be simulated; and the resulting thin
+curves in the image must be sampled without introducing alias-
+ing. Most of the research effort on hair has gone toward model-
+ing and animating the geometry of a collection of ﬁbers [Sourin
+et al. 1996; Chen et al. 1999; Hadap and Magnenat-Thalmann
+2000; Kim and Neumann 2000; Kim and Neumann 2002; Chang
+et al. 2002; Magnenat-Thalmann et al. 2002], efﬁcient antialias-
+ing and curve-drawing algorithms for scanline rendering [Watan-
+abe and Suenaga 1992; Kong and Nakajima 2000], and approxi-
+mating shadows within the hair [Lokovic and Veach 2000; Kim and
+Neumann 2001]. However, considerably less attention has been
+put toward the scattering model that determines the appearance of
+a particular assembly of ﬁbers. Sometimes models for reﬂection
+from grooved surfaces [Kajiya 1985; Poulin and Fournier 1990] are
+root
+tip
+tilted
+cuticle
+scales
+elliptical
+cross section
+axis ratio a:1
+α
+2α
+> 2α
+2α
+R
+TRT
+TT
+< 2α
+surface roughness β
+interior:
+refrac. index η
+absorption σa
+Figure 1: A schematic of our model for a hair ﬁber. The dashed
+lines indicate the scattering angles for a cylinder without tilted sur-
+face scales.
+used to compute scattering from combed ﬁbers, but most hair ren-
+derings have used the classic phenomenological model of Kajiya
+and Kay [1989].
+Kajiya and Kay’s model was designed to capture the most ob-
+vious feature of scattering from a ﬁber—namely the appearance of
+a linear highlight in the image running perpendicular to the ﬁber
+directions. It is based on the observation that the reﬂection of a par-
+allel beam from the surface of a cylinder will be in a cone centered
+on the hair axis. The model places a constant-intensity highlight
+centered on that cone. All other scattering is accounted for by a dif-
+fuse term that produces radiance proportional to the cosine of the
+incident angle. Although it has served well for many years, this
+model falls short in several respects. For one thing, it is not energy
+conserving, which is important for physically based rendering.
+But even when physical correctness is not needed, the Kajiya-
+Kay model fails to predict some observed visual effects. Since it
+models ﬁbers as opaque cylinders, it does not account for transmis-
+sion or internal reﬂection. Hair is a dielectric material, and blond,
+brown, red, or other light colored hair is very translucent. Gold-
+man has simulated translucency by adding a directional parameter
+that controls the relative amount of forward transmission and back-
+ward reﬂection [Goldman 1997]. Kim has extended this model by
+proposing a two-term phase function [Kim 2002]. The ﬁrst term
+models surface reﬂection as a cardioid, based on a ray density argu-
+ment; our R component is similar but accounts for the Fresnel factor
+and handles oblique incidence. The second term models transmis-
+sion as a forward scattering cosine lobe, supported by Monte Carlo
+computations of normal-incidence scattering from a transparent cir-
+cular cylinder. We extend Kim’s model by accounting for the Fres-
+nel factor and volume absorption in an analytical model that also
+includes internal reﬂection, modeling the separation of highlights
+from different reﬂection modes, and approximating the effects of
+eccentricity.
+
+Two research groups working in the cosmetics industry have
+measured the scattering properties of hair ﬁbers in order to un-
+derstand what makes hair look pleasing and healthy. Stamm et
+al. [1977] measured relative scattering from a rack of individual
+ﬁbers as a function of illumination and viewing angles for direc-
+tions coplanar with the ﬁber axis (that is, in the incidence plane).
+They discovered two deviations from the expected behavior. First,
+the primary specular peak occurs at an angle several degrees away
+from the specular direction. They speculated that the angular shift
+is caused by the tilt of the scales forming the cuticle of the hair ﬁber.
+Second, there is a secondary lobe that occurs on the other side of
+the specular direction. Bustard and Smith [1991] have observed
+that the ﬁrst peak preserves polarization, whereas the second peak
+is depolarized. Both groups also observed that the secondary high-
+light is not present in black hair. Bustard and Smith also report a
+preliminary observation of azimuthal scattering in the plane normal
+to the ﬁber in which they observed strong peaks, which they con-
+jectured are internal reﬂection caustics. These experiments support
+the hypothesis that the secondary peak is due to internal reﬂection
+off the back side of the ﬁber.
+We have made an experimental and theoretical study of the scat-
+tering of light from individual ﬁbers of human hair, and developed
+a simple practical model for use in computer graphics. Speciﬁcally,
+• In addition to the incidence-plane measurements of Stamm et
+al. and Bustard and Smith, we measure scattering in the plane
+normal to the ﬁber. We also report for the ﬁrst time full 3D
+hemispherical scattering measurements. Several new appear-
+ance phenomena are visible in the 3D data. First, the primary
+specular highlight continues all the way around the hair, while
+the secondary highlight is conﬁned to the side of the hair to-
+ward the source. Second, a pair of large out-of-plane peaks,
+or glints, are present, and as the incidence angle increases the
+peaks move closer to the incidence plane, eventually merging
+and disappearing.
+• The scattering distribution, especially the secondary high-
+light, depends on the angle of rotation of the hair ﬁber about
+its axis. This is to be expected because hair ﬁbers are not
+generally circular in cross section [Robbins 1994].
+• To explain our observations, we propose a simple model based
+on the structure and composition of hair ﬁbers (Figure 1). We
+approximate the hair as a transparent circular cylinder with
+a colored interior and a surface composed of rough, tilted
+scales. Using geometric optics, we derive predictions for the
+far-ﬁeld scattered light distribution from such a cylinder. Our
+theory predicts that three transport modes are signiﬁcant: sur-
+face reﬂection, transmission, and internal reﬂection.
+• Based on the theory, we propose a shading model for human
+hair. We illustrate its use by producing several example ren-
+derings of brown hair. The shading model is simple and easily
+Figure 2: An electron micrograph of a hair ﬁber that shows the
+structure of the outer cuticle surface, which is composed of thin
+overlapping scales [Robbins 1994]. In this image the ﬁber is ori-
+ented with the root at the top and the tip at the bottom.
+φi
+φr
+θi
+ωi
+ωr
+θr
+v
+u
+w
+Figure 3: Notation for scattering geometry.
+incorporated into standard rendering algorithms. Finally, we
+validate the model against experimental data and show there
+is good qualitative agreement.
+2
+Fibers
+We begin by presenting some background information on human
+hair ﬁbers. We also introduce the notation we use in this paper, and
+deﬁne the light scattering function for ﬁbers.
+2.1
+Hair ﬁbers and ﬁber scattering
+A ﬁber of human scalp hair is composed of two main parts: the cu-
+ticle and the cortex. The cuticle is a thin protective outside sheath
+that surrounds the inner cortex. The cuticle is of particular impor-
+tance for light scattering, since it forms the interface between the
+ﬁber and the air. It is composed of ﬂat cells that overlap like roof
+shingles (Figure 2) and make the ﬁber appear as a nested set of
+cones. Because of their overlapped arrangement, the surfaces of
+the scales deviate slightly but systematically from the overall nor-
+mal of the ﬁber’s surface, tilting their surfaces toward the root end
+of the ﬁber by approximately 3◦[Bustard and Smith 1991; Robbins
+1994].
+The cortex forms the bulk of the ﬁber. At the center is a pig-
+mented core, the medulla. The pigments in the cortex and medulla
+determine the hair color. In this paper, we approximate the opti-
+cal properties of the interior of the ﬁber with two quantities: an
+index of refraction η of approximately 1.55 [Stamm et al. 1977]
+and an absorption cross section σa, which is assumed to be uniform
+throughout the ﬁber.
+As we will see, the morphology of the hair ﬁber provides an ex-
+planation for the main features of the scattering function. The ﬁber
+is modeled as a dielectric cylinder covered with tilted scales and
+with a pigmented interior (Figure 1). Reﬂection of a directional
+beam from a cylinder produces several distinct components of re-
+ﬂected light, all directed into a cone of outgoing directions. Re-
+ﬂection from the surface produces a component that is spread fairly
+uniformly around the cone. Transmission through the hair produces
+a very bright component that is focused toward directions on the op-
+posite side of the hair. Light that reﬂects off the inside of the hair
+surface produces a back-scattering component. This component is
+more complicated and, depending on the shape of the cylinder and
+the angle of incidence, may spread the energy over the whole cone
+or focus it into one or more caustics. Using T and R to stand for
+transmission and reﬂection across a cylinder interface, we denote
+these three modes of reﬂection as R, TT, and TRT.
+As illustrated in Figure 1, the tilt of the cuticle scales shifts the
+cones of the R and TRT components slightly off the ideal specular
+cone. More importantly, they shift in opposite directions, causing
+them to separate into two visually distinguishable highlights. The
+
+10
+5
+.5
+.1
+1
+10
+–30º
+30º
+–60º
+5
+.5
+.1
+1
+10
+5
+.5
+.1
+1
+10
+5
+.5
+.1
+1
+10
+5
+.5
+.1
+1
+10
+5
+.5
+.1
+1
+TIP
+ROOT
+TIP
+ROOT
+TIP
+ROOT
+Black hair
+Synthetic
+Blond hair
+θr
+θr
+θr
+θr
+θr
+θr
+Figure 4: Measurements of scattering in the incidence plane: scattering as a function of scattering angle with illumination at 45◦from the tip
+and root ends. Black and blond hair are shown, along with a synthetic ﬁber from a wig.
+R highlight, since it is surface reﬂection, is white, whereas the TRT
+highlight, which is formed by light that passes through the interior
+of the ﬁber, is colored.
+2.2
+Scattering
+Before getting into more detail, let us establish the notation we will
+use throughout the paper to describe the scattering geometry (Fig-
+ure 3). The tangent to the hair is u, pointing in the direction from
+the root toward the tip; the vectors v and w complete a right-handed
+orthonormal basis, and if the cross section is elliptical v is the ma-
+jor axis and w is the minor axis. We refer to the v–w plane as the
+normal plane. The direction of illumination is ωi, and the direction
+in which scattered light is being computed or measured is ωr; both
+directions point away from the center. We express ωi and ωr in
+spherical coordinates. The inclinations with respect to the normal
+plane are denoted θi and θr (measured so that 0◦is perpendicular to
+the hair, 90◦is u, and −90◦is −u). The azimuths around the hair
+are denoted φi and φr (measured so that v is 0◦and w is +90◦).
+We also use several derived angles. The difference angle (θr −
+θi)/2 is denoted θd. The relative azimuth φr −φi is denoted simply
+φ. The averages θh = (θi + θr)/2 and φh = (φi + φr)/2 are called
+half angles.
+The bidirectional scattering function S for a ﬁber is different
+from the bidirectional reﬂection distribution function fr for a sur-
+face, although it shares the same physical units. For the incident
+and reﬂected light we use curve irradiance ¯E, or power per unit
+length, and curve intensity ¯L, or intensity per unit length, respec-
+tively. These units are analogous to irradiance (power per unit area)
+and radiance (intensity per unit area) on a surface.
+S(ωi,ωr) = d ¯Lr(ωr)
+d ¯Ei(ωi) ,
+where ¯Lr is the curve intensity scattered from an inﬁnitesimal length
+of ﬁber, and ¯Ei is the curve irradiance on that portion of the ﬁber.
+This irradiance is proportional to incoming radiance:
+d ¯Ei(ωi) = DLi(ωi)cosθi dωi,
+where D is the diameter of the ﬁber (which depends on φi for an
+elliptical ﬁber). Note that the area over which the irradiance is mea-
+sured is Ddl where dl is an inﬁnitesimal arc length along the ﬁber.
+Given this deﬁnition, the scattering integral is written as
+¯Lr(ωr) = D
+Z
+S(ωi,ωr)Li(ωi)cosθi dωi
+(1)
+Note that, unlike a surface where the integral extends over the up-
+per hemisphere, this integral extends over the entire sphere. The
+presence of D in this equation indicates that a thick ﬁber intercepts
+more light, and therefore appears brighter from a distance, than a
+thin ﬁber.
+3
+Scattering measurements
+The experimental component of our study of hair was intended to
+provide a qualitative and quantitative understanding of the phenom-
+ena that need to be explained by a scattering model for hair. In this
+paper, we brieﬂy outline these measurements; a full description of
+our experiments will be provided in a future paper.
+In our experiments we illuminated individual hairs with a narrow
+beam and measured the scattered light in various directions using a
+setup based on a four-axis goniometer that positioned a light source
+and a CCD camera at arbitrary directions from the sample. We
+used a focused beam to illuminate only a small length of hair, on
+the order of 1 to 2 cm, and this illuminated segment deﬁned the
+length of hair being measured. This served to reduce the effects of
+any variations in properties along the length of the hair.
+3.1
+Incidence plane
+Stamm et al.’s and Bustard and Smith’s measurements were in the
+incidence plane, meaning that they observed only the 2D slice of the
+scattering function for which the source and detector are coplanar
+with the ﬁber. To verify these earlier results, we made the same
+kind of measurements on samples of several different types of hair
+and on a synthetic ﬁber from a wig (Figure 4).
+For each sample, we set the angle of incidence to 45◦and mea-
+sured scattering for varying outgoing angles. We performed this
+experiment twice, once with the illumination from the direction of
+the root (with θi = −45◦), and again with the illumination from the
+direction of the tip (with θi = 45◦). Each measurement was made in
+three color bands across the visible wavelength range. Note that the
+small gap near the incidence angle in each plot is due to the camera
+occluding the light source.
+
+0º
+15
+–15
+30
+–30
+0º
+15
+–15
+30
+–30
+0º
+15
+–15
+30
+–30
+0º
+15
+–15
+30
+–30
+0º
+15
+–15
+30
+–30
+0º
+15
+–15
+30
+–30
+1
+10
+θd = 5º
+1
+10
+θd = 15º
+1
+10
+θd = 30º
+10
+θd = 45º
+10
+θd = 60º
+4
+40
+θd = 70º
+θh 
+1
+1
+Figure 5: Measurements of scattering in the incidence plane: scattering as a function of θh for several values of θd. The red and blue curves
+correspond to red and blue wavelength bands; for this blond hair the very strong secondary highlight can be seen to be higher in the red. The
+solid and dashed curves are two reciprocal measurements combined to extend the instrument’s range.
+0º
+30
+–30
+60
+–60
+1
+10
+θi = 0º
+φ
+0º
+30
+–30
+60
+–60
+1
+10
+θi = 15º
+φ
+0º
+30
+–30
+60
+–60
+1
+10
+θi = 30º
+φ
+0º
+30
+–30
+60
+–60
+1
+10
+θi = 45º
+φ
+0º
+30
+–30
+60
+–60
+1
+10
+θi = 60º
+φ
+0º
+30
+–30
+60
+–60
+1
+10
+θi = 75º
+φ
+Figure 6: A measurement showing the evolution of glints with incidence angle on a more nearly circular hair. For each θ the source is ﬁxed
+while the camera sweeps along the specular cone. A qualitative match to our shading model is plotted with dashed curves.
+The most prominent feature in the scattering function is the spec-
+ular highlight that occurs approximately when θr = −θi. For the
+synthetic hair the highlight occurs exactly at the specular direction,
+but for the real hairs it occurs 6 to 10 degrees toward the root, re-
+gardless from which direction the hair is illuminated. Additionally,
+the blond hair, but not the black hair, has a color-dependent asym-
+metry in the lobe, with a side lobe appearing closer to the specular
+direction than the primary highlight. A background of diffuse re-
+ﬂection is present that is larger and more colored for the blond hair.
+In other measurements of this type we always observed the sec-
+ondary highlight (except in black hair), but its strength and width
+varied considerably.
+To study the effects of both θi and θr on the scattering function in
+the incidence plane, we made a second measurement for one blond
+ﬁber. This measurement was parameterized in terms of θh and θd.
+Each sweep was made with the source and detector ﬁxed, thereby
+holding θd ﬁxed, and the hair rotating to vary θh.
+A selection of the results of this full incidence-plane measure-
+ment are shown in Figure 5. In these plots, both the primary and
+secondary highlight are visible, on either side of zero, which cor-
+responds to the specular direction. This hair in this conﬁguration
+has a very strong secondary highlight that is actually stronger than
+the primary highlight for most angles. As the scattering angle in-
+creases, the secondary highlight fades out, while the primary high-
+light maintains more constant amplitude. Both peaks maintain ap-
+proximately constant width. At high angles the primary highlight
+gives way to a sharp peak that emerges very close to the specular
+direction. This appears to be the same phenomenon that Stamm
+et al. observed and named the equal-angle peak.
+3.2
+Normal plane
+To begin to understand the full 3D complexities of the scattering
+function, in particular the secondary highlight, we made another
+planar 2D measurement, but with the plane of the source and detec-
+tor oriented approximately perpendicular to the ﬁber; that is, in the
+normal plane. Within this plane, the azimuths φi and φr both var-
+ied independently. To be more precise, the incident direction was
+in the normal plane but the scattering direction was on the cone at
+θr = 10◦. This is because the shift we have observed in the high-
+lights due to the tilt of the cuticular scales would prevent us from
+observing the secondary highlight if we measured exactly in the
+normal plane. In this and the following measurements, we show
+only the red wavelength band, because that is where the secondary
+highlight is most prominent.
+The results are plotted as solid lines in Figure 7. We have or-
+ganized the data in terms of φi and the relative azimuth φ, so each
+polar scattering diagram corresponds to a sweep of the camera with
+the source ﬁxed, and moving from diagram to diagram corresponds
+to changing the light source angle (or equivalently, rotating the hair
+around its axis). The wedges of missing data are caused by the
+mechanical constraints of the goniometer.
+This measurement shows that there are two bright out-of-plane
+peaks. The strength and φ locations of the peaks vary from hair to
+hair. We refer to this peak as a “glint” because of the visual effect
+it produces.
+Furthermore, the glints change considerably in brightness and
+position as a function of φi, which shows that the hair is not rota-
+tionally symmetric. However, two symmetries are evident in the
+ﬁgure. One is a 180◦rotational symmetry in φi (diametrically op-
+posite plots are similar); the other is by negating both φi and φ
+(vertical bilateral symmetry of the whole ﬁgure). Together these
+symmetries suggest that the hair has a 180◦rotational symmetry
+and is bilaterally symmetric in cross section.
+When the pattern of glints is symmetric about the plane of in-
+cidence (φi = 0), it looks a lot like the caustic formation due to
+refraction in a sphere or cylinder with circular cross section. More
+generally, the evolution of the peaks as the ﬁber rotates appears sim-
+ilar to the internal reﬂection from a transparent elliptical cylinder,
+as we discuss in Section 6.1. A microscopic inspection of another
+ﬁber from the same individual reveals it has an eccentricity of 0.7:1.
+3.3
+3D hemispherical measurements
+3.3.1
+Changes in glints with angle of incidence
+It is instructive to examine the secondary highlight as a function of
+φ while varying the incidence angle. This shows whether and how
+this highlight evolves as the inclination of the hair to the light source
+changes. To make this measurement, we arrange for the source and
+camera to be at approximately equal incidence angles θ on opposite
+sides of the normal plane, and we measure the φ dependence by
+sweeping the camera along its cone while keeping the light source
+ﬁxed. The results are plotted as solid lines in Figure 6.
+As in the previous measurement, the camera needs to be a bit
+more toward the tip than the source in order to observe the maxi-
+
+φi
+φ
+φ
+φ
+Figure 7: A measurement of scattering in the normal plane from a
+blond hair with substantial eccentricity. Illumination comes from
+the right in all plots; the green ellipses indicate the hair orientation.
+Bright glints appear whose location and strength depend on the ori-
+entation of the hair. The green plots are the results of Monte Carlo
+scattering simulation on the proposed ﬁber model.
+mum glint intensity, so we maintain the condition that θi +θr = 10◦
+as we vary θi.
+The phenomenon shown by this measurement is that the azimuth
+at which the glints occur changes as a function of incidence an-
+gle, with the glints moving toward the incidence plane as the inci-
+dence moves from normal to grazing. They appear to merge around
+θ = 60◦. This behavior provides another clue to the structure: such
+a merging transition is characteristic of the caustics formed by in-
+ternal reﬂection in a cylinder [Mount et al. 1998]. The measured
+eccentricity of this ﬁber is approximately 0.8:1.
+3.3.2
+Hemispherical scattering
+These measurements extended the 1D incidence plane measure-
+ments by varying φr as well as θr, so that the scattering direction
+varied over a full hemisphere. For a ﬁxed direction of incidence,
+this is a complete measurement of the scattering function (or half
+of it, which sufﬁces given bilateral symmetry—a reasonable if in-
+exact assumption when we are not allowing φi to vary).
+The results are shown in Figure 8. In this plot, several curves
+for ﬁxed values of φ are plotted together against θr. A primary
+highlight appears at θr = 40◦, and a broad secondary highlight ap-
+pears around 50◦–80◦. Moving from curve to curve, the primary
+highlight maintains a fairly constant amplitude and shift from the
+specular cone (marked by a blue line in the plot). The secondary
+highlight becomes stronger, peaks around φ = 30◦, and then dies
+out. The forward-scattering half of the scattering function, shown
+with a larger scale on the lower axes, is dominated by a strong
+forward-scattered component that is not shifted appreciably from
+the specular cone.
+3.4
+Summary
+To summarize, our experiments measuring the scattering of light
+from hair ﬁbers revealed the following phenomena. Here, we cate-
+gorize the phenomena in terms of the scattering modes of a dielec-
+tric cylinder (Section 2).
+10
+5
+.5
+.1
+1
+100
+50
+5
+1
+10
+TIP
+ROOT
+φ = 0º
+15º
+30º
+45º
+60º
+φ = 75º
+90º
+120º
+150º
+165º
+θi = 45º
+θr
+θr
+primary
+secondary
+Figure 8: A measurement of one hemisphere of the scattered dis-
+tribution for a ﬁxed incident direction with angle of incidence 45◦.
+The primary highlight, the secondary highlight, and the transmitted
+component are all visible.
+• R: Shift of the primary specular peak toward the root. This
+deviation is hypothesized to be due to the tilt in the scales on
+the hair ﬁber.
+• TT: A strong forward scattering component from light colored
+hair. This causes blond, brown, gray, and white hair to look
+very bright when lit from behind.
+• TRT:
+– A colored secondary peak shifted toward the tip from
+the white primary specular peak.
+In a head of hair,
+this leads to the secondary highlight that is visible just
+above the primary, sometimes appearing more as a col-
+ored fringe on the primary than a separate feature.
+– The secondary highlight varies as a function of φ. It
+generally contains two peaks, or glints. The locations
+of the peaks depend on the angle of incidence, and they
+converge to the incidence plane as θ increases. Further-
+more, for hair that is not circular in cross section, the
+strength and position of the glints depend strongly on
+the angle of rotation of the hair around its axis. This
+gives the hair ﬁber a distinctive sparkling appearance.
+– Most of the energy in the secondary highlight is con-
+tained between the two glints.
+4
+Theory of scattering from ﬁbers
+In this section we present background theory applicable to scatter-
+ing from smooth cylinders. We show that because of the symme-
+try of a cylinder, the 4D scattering function can be factored into
+a product of two 2D terms. One term, called M, captures the θ
+dependence, and the other, called N, captures the φ dependence.
+We also derive N for the case of a circular cylinder. These two
+parts form the basis for the complete, practical model developed in
+the next section, in which we introduce expressions for M, an ap-
+proximation to extend N to elliptical cylinders, and procedures for
+efﬁciently approximating N.
+4.1
+Scattering from cylinders
+For ﬁbers formed by translating a ﬁxed cross section along a single
+axis we can separate the 4D scattering function to a product of 2D
+
+terms. We make use of properties that have been used in previous
+work on scattering from ﬁbers [Marcuse 1974; Adler et al. 1998;
+Mount et al. 1998]:
+• A ray that enters a dielectric cylinder at a particular inclina-
+tion to the axis will always exit at the same inclination, re-
+gardless of the sequence of refractions and reﬂections it un-
+dergoes.
+This means that a bundle of parallel incident rays coming from
+the direction ωi will produce a collection of scattered rays
+whose directions lie on the cone centered on the ﬁber axis and
+containing −ωi (Appendix A). The directions of the refracted
+rays inside the hair also lie on a cone. This effectively reduces
+the scattering function from 4D to 3D, because scattering only
+occurs when θr = −θi. Of course, this equality holds only
+approximately if the surface is rough, and it depends on the
+assumption that there is no volumetric scattering inside the
+cylinder.
+• The dependence of the scattered distribution on φr can be an-
+alyzed by examining only the projection into a plane perpen-
+dicular to the hair.
+It’s easy to see that the R component can be computed just
+from the projection—the incident and reﬂected vectors are ar-
+ranged symmetrically across the surface normal in the projec-
+tion just as they are in 3D, so a mirror reﬂection from the 3D
+cylinder remains a mirror reﬂection in the projection.
+The same holds for refracted rays, as a consequence of Bra-
+vais’s law (derived in Appendix B), which states that if the
+incident and transmitted vectors at a dielectric interface are
+projected into a plane containing the surface normal, the pro-
+jected vectors still obey Snell’s law, but with the index of re-
+fraction η replaced by η′(η,θ) > η. Note that η′ depends
+only on the inclination θ of the incident ray out of the projec-
+tion plane, and it is independent of the angles in the projec-
+tion plane. Thus, since we know that all rays originating from
+a particular incident direction maintain the same inclination
+to the normal plane, a 2D analysis that works in the normal
+plane for arbitrary refractive index sufﬁces to describe the 3D
+scattering function.
+These two facts allow us to write the scattering function for a
+smooth cylinder of any cross section as:
+S(φi,θi;φr,θr) = δ(θr +θi)N(η′(θ);φi,φr)/cos2 θ
+The ﬁrst factor says that scattering only occurs in the specular cone;
+the second factor N represents the azimuthal scattering function;
+and cos2 θ accounts for the projected solid angle of the specular
+cone. We write simply θ to emphasize that θi = θr. Since θ inﬂu-
+ences N only indirectly through η′, we can derive N independently
+using a 2D analysis. In the next section, we will generalize this
+expression to
+S(φi,θi;φr,θr) = M(θi,θr)N(η′(θd);φi,φr)/cos2 θd;
+(2)
+that is, we will allow for a more complicated dependence on θ. We
+will refer to M as the longitudinal scattering function.
+4.2
+Scattering from a circular cross section
+In this section we derive N assuming a circular cross section. With
+circular symmetry, N depends only on φ, the difference between φi
+and φr, so the 2D azimuthal scattering function is further reduced to
+1D, and in this context we will write N with a single angular argu-
+ment. Scattering from a dielectric circle is well studied, having been
+dφTRT
+dh
+dφR
+dφTT
+h
+iγ
+iγ
+iγ
+iγ
+γ t
+γ t
+γ t
+γ t
+R (p = 0)
+TT (p = 1)
+TRT (p = 2)
+Figure 9: Geometry for scattering from a circular cross section.
+ﬁrst analyzed by Descartes to explain the formation of the rainbow
+in a rain shower (for a full discussion, see, e.g., Humphreys [1964]).
+Note that the effective refractive index η′ is a parameter to the en-
+tire discussion that follows, so for clarity it is left as an implicit
+parameter when it is not being discussed.
+We can determine the far-ﬁeld intensity by tracing rays as they
+refract through a circle. Consider a ray incident on a unit circle
+at an offset −1 < h < 1 from its center (see Figure 9). The angle
+sinγi = h is the angle of incidence, and η′ sinγt = h is the angle of
+the refracted ray. By following a ray entering a circle as it refracts
+and reﬂects, we can calculate the exit angle φ(h).
+From Figure 9 it can be seen that the incident ray deviates by
+γt −γi as it enters the circle, by π + 2γt at each internal reﬂection,
+and by γt −γi again as it exits, for a total of
+φ(p,h) = 2pγt −2γi + pπ
+(3)
+where p is the number of internal path segments.1 This expres-
+sion encompasses all three scattering modes we are interested in,
+for different values of p: surface reﬂection R (p = 0), refractive
+transmission TT (p = 1), and internal reﬂection TRT (p = 2). For
+the rest of this analysis, we will ignore p > 2 terms.
+The above ray tracing calculation parameterizes paths by h.
+However, for scattering calculations we often need to ﬁnd all the
+paths that contribute to scattering in a given direction φ. The h val-
+ues for these paths are found by solving for the roots of the function
+φ(p,h) −φ = 0. We denote these roots by the function h(p,r,φ),
+where different values of r denote different roots. In the p = 0 and
+p = 1 cases, there is a single root, and thus a single path. However,
+for the p = 2 case, there may be one or three roots and hence one
+or three paths.
+Since the function φ is smooth, the transition from a single exit
+ray to three exit rays represents a fold in φ(2,h) and this fold occurs
+when dφ
+dh = 0. Descartes ﬁrst showed that this fold occurs when:
+h2 = (4−(η′)2)/3.
+(4)
+This expression is symmetric, and predicts that two symmetric ex-
+trema exist. [Humphreys 1964]
+Now that we have the expression (3) to relate φ and h, we can
+compute the intensity of the scattered light by using the principle of
+energy conservation. When curve irradiance ¯E illuminates a ﬁber,
+uniform irradiance E(h) = ¯E/2 falls on the cross section across its
+1Note that pπ accounts for p−1 internal reﬂections plus the reversal in
+direction from ωi, which points outward.
+
+width.2 Setting aside attenuation for the moment, power from a
+small interval dh in the incident beam is scattered into an angular
+interval dφ in the exitant intensity distribution (Figure 9).
+¯L(φ(h))dφ = E(h)dh = ( ¯E/2)dh
+(5)
+or
+¯L(φ(h)) =
+2dφ
+dh
+
+−1
+¯E
+(6)
+This equation implies that intensity goes to inﬁnity at the fold in the
+function φ. This intensity singularity is called a caustic.
+In the case of a circular cylinder, the pair of caustics cause the
+glints. Since in the cylinder the Bravais index η′ increases with θ,
+the two caustics will move closer to the plane as the incident light
+becomes more oblique to the hair. When η′ reaches 2, the caustic
+ceases to form. This caustic merge transition can be seen in the
+measurement plotted in Figure 6.
+4.3
+Attenuation by absorption and reﬂection
+In this section we add terms for volume absorption in the ﬁber inte-
+rior and Fresnel reﬂection at the interfaces.
+For absorption we need to know the path length inside the ﬁber.
+Applying the law of cosines to the triangles in Figure 9 gives the
+length of each internal path segment as 2 + 2cos(2γt) times the
+hair’s radius.
+Let σa be the volume absorption per unit length,
+with the unit length deﬁned to be the radius of the hair.
+Then
+each of the p segments inside the hair contributes a factor of
+T(σa,h) = exp(−2σa(1+cos(2γt))) to the absorption.
+Now we can introduce an attenuation factor in front of the inten-
+sity contributed by a path
+¯L(φ) = A(p,h)
+2dφ
+dh
+
+−1
+¯E
+(7)
+where
+A(0,h) = F(η,γi)
+A(p,h) =
+ 1−F(η,γi)
+2 F(1/η,γt)p−1T(σa,h)p.
+Just as Bravais’s law lets the normal-incidence geometry factor
+work for oblique incidence, we can generalize A to oblique inci-
+dence simply by changing the parameters. Appendix B shows that
+the correct Fresnel factors may be computed using the usual Fres-
+nel formulas and two virtual indices of refraction, η′(θ) and η′′(θ).
+Similarly, because all the internal path segments have the same in-
+clination θt to the axis, they lengthen by a factor of 1/cosθt, so
+substituting σ′a(θ) = σa/cosθt for σa completes the generalization
+to 3D:
+A(0,h) = F(η′,η′′,γi)
+A(p,h) =
+ 1−F(η′,η′′,γi)
+2 F
+ 1
+η′ , 1
+η′′ ,γt
+p−1
+T(σ′
+a,h)p
+The complete normal-plane scattering function is thus
+N(φ) = ∑
+p
+Np(p,φ)
+Np(p,φ) = ∑
+r
+A(p,h(p,r,φ))
+2dφ
+dh (p,h(p,r,φ))
+
+−1
+(8)
+where the sum is over all the paths of different types (p) including
+those with multiple roots (r).
+2For the unit radius circle ¯E is spread out across the ﬁber width of 2. The
+ﬁber diameter does not affect S.
+4.4
+Summary
+The theory developed in this section predicts that the light from a
+directional beam will be scattered into a perfect cone and that the
+distribution around the cone is a sum of three distinct scattering
+modes. This leads to the following form for our new scattering
+model:
+S(φi,θi;φr,θr) =
+MR(θh)NR(η′(η,θd);φ)/cos2 θd +
+MTT (θh)NTT (η′(η,θd);φ)/cos2 θd +
+MTRT (θh)NTRT (η′(η∗(φh),θd);φ)/cos2 θd.
+(9)
+This equation derives from Equation 2 but includes generalizations
+that will allow us to introduce several useful approximations in the
+next section. The three terms MR, MTT , and MTRT are three sepa-
+rate longitudinal scattering functions. They allow the effects of the
+cuticle scales, which are different for the three modes, to be simu-
+lated. The three terms NR, NTT , and NTRT are the three modes of
+the azimuthal scattering function. The ﬁrst two of these,
+NR(φ) = Np(0,φ)
+NTT (φ) = Np(1,φ),
+are deﬁned directly from Equation 8, but the computation of NTRT
+will be discussed in more detail in Section 5.2.2. The function η∗
+lets the effective index of refraction for NTRT depend on φh, which
+allows the approximation for elliptical cross sections presented in
+Section 5.2.3.
+Note that only the angles θd, φ, θh, and φh appear on the right
+hand side of Equation 9. Writing the Ms and Ns in terms of sums
+and differences in this way emphasizes the natural symmetry of S
+and will make it easy to see that the model is reciprocal.
+5
+A practical shading model for human hair
+In this section we extend the results of the previous section into a
+complete, practical model suitable for integration into a renderer.
+To do this we introduce empirical functions for the longitudinal
+scattering functions (MR, etc.), which the theory of smooth cylin-
+ders does not predict. We also describe our approach to computing
+NTRT in the presence of surface roughness and an approximation to
+h(p,r,φ) that is used to compute NR, NTT , and NTRT . Finally, we
+introduce convenient parameters for controlling the model.
+It is important to recognize that the purpose of the model given
+in this section is to capture the phenomena that are important in
+rendering. The form of the model and the basic energy distribution
+come from the theory presented in the previous section, but there
+are many details for which a simple analysis is not available, and
+we ﬁll these in empirically.
+5.1
+The longitudinal scattering function M
+The analysis of a smooth cylinder predicts that the reﬂected light
+will stay exactly in the specular cone. Our hair model includes
+two features that cause deviations from this behavior. First, the
+interfaces are rough. As rays propagate through the cylinder, the
+roughness will cause their directions to deviate randomly from the
+directions predicted by the model. The overall effect is to blur the
+scattered distribution, with the different scattering modes blurred to
+different degrees. Second, the cuticle scales cause a tilt of the sur-
+face normals relative to the ideal cylinder, which causes the scat-
+tered lobes not to be centered on the specular cone.
+Figure 1 illustrates how we can expect the positions of the lobes
+to shift: the R mode is displaced by 2α toward the root; the TRT
+
+Parameter
+Purpose
+Typical values
+Fiber properties
+η
+index of refraction
+1.55
+σa
+absorption coefﬁcient (R, G, B)
+0.2 to ∞
+a
+eccentricity
+0.85 to 1
+Surface properties
+αR
+longitudinal shift: R lobe
+−10◦to −5◦
+αTT
+longitudinal shift: TT lobe
+−αR/2
+αTRT
+longitudinal shift: TRT lobe
+−3αR/2
+βR
+longitudinal width (stdev.): R lobe
+5◦to 10◦
+βTT
+longitudinal width (stdev.): TT lobe
+βR/2
+βTRT
+longitudinal width (stdev.): TRT lobe
+2βR
+Glints
+kG
+glint scale factor
+0.5 to 5
+wc
+azimuthal width of caustic
+10◦to 25◦
+∆η′
+fade range for caustic merge
+0.2 to 0.4
+∆hM
+caustic intensity limit
+0.5
+Table 1: All the parameters of the shading model.
+mode is displaced more than that far toward the tip; and the TT
+mode is displaced toward the tip.3 We approximate the effects of
+the scales by shifting the mean of M differently for each lobe.
+MR(θh) = g(βR;θh −αR)
+MTT (θh) = g(βTT ;θh −αTT )
+MTRT (θh) = g(βTRT ;θh −αTRT )
+where g(β,x) is a unit-integral, zero-mean lobe function with width
+β. In our implementation we used a normalized Gaussian function
+with standard deviation β.
+5.2
+The azimuthal scattering function N
+In this section we introduce three approximations to the azimuthal
+scattering function. The ﬁrst is an efﬁcient method for solving for
+paths, the second is a phenomenological model for the secondary
+highlights, and the third is a simple model for glints.
+5.2.1
+Solving for paths
+In order to ﬁnd a path through a circle, we must solve Equation 3 for
+the value or values of h(p,r,φ) that result in the scattering angle φ.
+Because the formula for φ involves Snell’s Law and hence arcsines,
+it is computationally expensive to solve for h exactly.
+To simplify the angular dependence, we approximate Snell’s law
+with the cubic polynomial that matches the value and derivative of
+the exact expression at ±90◦:
+γt = 3c
+π γi −4c
+π3 γ3
+i
+where c = sin−1(1/η′) (in this expression angles γ are measured in
+radians). The maximum approximation error is less than 0.75◦for
+η > 1.5.
+With this approximation, φ is a cubic in γi:
+ˆφ(p,γi) =
+6pc
+π −2
+
+γi −8pc
+π3 γ3
+i + pπ.
+(10)
+The roots of this equation yield γi from which h is easily found. For
+the R and TT cases there will always be exactly one root, whereas
+the TRT case may have one or three roots.
+3For the TT and TRT components the shifts depend on the incidence
+angle, and for all three components the shift depends on φ, but we ignore
+these effects.
+10
+5
+.5
+.1
+1
+30º
+–30º
+60º
+θr
+Figure 10: A plot of the shading model, under the same geometric
+conditions used in Figure 4. The parameters have been adjusted to
+match the behavior of the blond hair (top center plot in that ﬁgure).
+5.2.2
+Approximation for TRT
+Our theory, which is based on smooth surfaces, predicts that the
+caustics in the TRT component produce singularities in S with inﬁ-
+nite intensity. Since this is unrealistic, particularly in the presence
+of surface roughness, we remove the caustic from NTRT and re-
+place it with a smooth lobe centered at the location of the caustic.
+The width of this lobe simulates the blurring of the caustic due to
+roughness.
+The angle φc at which the caustic appears can be computed from
+Descartes’s formula (Equation 4) when it is deﬁned, but for inci-
+dence angles past the caustic merge it is undeﬁned. To maintain
+continuity we continue to insert the caustic at φc = 0 and fade it
+out smoothly over a short range of incidence angles past the merge.
+It is simplest to precisely describe this component by giving the
+procedure used to compute it:
+function NTRT (θ,φ;wc,kG,∆η′,∆hM)
+if (η′(θ) < 2)
+Compute hc, φc using η′(θ) in (4)
+∆h = min(∆hM,2
+q
+2wc/| d2φ
+dh2 (hc)|)
+t = 1
+else
+φc = 0
+∆h = ∆hM
+t = smoothstep(2,2+∆η′,η′(θ))
+L = Np(2,φ)
+L = L·(1−tg(φ −φc,wc)/g(0,wc))
+L = L·(1−tg(φ +φc,wc)/g(0,wc))
+L = L+tkGA(2,θ,φ)∆h(g(φ −φc,wc)+g(φ +φc,wc))
+return L
+In this procedure we roughly approximate the power that is re-
+moved from the intensity distribution by using d2φ/dh2 to estimate
+the size ∆h of the interval in h that maps within wc of φc. The
+limit ∆hM is necessary because d2φ/dh2 goes to zero at the caustic
+merge. The function smoothstep(a,b,x) is 1 for x < a, 0 for x > b,
+and smooth in between.
+The user-adjustable parameters to this function are wc, the width
+of the blur for the caustics, kG, a factor to adjust the strength of the
+glints, ∆η′, the range of η′ over which to fade out the caustic after
+the merge, and ∆hM, a limit on the caustic power.
+5.2.3
+Approximation for eccentricity
+When the ﬁber’s cross section is elliptical rather than circular, a
+simple analytical solution for N is not available. However, the ap-
+pearance of the TRT component is signiﬁcantly affected by even
+mild eccentricity: the angle φc at which the caustics appear changes
+by ±100% over the range from a = 0.85 to a = 1/0.85. Because
+eccentricities in this range are very common, it is important to ap-
+proximate the effect of eccentricity on the TRT component. We do
+this by using the function η∗in Equation 9.
+
+Changing refractive index has effects that are qualitatively sim-
+ilar to changing eccentricity. One case for which it is simple to
+analyze this relationship in the TRT component is paraxial paths
+that are symmetric across the major axis. For these paths φi = −φr
+and the reﬂection occurs on the major axis. If γ′t is the angle of
+incidence at the internal reﬂection it can be shown that
+dφr
+dγ′t
+= 2a2(η −1)−η.
+We can use this ﬁrst-order approximation to roughly match the be-
+havior of the circular model to the elliptical one by using the index
+of refraction η∗= 2a2(η −1)−η +2 in the circular model.
+This gives us an approximation for how the TRT component of
+the scattering function changes with mild eccentricity when φh is
+aligned with one of the principal axes. To incorporate this approxi-
+mation into the practical model, we simply interpolate sinusoidally
+to deﬁne η∗for all intermediate values of φh:
+η∗
+1 = 2(η −1)a2 −η +2
+η∗
+2 = 2(η −1)a−2 −η +2
+η∗(φh) = 1
+2
+ (η∗
+1 +η∗
+2)+cos(2φh)(η∗
+1 −η∗
+2)
+
+As shown in Equation 9, we simulate eccentricity simply by
+passing the refractive index η∗to the code that computes NTRT
+using the formulas derived from the circular case.
+5.3
+Summary
+We have now accounted for all the terms that appear in Equation 9.
+The three longitudinal scattering functions MR, MTT , and MTRT
+are Gaussians. The azimuthal scattering functions NR and NTT are
+evaluated directly from Equation 8, using Equation 10 to compute
+h. The azimuthal scattering function NTRT is ﬁrst computed using
+Equations 8 and 10 with the refractive index η∗, summing over the
+possibly multiple values of h, then modiﬁed by the procedure in
+Section 5.2.2 to smooth out the caustics.
+Depending on the type of renderer, it may be helpful in practi-
+cal use to include a small amount of diffuse reﬂection. Although
+our model does not include a diffuse component, one can easily be
+added by introducing a constant term MD into Equation 9.
+All the model’s parameters are collected for reference in Table 1.
+6
+Results
+6.1
+Validation
+In this section we provide evidence that our assumptions about the
+structure of hair are valid and that the shading model can qualita-
+tively reproduce the behaviors we have seen in the measurements.
+Validating the hair structure model against measurements. The
+normal-plane measurement in Figure 7, which best illustrates the
+glints, behaves entirely consistently with the model of a hair as an
+elliptical cylinder. To show this, we have used a Monte Carlo pro-
+cedure to compute the scattering due to the TRT mode in a rough
+elliptical cylinder with eccentricity matching the measured value
+for this individual. The ﬁgure shows the results of this numerical
+experiment plotted with the results of the physical experiment. The
+match in both the angular and the intensity variation in the peaks
+is striking, providing clear evidence both for the explanation of the
+glints as internal reﬂection caustics and for the model of the hair’s
+cross section as an ellipse. The real data of course includes some
+contributions from the other scattering modes, which is noticeable
+in forward scattering, where the TRT mode does not contribute.
+Figure 11: A photograph [Gray 1997] showing brown hair with a
+prominent secondary highlight caused by a small light source near
+the camera. Glints help give the hair its distinctive natural texture.
+Validating the shading model against measurements. In order to
+demonstrate the ability of our shading model to qualitatively match
+the behavior of real hair, we have set the parameters to ﬁt two of
+the measurements in Section 3. In Figure 10 we show a plot of the
+model adjusted to behave like the blond hair that was measured in
+the incidence plane (Figure 4, top center). Note that both the small
+side lobe and the broader lobe toward grazing are predicted.
+The measurement in Figure 6 shows a caustic merge as incli-
+nation changes.
+The shading model is plotted as a dashed line
+along with the data, with a set of parameters that describes this
+more mildly eccentric hair. The behavior of two glints merging and
+disappearing matches qualitatively.
+6.2
+Renderings
+We have implemented the shading model described in the previ-
+ous section and used it to simulate light reﬂection from proce-
+durally generated assemblies of hair ﬁbers.
+We have used the
+commercial “Sasquatch” rendering software (Worley Laboratories,
+http://www.worley.com) to model the hair, and each model con-
+sisted of 50,000–100,000 spline curves, corresponding to the aver-
+age number of hairs on a human head. The shading parameters were
+constant per ﬁber, but in some cases (noted below) we used a noise
+function on the scalp to assign a random absorption to each ﬁber.
+The azimuthal orientation of the elliptical ﬁbers was random from
+ﬁber to ﬁber but smooth along each ﬁber. All renderings have η =
+1.55, and ∆hM = 0.5. The parameters αTT and αTRT are deﬁned
+from αR by the ratios recommended in Table 1.
+We used ray tracing to render the images, accounting for occlu-
+sion and shadowing but not multiple scattering between the hairs.
+We represented the hairs as ﬂat ribbons that always face the ray
+direction, with a width equal to the hair diameter. This is more
+efﬁcient than using cylinders, and since our scattering function ab-
+stracts away all interactions below the level of strands it is appro-
+priate.
+In the following results, computation was dominated by ray in-
+tersection so that even though our model is substantially more ex-
+pensive to compute than Kajiya’s very simple model, the increase
+in rendering time was modest. For instance, switching to the new
+model increased the rendering time for Figure 12 from 6 minutes to
+8 minutes on a two-processor 1GHz Pentium III system.
+The ﬁrst set of renderings is inspired by the photograph shown
+in Figure 11. Because the hair is combed into a fairly ﬂat surface,
+
+Figure 12: A comparison of Kajiya and Kay’s model (left) under a single point source, our proposed model (center) with the same lighting,
+and the hair from the photograph in Figure 11 (removed from context to simplify the comparison). The Kajiya model’s diffuse term results in
+a ﬂat appearance, while the secondary highlight in our model correctly captures the colored shading of the real hair.
+the secondary highlight is quite prominent; there is very little dif-
+fuse scattering, as evidenced by the dark appearance at the top and
+bottom of the hair.
+We constructed an idealized geometric model to roughly match
+the overall shape of the hair, without attempting to reproduce the
+placement of the ﬁbers exactly. In Figure 12 we show a rendering
+of this model using settings appropriate for mildly elliptical brown
+hair. The result of rendering the same model in the same lighting
+using Kajiya’s model is shown for comparison. The diffuse compo-
+nent required to produce an overall brown color does not adequately
+predict the variation in shading that occurs in the real hair, where
+the brown color comes from the secondary highlight. The same
+procedural color variation is present in both images; the additional
+texture from the proposed model is due to eccentricity. The param-
+eters for this images are αR = 3◦, βR = 14◦, βTT = 8◦, βTRT = 22◦,
+σa = (0.432,0.612,0.98) – (0.36,0.72,0.94), kG = 0.4, wc = 1.5◦,
+and a = 0.9.
+To illustrate the components of the model and the effect of ec-
+centricity, Figure 14 shows the two highlights separately and a com-
+parison between circular and elliptical hair with all other parameters
+held constant. The parameters for these images are α = 3◦, βR = 8◦,
+βTT = 6◦, βTRT = 15◦, σa = (0.44,0.64,0.9), kG = 0.4, wc = 1.5◦,
+and a = 1 and 0.9.
+To further demonstrate the capabilities of the model we include
+additional results for varying light direction in Figure 15 and for
+complex illumination (using the method of Agarwal et al. [2003])
+in Figure 13.
+7
+Conclusions
+In this paper we have looked at light scattering from human hair
+in reality, in theory, and in rendering practice. Our measurements
+show that the scattering behavior of individual hair ﬁbers differs
+signiﬁcantly from what has previously been assumed in shading
+models; the theory of scattering from dielectric cylinders explains
+the sources of these differences; and we present a shading model
+that captures the relevant visual effects, including those due to ec-
+centricity, in a practical, adjustable model for use in rendering.
+The most important implication of this work is that realistic ren-
+dering of hair needs to account for the multiple modes of scatter-
+ing that occur in cylinders. The standard assumption that the color
+comes primarily from diffuse scattering is not supported by the ev-
+idence in the case of ﬁbers, and our images show that this assump-
+tion limits the quality of results from current hair shading models.
+The shading model we have introduced could be made more ac-
+curate in future work. Two avenues for improvement are eccentric-
+ity and surface roughness. It would be useful to handle more ex-
+treme deviations from circularity, in order to allow us to accurately
+model more types of hair. Also, the current model approximates the
+effects of eccentricity on the ray density factor but not the Fresnel
+factor, which limits the quantitative accuracy of the energy distri-
+bution. Our model accounts for the effects of surface roughness
+and the scale angle in the simplest way that is consistent with the
+appearance phenomena. The true effects of these surface features
+are complicated and dependent on the scattering geometry. A more
+exact model of these effects could lead to a scattering model that is
+more accurate for grazing angles.
+Our analysis applies to many kinds of transparent ﬁbers, so it has
+implications for rendering animal hair, synthetic hair or fur, and all
+kinds of cloth.
+Figure 13: A hair model (62K ﬁbers) illuminated by a complex
+environment map.
+
+(a)
+(b)
+(c)
+(d)
+(e)
+Figure 14: (a–c) The components of our model for circular hair (a = 1): (a) the R component (primary highlight) alone; (b) the TRT
+component (secondary highlight) alone; (c) the full model. (d) The full model for a = 0.9, showing texture due to glints; (e) an enlargement
+of (d).
+Figure 15: A hair model under different illumination angles. As the relative strengths of the primary and secondary highlights change, they
+alter the color, brightness, and sheen of the hair.
+Acknowledgements
+The authors would like to thank Heidi Marschner, Joyce Ma, and
+James Davis for donating the hairs we measured, Franc¸ois Guim-
+breti`ere for the presentation idea for Figure 7, and Dr. John Gray for
+the use of the photograph in Figure 11. This research was supported
+by an NSF ITR grant (IIS-0085864), and the third author was sup-
+ported by a 3Com Corporation Stanford Graduate Fellowship and
+an NSF Graduate Fellowship. The scattering measurements were
+performed on the Stanford Spherical Gantry, which was designed
+by Marc Levoy, Brian Curless, and Szymon Rusinkiewicz and con-
+structed using funds from Interval Research.
+References
+ADLER, C. L., LOCK, J. A., AND STONE, B. R. 1998. Rainbow scattering
+by a cylinder with a nearly elliptical cross section. Applied Optics 37, 9,
+1540–1550.
+AGARWAL, S., RAMAMOORTHI, R., BELONGIE, S., AND JENSEN, H. W.
+2003.
+Structured importance sampling of environment maps.
+ACM
+Transactions on Graphics 22, 3.
+BUSTARD, H., AND SMITH, R. 1991. Investigation into the scattering of
+light by human hair. Applied Optics 24, 30, 3485–3491.
+CHANG, J., JIN, J., AND YU, Y. 2002. A practical model for hair mu-
+tual interactions. In Proceedings of the ACM SIGGRAPH Symposium on
+Computer Animation, ACM Press, 73–80.
+CHEN, L.-H., SAEYOR, S., DOHI, H., AND ISHIZUKA, M.
+1999. A
+system of 3D hair style synthesis based on the wisp model. The Visual
+Computer 15, 4, 159–170.
+GOLDMAN, D. B. 1997. Fake fur rendering. In Proceedings of SIGGRAPH
+1997, ACM Press, 127–134.
+GRAY, J. 1997. World of Hair. Hairdressing Training Board.
+HADAP, S., AND MAGNENAT-THALMANN, N. 2000. Interactive hair styler
+based on ﬂuid ﬂow. In Computer Animation and Simulation 2000, Euro-
+graphics, 87–99.
+HUMPHREYS, W. J. 1964. Physics of the Air. Dover, London.
+KAJIYA, J. T., AND KAY, T. L. 1989. Rendering fur with three dimensional
+textures. In Proceedings of SIGGRAPH 1989, 271–280.
+KAJIYA, J. T. 1985. Anisotropic reﬂection models. In Proceedings of
+SIGGRAPH 85, ACM Press, 15–21.
+KIM, T.-Y., AND NEUMANN, U. 2000. A thin shell volume for modeling
+human hair. In Computer Animation 2000, IEEE CS Press, 104–111.
+KIM, T.-Y., AND NEUMANN, U. 2001. Opacity shadow maps. In Ren-
+dering Techniques 2001: Proceedings of Eurographics Rendering Work-
+shop, Springer Verlag Wien, 177–182.
+KIM, T.-Y., AND NEUMANN, U. 2002. Interactive multiresolution hair
+modeling and editing. ACM Transactions on Graphics 21, 3, 620–629.
+KIM, T.-Y. 2002. Modeling, Rendering, and Animating Human Hair. PhD
+thesis, University of Southern California.
+KONG, W., AND NAKAJIMA, M. 2000. Hair rendering by jittering and
+pseudo shadow. In Computer Graphics International 2000, 287–294.
+LOKOVIC, T., AND VEACH, E. 2000. Deep shadow maps. In Proceedings
+of SIGGRAPH 2000, ACM Press, 385–392.
+MAGNENAT-THALMANN, N., HADAP, S., AND KALRA, P. 2002. State of
+the art in hair simulation. In International Workshop on Human Model-
+ing and Animation, Korea Computer Graphics Society, 3–9.
+MARCUSE, D. 1974. Light scattering from elliptical ﬁbers. Applied Optics
+13, 1903–1905.
+MOUNT, C. M., THIESSEN, D. B., AND MARSTON, P. L. 1998. Scattering
+observations for tilted transparent ﬁbers. Applied Optics 37, 9, 1534–
+1539.
+POULIN, P., AND FOURNIER, A. 1990. A model for anisotropic reﬂection.
+In Proceedings of SIGGRAPH 90, 273–282.
+
+vi
+si
+vt
+si′
+st′
+st′= si′/ η
+st
+st = si/ η
+γ
+δ
+vi′
+vt′
+n
+vi
+vt′
+vt
+ht
+hi
+n′
+n
+vi
+n′
+n
+vr′
+vr
+(a)
+(b)
+(c)
+Figure 16: Reﬂected (a) and refracted (b) vectors from a cylinder lie in a cone; derivation of Bravais’s law.
+ROBBINS, C. R. 1994. Chemical and Physical Behavior of Human Hair,
+third ed. Springer-Verlag, New York.
+SOURIN, A., PASKO, A., AND SAVCHENKO, V. 1996. Using real functions
+with application to hair modelling. Computers & Graphics 20, 1, 11–19.
+STAMM, R. F., GARCIA, M. L., AND FUCHS, J. J. 1977. The optical prop-
+erties of human hair I. fundamental considerations and goniophotometer
+curves. J. Soc. Cosmet. Chem., 28, 571–600.
+TRICKER, R. A. R. 1970. Introduction to Meteorological Optics. Mills &
+Boon, London.
+WATANABE, Y., AND SUENAGA, Y. 1992. A trigonal prism-based method
+for hair image generation. IEEE Computer Graphics & Applications 12,
+1, 47–53.
+A
+Loci of reﬂections
+In this appendix, the geometry of reﬂection and refraction from a
+cylindrical ﬁber is analyzed. The set of normal vectors to a cylin-
+drical ﬁber lie in a plane perpendicular to the axis of the ﬁber; this
+plane is called the normal plane. The geometry is most easily visu-
+alized using a unit sphere; each point on the unit sphere represents
+a different direction. On this sphere, the axis of the ﬁber is at the
+north pole and the set of normal vectors is contained in the equator
+(see Figure 16a).
+To analyze reﬂection for a given incident direction vi, consider
+a particular surface normal n and the corresponding reﬂection vec-
+tor vr. The law of reﬂection states that vi, n, and vr are coplanar
+and n · vi = n · vr. By ﬁnding similar triangles, the reﬂection rule
+also forces the distances of vi and vr from the equator to be equal.
+This equidistance condition must hold for any normal vector. Thus,
+the set of reﬂection vectors formed for a given incident direction
+must lie on a horizontal circle at constant height that is at the same
+distance from the equator as vi. This is a formal proof of the well-
+known result that, in 3D, the set of reﬂections from a cylinder form
+a cone.
+Figure 16b is analogous to the previous ﬁgure, but shows the
+refracted directions instead. The rule for refraction (Snell’s law)
+is similar to reﬂection. First, vi, n, and vt are coplanar. Second,
+Snell’s Law says that η sinθt = sinθi, and using similar triangles,
+this law implies that the perpendicular distances to the equator, hi
+and ht, also have the ratio η. This means the transmitted vectors all
+lie on a circle that is a factor of η closer to the equator than vi.
+By the same argument, the rays that refract again on the way out
+of the cylinder will obey the equidistance condition. Furthermore,
+internal reﬂections are no different than external reﬂections. The
+conclusion is that all rays that exit a cylindrical ﬁber must lie in the
+same cone as the reﬂected rays.
+B
+The Bravais index
+A cylindrical ﬁber is formed by sweeping a cross section along an
+axis. Bravais has shown that the optics of a 3D cylindrical ﬁber may
+be reduced to the 2D analysis of the optics of its cross section. The
+incident direction is ﬁrst projected into the cross-section plane and
+then reﬂected and refracted in 2D. However, to model the correct
+physics in 2D, the index of refraction must be changed as a function
+of the angle of incidence. Bravais’s law is often used to analyze
+refraction through crystals (as in ice haloes [Tricker 1970]).
+Figure 16c shows the geometry of the refraction across a hori-
+zontal surface. The direction vi is refracted in the direction vt. To
+reduce this to a 2D problem, the vectors vi and vt are projected onto
+the vertical plane containing the normal. The projected vectors are
+labeled v′
+i and v′t. The goal is to ﬁnd an effective index of refrac-
+tion, η′, such that if v′
+i is refracted at the boundary it will yield v′t.
+First note that Snell’s Law states that sinθi = η sinθt. That is, the
+length of the projection of vi onto the horizontal plane is η times
+the length of the projection of vt. Since vi and vt lie in a plane,
+the two triangles shown in the horizontal plane are similar. The
+length of each edge of the left (incident-side) triangle is η times
+the length of the corresponding edge in the right (transmitted-side)
+triangle. Second, an equivalent Snell’s Law is obeyed in the verti-
+cal normal plane. Here, sinθ′
+i = η′ sinθ′t . But sinθ′
+i = sinθi cosγ,
+where γ is the angle between the incident vector and its projection
+on the normal plane. Similarly, sinθ′t = sinθt cosδ, where δ is the
+angle between the transmitted direction and its projection on the
+normal plane. Substituting, yields sinθi cosγ = η′ sinθt cosδ, and
+substituting Snell’s Law into this equation yields η cosγ = η′ cosδ,
+Equivalently,
+η′(γ) =
+q
+η2 −sin2 γ
+
+cosγ.
+The implication of this is that for an incident ray that makes an
+angle γ with the projection plane, we can compute the projection of
+the refracted direction from the projection of the incident direction
+using the usual Snell’s law but substituting the effective index of
+refraction η′.
+The Fresnel attenuation at the interface may be computed in a
+similar way. From Fresnel’s formulas, it is straightforward to verify
+that the factor for oblique incidence may be computed from the
+projected angles by using η′ for the perpendicular component of
+the reﬂectance and a second index,
+η′′(γ) = η2 cosγ
+. q
+η2 −sin2 γ
+for the parallel component. We will use the notation F(η′,η′′,γ)
+for this slightly generalized Fresnel function.

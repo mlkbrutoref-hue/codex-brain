@@ -1,0 +1,141 @@
+{
+  "state": "READY_TO_POST",
+  "assets_total": 11,
+  "source_status_counts": {
+    "PASS": 7,
+    "REVIEW": 4,
+    "FAIL": 0,
+    "BLOCKED": 0
+  },
+  "effective_status_counts": {
+    "PASS": 7,
+    "APPROVED_BY_USER": 4,
+    "REVIEW": 0,
+    "FAIL": 0,
+    "BLOCKED": 0
+  },
+  "assets": [
+    {
+      "asset_id": "carousel_01_cover",
+      "source_status": "REVIEW",
+      "effective_status": "APPROVED_BY_USER",
+      "asset_sha256": "63e1c7221053855c8cf28845330f4d9b1c98147116c0e2eba689fb3430f082cc",
+      "qa_sha256": "3dc7e4ad73edc868fc738128ffcc8172f9332e1462ee015e1aa519825610a155",
+      "approval": {
+        "asset_id": "carousel_01_cover",
+        "status": "APPROVED_BY_USER",
+        "approved_by": "user",
+        "approved_at": "2026-10-04T14:51:11.9964542-03:00",
+        "reason": "User explicitly approved the current asset after reviewing the observability limitation.",
+        "asset_sha256": "63e1c7221053855c8cf28845330f4d9b1c98147116c0e2eba689fb3430f082cc",
+        "qa_sha256": "3dc7e4ad73edc868fc738128ffcc8172f9332e1462ee015e1aa519825610a155"
+      }
+    },
+    {
+      "asset_id": "carousel_02_product",
+      "source_status": "PASS",
+      "effective_status": "PASS",
+      "asset_sha256": "20a7da8d7624b29812a290a0dbb02abaccc9d9d81fbb3c55f8e5e8e762d2bb2c",
+      "qa_sha256": "9a61f65d6e0c21917993371a4ef27c7d5c1f091131d42caf9034227d91b3cc9e",
+      "approval": null
+    },
+    {
+      "asset_id": "carousel_03_product",
+      "source_status": "PASS",
+      "effective_status": "PASS",
+      "asset_sha256": "0b5e5f298ac92faeae4fe75a7245f5c0bee227c37b93e297c6875343c8cbd707",
+      "qa_sha256": "8cfb73ad0cff13dacc9e7feb297a850014bfdb2dd671fe9213ea408c5eccc869",
+      "approval": null
+    },
+    {
+      "asset_id": "carousel_04_product",
+      "source_status": "PASS",
+      "effective_status": "PASS",
+      "asset_sha256": "f3d2d39d4b4576dcf92d3656fed16f23a4b5ceea335da54dca74c3937cc94635",
+      "qa_sha256": "75c1fb6ea78dcd88c7abf0db90de0624c50ea25d656e77612f38ea6e6131bcda",
+      "approval": null
+    },
+    {
+      "asset_id": "carousel_05_product",
+      "source_status": "PASS",
+      "effective_status": "PASS",
+      "asset_sha256": "3409a04a38b45de004438ba0f0b259f021f64967ba0ccbebcd5f1915ea7964f5",
+      "qa_sha256": "495dbc065919047906b5bb9c0b62da86bf696244441da09934b263c6ae5ed20a",
+      "approval": null
+    },
+    {
+      "asset_id": "carousel_06_cta",
+      "source_status": "PASS",
+      "effective_status": "PASS",
+      "asset_sha256": "10fd1354eef86298e1f7e7562c29cbaf2a58bae67fdf0e3b93ea196e0dbd831c",
+      "qa_sha256": "9cebaa79802d9aa9df29f9075ce13e2b7c74da43eadb531ea94140429a8a9908",
+      "approval": null
+    },
+    {
+      "asset_id": "product_story_01",
+      "source_status": "REVIEW",
+      "effective_status": "APPROVED_BY_USER",
+      "asset_sha256": "8bc72fa1cca52bd510e230d0872f96cf93d6b1fb01f7b4621ee239a08d44b3b8",
+      "qa_sha256": "37ee5dade6e36f139851c6e1282d10add37deeaa3a396fbb40fbc411fd5e3db4",
+      "approval": {
+        "asset_id": "product_story_01",
+        "status": "APPROVED_BY_USER",
+        "approved_by": "user",
+        "approved_at": "2026-10-04T14:51:11.9964542-03:00",
+        "reason": "User explicitly approved the current asset after reviewing the observability limitation.",
+        "asset_sha256": "8bc72fa1cca52bd510e230d0872f96cf93d6b1fb01f7b4621ee239a08d44b3b8",
+        "qa_sha256": "37ee5dade6e36f139851c6e1282d10add37deeaa3a396fbb40fbc411fd5e3db4"
+      }
+    },
+    {
+      "asset_id": "product_story_02",
+      "source_status": "PASS",
+      "effective_status": "PASS",
+      "asset_sha256": "0e9e594ff67812ffbdf1e39345752fa1639a2c8282b38e3c46e3f7f64a6a797e",
+      "qa_sha256": "e6b19d790a1f1e8152d48fa144f0bcb6931cd2b74f8aba21dba69b5815f3db24",
+      "approval": null
+    },
+    {
+      "asset_id": "lifestyle_morning",
+      "source_status": "PASS",
+      "effective_status": "PASS",
+      "asset_sha256": "f13258425a2b50dc24e892bfd2b285f5ad17c42ab771b7bf9843cde9f1b8da22",
+      "qa_sha256": "7c9136bd7ae6b59c6451b9f1ab8866b59a693b36cb7e82f81d68d7e5bff255dc",
+      "approval": null
+    },
+    {
+      "asset_id": "lifestyle_afternoon",
+      "source_status": "REVIEW",
+      "effective_status": "APPROVED_BY_USER",
+      "asset_sha256": "dfeb330a37af3b7a2eeb97b8b6ce236ca58c3bcc99b756befceda57c0d4e250a",
+      "qa_sha256": "23d6dc50f39b5c31bf9b6b9c754c0e4f0ea828216c02824c44e874a4874de282",
+      "approval": {
+        "asset_id": "lifestyle_afternoon",
+        "status": "APPROVED_BY_USER",
+        "approved_by": "user",
+        "approved_at": "2026-10-04T14:51:11.9964542-03:00",
+        "reason": "User explicitly approved the current asset after reviewing the observability limitation.",
+        "asset_sha256": "dfeb330a37af3b7a2eeb97b8b6ce236ca58c3bcc99b756befceda57c0d4e250a",
+        "qa_sha256": "23d6dc50f39b5c31bf9b6b9c754c0e4f0ea828216c02824c44e874a4874de282"
+      }
+    },
+    {
+      "asset_id": "lifestyle_night",
+      "source_status": "REVIEW",
+      "effective_status": "APPROVED_BY_USER",
+      "asset_sha256": "b801e2aef5edab1981676543374b91ef52dd5cfdae0ab11b2a615e5bf6d8eadc",
+      "qa_sha256": "854e147b27434524e3cde8f6bebaef016746c1bf8bc92b4bb31c2cba4527304a",
+      "approval": {
+        "asset_id": "lifestyle_night",
+        "status": "APPROVED_BY_USER",
+        "approved_by": "user",
+        "approved_at": "2026-10-04T14:51:11.9964542-03:00",
+        "reason": "User explicitly approved the current asset after reviewing the observability limitation.",
+        "asset_sha256": "b801e2aef5edab1981676543374b91ef52dd5cfdae0ab11b2a615e5bf6d8eadc",
+        "qa_sha256": "854e147b27434524e3cde8f6bebaef016746c1bf8bc92b4bb31c2cba4527304a"
+      }
+    }
+  ],
+  "blockers": [],
+  "review_items": []
+}

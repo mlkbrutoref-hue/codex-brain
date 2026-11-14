@@ -1,0 +1,12 @@
+{
+  "codex-project-coordination": {
+    "enabled": false,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "\"C:/Users/GAMER/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe\" -X utf8 \"C:/Users/GAMER/Documents/SHOPEE AUTOMATION/ai-commerce-content-factory/.agents/coordination/channel.py\" hook",
+        "timeout": 5
+      }
+    ]
+  }
+}

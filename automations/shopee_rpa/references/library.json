@@ -1,0 +1,829 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-12",
+  "status": "MANUAL_RESEARCH_LIBRARY",
+  "references": [
+    {
+      "reference_id": "P01_MIRROR",
+      "source": "Pinterest",
+      "source_url": "https://uk.pinterest.com/pin/mirror-selfie--794111346795483355/",
+      "image_url": "https://i.pinimg.com/736x/6d/1a/e1/6d1ae12a3ea489fbccd31feb8a9c4db9.jpg",
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "references/pinterest/beauty/mirror.jpg",
+      "sha256": "0e15bbb3e4314bf251477e87e63b9d672cf6bef2db54be21bc214d81147cb8f8",
+      "category": [
+        "carousel_covers",
+        "lifestyle/mirror",
+        "product_scenes/beauty"
+      ],
+      "asset_type": [
+        "photographic_scene_reference"
+      ],
+      "priority": "SCENE_SECONDARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Selfie de espelho vertical, celular ao lado do rosto, corte acima da cintura.",
+      "lighting": "Luz doméstica suave, neutra/quente, granulação visível.",
+      "composition": "Rosto na metade superior, parede simples, robe preenchendo a base.",
+      "pose": "Sentada/frontal, uma mão segura o telefone.",
+      "environment": "Banheiro neutro.",
+      "why_selected": "Lógica de celular e fundo simples compatíveis com a capa enviada pelo usuário.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Aparência fotográfica observada; origem/câmera e ausência de IA não autenticadas.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": [
+        "Adaptar para 3:4 com espaço de headline; não copiar cabelo, rosto ou corpo da pessoa."
+      ]
+    },
+    {
+      "reference_id": "P02_VANITY",
+      "source": "Pinterest",
+      "source_url": "https://www.pinterest.com/pin/my-absolute-favorite--1759287346258436/",
+      "image_url": "https://i.pinimg.com/originals/29/21/3d/29213d9c13396c44559fb4bbbb04d211.jpg",
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "references/pinterest/beauty/vanity.jpg",
+      "sha256": "5db3f41a113f8f63abf177abfdaf9e15e8419883a33e3bc8ed3e537e1e068e4f",
+      "category": [
+        "carousel_cta",
+        "product_scenes/beauty",
+        "product_scenes/organization"
+      ],
+      "asset_type": [
+        "photographic_scene_reference"
+      ],
+      "priority": "SCENE_SECONDARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Vertical, câmera oblíqua ligeiramente acima da bancada.",
+      "lighting": "Lâmpadas de espelho e ambiente difuso.",
+      "composition": "Objetos em alturas diferentes sobre bandeja; reflexo cria profundidade.",
+      "pose": "Sem pessoa.",
+      "environment": "Penteadeira branca com rosa e objetos de uso diário.",
+      "why_selected": "Fundo fotográfico de fechamento e hierarquia de objetos; compatível com paleta Nina.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Aparência fotográfica observada; origem/câmera e ausência de IA não autenticadas.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": [
+        "Página do Pin retornou 403; vínculo Pin/imagem encontrado em busca de imagens e arquivo inspecionado.",
+        "Reduzir decoração e substituir cosméticos de marcas por produtos oficiais da campanha."
+      ]
+    },
+    {
+      "reference_id": "P03_GRWM",
+      "source": "Pinterest",
+      "source_url": "https://in.pinterest.com/pin/980307043884292108/",
+      "image_url": "https://i.pinimg.com/736x/09/0b/20/090b2076dd788fed6d5f84b8186727c9.jpg",
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "references/pinterest/beauty/grwm.jpg",
+      "sha256": "a0515e0d45ac39c66428f6789dd0e5588cafb90d7586ca18d2268e9c9fe1eceb",
+      "category": [
+        "product_scenes/beauty",
+        "compositions"
+      ],
+      "asset_type": [
+        "photographic_scene_reference"
+      ],
+      "priority": "SCENE_SECONDARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Vertical, oblíqua para baixo, bancada em diagonal.",
+      "lighting": "Lâmpadas quentes com ambiente mais frio.",
+      "composition": "Objetos de uso na frente, espelho ao lado, área de parede no alto.",
+      "pose": "Sem pessoa física; tela mostra tutorial.",
+      "environment": "Penteadeira com quarto refletido.",
+      "why_selected": "Organização vivida e camadas espaciais para produtos internos e Story de espelho.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Aparência fotográfica observada; origem/câmera e ausência de IA não autenticadas.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": [
+        "Não copiar vídeo, pessoa na tela, neon, marcas ou layout exato; retirar tablet na adaptação."
+      ]
+    },
+    {
+      "reference_id": "P04_MORNING",
+      "source": "Pinterest",
+      "source_url": "https://in.pinterest.com/pin/happy-young-woman-drinking-morning-coffee-in-kitchen-by-prostockstudios-photos-ad-ad-woman-young-happy-dri--678776975069075092/",
+      "image_url": "https://i.pinimg.com/736x/e7/aa/b4/e7aab4dc463d27f8391a46a0168c9598.jpg",
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "references/pinterest/morning/coffee.jpg",
+      "sha256": "f5b5583d328abf82615fd9bcaa8aecac666b4007d2444b5c25925bb894860f7e",
+      "category": [
+        "lifestyle/morning"
+      ],
+      "asset_type": [
+        "photographic_scene_reference"
+      ],
+      "priority": "SCENE_SECONDARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Plano aberto horizontal, câmera externa, altura aproximada do tronco.",
+      "lighting": "Janela lateral quente.",
+      "composition": "Pessoa à direita, cozinha e bancada à esquerda.",
+      "pose": "Em pé apoiada na bancada, caneca nas duas mãos.",
+      "environment": "Cozinha doméstica.",
+      "why_selected": "Ação simples e luz matinal compatíveis com a manhã já planejada.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Aparência fotográfica observada; origem/câmera e ausência de IA não autenticadas.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": [
+        "Prévia stock com watermark Envato, mantida intacta; somente direção, sem reutilização de pixels.",
+        "Não é selfie; adaptar como foto casual com temporizador em 9:16, sem copiar cenário rústico."
+      ]
+    },
+    {
+      "reference_id": "P05_AFTERNOON",
+      "source": "Pinterest",
+      "source_url": "https://in.pinterest.com/pin/young-tired-student-woman-study-online-at-home-with-laptop-in-the-morning-with-cup-of-coffee-young-student-woman-study--469148486180506981/",
+      "image_url": "https://i.pinimg.com/736x/c7/f2/06/c7f2064b7a16fc508c919da8a578e9a7.jpg",
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "references/pinterest/afternoon/desk.jpg",
+      "sha256": "a70317845056eff4cbe986b9f534784db89ee66916cc5ab0c03c974acd6a0de8",
+      "category": [
+        "lifestyle/afternoon"
+      ],
+      "asset_type": [
+        "photographic_scene_reference"
+      ],
+      "priority": "SCENE_SECONDARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Plano médio/aberto horizontal, câmera externa oblíqua à mesa.",
+      "lighting": "Janela lateral difusa.",
+      "composition": "Pessoa à direita, laptop e mesa diagonal à esquerda.",
+      "pose": "Sentada, mão apoiada na cabeça e outra na caneca.",
+      "environment": "Mesa de estudos com planta.",
+      "why_selected": "Ação de pausa e profundidade real de mesa úteis à rotina da tarde.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Aparência fotográfica observada; origem/câmera e ausência de IA não autenticadas.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": [
+        "Prévia atribuída a Maria Kovalevskaya/500px, watermark preservado; direção apenas.",
+        "Foto stock: reduzir pose de ensaio, adaptar 9:16; braço anatômico esquerdo da Nina mantém tatuagem."
+      ]
+    },
+    {
+      "reference_id": "P06_NIGHT",
+      "source": "Pinterest",
+      "source_url": "https://in.pinterest.com/pin/1030620696006905257/",
+      "image_url": "https://i.pinimg.com/736x/49/46/16/49461699264a7475f5b2ef0bfb3620d8.jpg",
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "references/pinterest/night/bed.jpg",
+      "sha256": "a73e11032e320ffb6ab46be83d95c5e50fdf876265a492aee993fb8c1f83453c",
+      "category": [
+        "lifestyle/night",
+        "lifestyle/bedroom"
+      ],
+      "asset_type": [
+        "photographic_scene_reference"
+      ],
+      "priority": "SCENE_SECONDARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Selfie próxima na altura do colchão; braço em primeiro plano ampliado.",
+      "lighting": "Luz ambiente clara, sem aparência noturna.",
+      "composition": "Rosto alto à esquerda, tecido ocupando base, quarto neutro.",
+      "pose": "Deitada, queixo apoiado na mão.",
+      "environment": "Cama com roupa clara.",
+      "why_selected": "Gestual relaxado e ponto de vista da cama; complementar ao exemplo noturno prioritário do usuário.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Aparência fotográfica observada; origem/câmera e ausência de IA não autenticadas.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": [
+        "Não transferir ampliação do braço nem proporções.",
+        "A referência é diurna: luz noturna e edredom rosa vêm dos exemplos do usuário; usar telefone apoiado/temporizador para reduzir risco."
+      ]
+    },
+    {
+      "reference_id": "U_STORY",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "data/brands/nina_v1/references/story_style_master.png",
+      "sha256": "79c39401b2c0120253825ef6238c570c5937fb3c52f164869d1a922c1c31a2e0",
+      "category": [
+        "product_story"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Celular vertical; observar enquadramento específico.",
+      "lighting": "Fotografia quente em mesa de madeira.",
+      "composition": "Produto central/inferior, headline branca acima, pills e box na base.",
+      "pose": "Sem pessoa.",
+      "environment": "Ambiente doméstico.",
+      "why_selected": "Paleta blush/creme, serifas e doodles; ignorar da série.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "U_VANITY",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "data/brands/nina_lifestyle_v1/references/vanity_mirror_skincare.png",
+      "sha256": "8f0155dd675d0a1134f0157a0a41c429c1b4aa64cb82b89912014669e295904d",
+      "category": [
+        "lifestyle/makeup"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Celular vertical; observar enquadramento específico.",
+      "lighting": "Luz interna neutra.",
+      "composition": "Espelho, rosto alto, bancada ocupada à frente.",
+      "pose": "Sentada com telefone e gesto casual.",
+      "environment": "Ambiente doméstico.",
+      "why_selected": "Objetos usados e enquadramento espontâneo.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "U_TOWEL",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "data/brands/nina_lifestyle_v1/references/night_towel_eye_patches.png",
+      "sha256": "d23b6e4df5afa990e5c00894231322a1e879c27c45f8f1e8706a94ec4eb3061e",
+      "category": [
+        "lifestyle/night"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Celular vertical; observar enquadramento específico.",
+      "lighting": "Luz baixa quente e luzinhas.",
+      "composition": "Selfie íntima com joelho e tigela em primeiro plano.",
+      "pose": "Toalha no cabelo, olhos fechados.",
+      "environment": "Ambiente doméstico.",
+      "why_selected": "Calma, textura doméstica e imperfeição.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "U_BED",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "data/brands/nina_lifestyle_v1/references/bed_plush_relax.png",
+      "sha256": "6c5167bc16128441f0e5c7063d59a50a2bc36efcee8d1b5369ae891ee681eabd",
+      "category": [
+        "lifestyle/bedroom"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Celular vertical; observar enquadramento específico.",
+      "lighting": "Ambiente noturno doméstico.",
+      "composition": "Quadro inclinado, rosto parcial, edredom rosa e pelúcias.",
+      "pose": "Deitada sob edredom.",
+      "environment": "Ambiente doméstico.",
+      "why_selected": "Conforto real e texto branco curto.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "U_FITNESS",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "data/brands/nina_lifestyle_v1/references/fitness_mirror_tumbler.png",
+      "sha256": "4db872d2d69400afe1671b26fc8e7c765b8d496c57458ac13b939e5c6c1f13e8",
+      "category": [
+        "lifestyle/gym"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Celular vertical; observar enquadramento específico.",
+      "lighting": "Luz interior neutra.",
+      "composition": "Close no espelho; telefone parcialmente cobre rosto.",
+      "pose": "Tumbler e fone, mão no telefone.",
+      "environment": "Ambiente doméstico.",
+      "why_selected": "Rotina fitness com uso plausível de objetos.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "U_TOPDOWN",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "data/brands/nina_lifestyle_v1/references/robe_topdown_selfcare.png",
+      "sha256": "d84a57737af89b84c7e0951c7484e8833eb29f128f77ad4b631ede49116baad5",
+      "category": [
+        "lifestyle/skincare"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Celular vertical; observar enquadramento específico.",
+      "lighting": "Luz difusa de banheiro.",
+      "composition": "Câmera alta, rosto cortado, bancada lateral.",
+      "pose": "Robe e bancada vista de cima.",
+      "environment": "Ambiente doméstico.",
+      "why_selected": "Texto pequeno e cena vivida, não copiar exagero de perspectiva.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "U_PEACE",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "data/brands/nina_lifestyle_v1/references/robe_mirror_peace.png",
+      "sha256": "5682945142ea123a86e33ad2659d97dfc5243fa74c52b2b0381bbeed3ede31a1",
+      "category": [
+        "lifestyle/mirror"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Celular vertical; observar enquadramento específico.",
+      "lighting": "Luz doméstica branca.",
+      "composition": "Espelho vertical, penteadeira cheia na base.",
+      "pose": "Robe e gesto de paz.",
+      "environment": "Ambiente doméstico.",
+      "why_selected": "Espontaneidade e reflexo fisicamente plausível.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "U_CLEANSER",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "data/brands/nina_lifestyle_v1/references/night_face_cleanser.png",
+      "sha256": "1bc0e8b404342b45314df4d859b8cc3906ad84f4702519733f3cf7e297c2f9cb",
+      "category": [
+        "lifestyle/skincare"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Celular vertical; observar enquadramento específico.",
+      "lighting": "Luz de banheiro.",
+      "composition": "Close inclinado, frasco no canto inferior.",
+      "pose": "Rosto com espuma e produto segurado.",
+      "environment": "Ambiente doméstico.",
+      "why_selected": "Ação cotidiana e horário discreto; não copiar tatuagens da pessoa.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "U_FEED_COVER",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "references/user/carousel/371960.png",
+      "sha256": "0f4a3001491294c059f8af8d7ff3eabaf9360aa9fd9c04e00bf0af44dc74f8f5",
+      "category": [
+        "carousel_covers"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Retrato de celular próximo; cover em espelho, interno demonstração.",
+      "lighting": "Luz doméstica quente/neutra.",
+      "composition": "Nina domina foto; serifas brancas, pill rosa, caixa branca arredondada e pequenos desenhos.",
+      "pose": "Selfie / uso de maquiagem.",
+      "environment": "Quarto real com profundidade.",
+      "why_selected": "Exemplos originais de feed fornecidos pelo usuário; autoridade de estilo, nunca de identidade corporal.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "U_FEED_INNER",
+      "source": "USER",
+      "source_url": null,
+      "image_url": null,
+      "date_collected": "2026-09-27T17:08:16.851588+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "references/user/carousel/371961.png",
+      "sha256": "bb99e8888856855f8c3b244a68bbeef0aa23e07292916b0b0749ccc89db9d8f6",
+      "category": [
+        "carousel_inner"
+      ],
+      "asset_type": [
+        "user_style_reference"
+      ],
+      "priority": "USER_PRIMARY",
+      "visual_style": "Fotografia doméstica/editorial feminina; ver análise específica.",
+      "camera": "Retrato de celular próximo; cover em espelho, interno demonstração.",
+      "lighting": "Luz doméstica quente/neutra.",
+      "composition": "Nina domina foto; serifas brancas, pill rosa, caixa branca arredondada e pequenos desenhos.",
+      "pose": "Selfie / uso de maquiagem.",
+      "environment": "Quarto real com profundidade.",
+      "why_selected": "Exemplos originais de feed fornecidos pelo usuário; autoridade de estilo, nunca de identidade corporal.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-09-27T17:08:16.851588+00:00",
+      "authenticity": "Exemplo enviado pelo usuário; autoridade de estilo, não prova de fotografia real.",
+      "usage": "Direção e consulta interna; não publicar nem copiar pixels, identidade, texto, marcas ou watermark.",
+      "limitations": []
+    },
+    {
+      "reference_id": "P07_SPA_MIRROR",
+      "source": "Pinterest",
+      "source_url": "https://www.pinterest.com/pin/cloud-spa-mirror-selfie-this-natural-light-bounce-is-unbeatable--904449537655502835/",
+      "image_url": "https://i.pinimg.com/736x/09/d8/58/09d858935bcc6ee187a94b9f6cbe8908.jpg",
+      "date_collected": "2026-10-07T18:26:25.773282+00:00",
+      "date_note": "Data de registro nesta biblioteca; não é data de publicação.",
+      "local_path": "output/daily_full_campaign_20261007_1518/references/scene/pinterest_spa_mirror.jpg",
+      "sha256": "2cfbbb914ca19bcbed2699443c07f8e9e369d099ae63d261859e7f5a5d0ec724",
+      "category": [
+        "carousel_covers",
+        "lifestyle/mirror",
+        "product_scenes/beauty"
+      ],
+      "asset_type": [
+        "photographic_scene_reference"
+      ],
+      "priority": "SCENE_SECONDARY",
+      "visual_style": "Fotografia doméstica minimalista de banheiro com espelho orgânico.",
+      "camera": "Selfie vertical de espelho com smartphone padrão e corpo acima da cintura.",
+      "lighting": "Luz natural clara com superfícies brancas e metais quentes.",
+      "composition": "Espelho orgânico central, pessoa alta no quadro e pia abaixo.",
+      "pose": "Em pé diante do espelho, telefone central.",
+      "environment": "Banheiro claro e minimalista.",
+      "why_selected": "Oferece física de espelho plausível e espaço visual para capa e Story de rotina.",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-10-07T18:26:25.773282+00:00",
+      "authenticity": "Aparência fotográfica observada; origem da câmera e ausência de IA não autenticadas.",
+      "usage": "Direção interna; não publicar nem copiar pessoa, roupa, ambiente exato ou pixels.",
+      "limitations": [
+        "A pessoa e a roupa não são referência da Nina; adaptar a paleta sem copiar o banheiro."
+      ]
+    },
+    {
+      "reference_id": "P_GYM_FLATLAY_20261012",
+      "source": "Pinterest",
+      "source_url": "https://in.pinterest.com/pin/pink-yoga-mat-sport-shoes-bottle-of-water-and-earphones-on-blue-wooden-background-sport-healthy-lifestyle-yoga--609182287082318652/",
+      "image_url": "https://i.pinimg.com/736x/44/14/ea/4414ea4b9c74d01213e40307915b965b.jpg",
+      "date_collected": "2026-10-12",
+      "path": "C:\\Users\\GAMER\\Documents\\SHOPEE AUTOMATION\\ai-commerce-content-factory\\output\\nina_gym_essentials_20261012\\references\\gym_flatlay.jpg",
+      "local_path": "output\\nina_gym_essentials_20261012\\references\\gym_flatlay.jpg",
+      "sha256": "c504d15b644ad2cd444e08c89b0895aae8fdbbc869d151250ca31685c0432d45",
+      "category": [
+        "product_scenes/fitness",
+        "carousel_cta"
+      ],
+      "camera": "Oblique close overhead product photography, natural scale.",
+      "lighting": "Soft directional daylight with small contact shadows.",
+      "composition": "Rolled mat and sports objects arranged diagonally; textures and negative space.",
+      "pose": "No person; objects lying naturally on a wooden surface.",
+      "environment": "Painted wooden tabletop.",
+      "why_selected": "Object hierarchy and material texture; adapt to the domestic blush/cream palette.",
+      "review_status": "VISUALLY_INSPECTED",
+      "visual_style": "Fitness still-life photography.",
+      "limitations": [
+        "Shutterstock watermark remains on internal reference; never copy watermark, photo pixels or products.",
+        "No viral-performance evidence.",
+        "Use warm wood/cream bedding rather than the original blue background."
+      ]
+    },
+    {
+      "reference_id": "P_NINA_TRAINING_BAG_20261014",
+      "source": "Pinterest",
+      "source_url": "https://www.pinterest.com/amrupund/",
+      "source_url_note": "Pinterest profile indexed with this image; exact individual Pin URL not recovered. Profile itself returned403 to text browser. CDN pixels retrieved and inspected.",
+      "image_url": "https://i.pinimg.com/736x/77/ab/d4/77abd40117f09df1152769807a0f7b13.jpg",
+      "local_path": "output/nina_training_bag_20261014_01/references/pinterest_gym_bag.jpg",
+      "sha256": "b267c811f70c2b743b9c6dc6233ef18bca75626409142afa4325f53e9a6faf71",
+      "date_collected": "2026-10-14",
+      "date_note": "Collection date, not publication date.",
+      "category": [
+        "carousel_covers",
+        "lifestyle/mirror",
+        "product_scenes/gym_bag"
+      ],
+      "review_status": "VISUALLY_INSPECTED",
+      "camera": "Vertical full-body mirror selfie; phone at face height.",
+      "lighting": "Diffuse natural domestic light inferred from broad wall/floor brightness; no EXIF/source position known.",
+      "composition": "Large mirror black edge left, white hall and wood floor, plant left, duffel at right side of body; large upper negative space.",
+      "pose": "Standing front, phone raised, free arm relaxed, shoulder strap supporting duffel.",
+      "environment": "Bright domestic hallway, white doors/paneling and floor strip transitions.",
+      "why_selected": "Compatible mirror casual style and physically supported gym bag, clear space for headline.",
+      "authenticity": "UNVERIFIED; appearance inspected, authorship/capture not authenticated.",
+      "what_to_keep": [
+        "standing front pose",
+        "mirror height/framing",
+        "hall and floor geometry",
+        "diffuse domestic light",
+        "strap hanging under gravity"
+      ],
+      "what_to_adapt": [
+        "person replaced with canonical Nina",
+        "Pinterest Nike bag replaced by exact Hang Loose bag",
+        "body follows canonical modest slim-to-average direction",
+        "variant poses remain in same hall"
+      ],
+      "what_not_to_copy": [
+        "original face/body/hair identity",
+        "Nike bag/logo",
+        "source watermark or source text"
+      ],
+      "nina_integration": "Two complementary canonical images; hair long dark brown, physical signs preserved; original model not identity authority.",
+      "product_integration": "Black Hang Loose exact front stripe, barrel form, paired pulls, handles and removable adjustable strap.",
+      "qa_requirements": [
+        "seven proportion checks",
+        "hands/wrist connections",
+        "strap tension and attachment points",
+        "product fidelity",
+        "camera/room line continuity",
+        "legible serif/blush overlays"
+      ],
+      "limitations": [
+        "phone occludes face partly",
+        "floor and wall surfaces reflect light but fixture/window position unknown",
+        "exact Pin URL unavailable"
+      ]
+    },
+    {
+      "reference_id": "P_NINA_JEWEL_SELFIE_20261015",
+      "source_url": "https://www.pinterest.com/pin/401735229263499338/",
+      "local_path": "output\\nina_accessories_20261015_01\\references\\pinterest_sun_selfie.jpg",
+      "camera": "Selfie direta vertical, rosto e colo; perspectiva próxima.",
+      "lighting": "Sol atrás/acima, flare e altas luzes presentes na referência.",
+      "composition": "Retrato íntimo em diagonal, colo e colares visíveis.",
+      "pose": "Rosto frontal, ombros levemente inclinados.",
+      "environment": "Exterior claro, fundo pouco resolvido.",
+      "why_selected": "Capa pessoal com destaque para acessórios.",
+      "limitations": [
+        "Não copiar pessoa, piercings, cabelo ou idade da referência.",
+        "Adaptar para interior junto à janela e distância plausível; flare não obrigatório."
+      ],
+      "source": "Pinterest",
+      "date_collected": "2026-10-16T02:29:19.729978+00:00",
+      "sha256": "12342ce6db72442e3c0692fc34463ffa6f88032e44ac2b69c2179bd6e6add1d6",
+      "review_status": "VISUALLY_INSPECTED",
+      "category": [
+        "jewelry",
+        "carousel"
+      ],
+      "authenticity": "UNKNOWN; aparência observada, sem autenticação de captura",
+      "usage": "Somente direção interna; sem cópia de pixels, identidade ou watermark"
+    },
+    {
+      "reference_id": "P_NINA_JEWEL_SATIN_20261015",
+      "source_url": "https://in.pinterest.com/pin/718887159245934750/",
+      "local_path": "output\\nina_accessories_20261015_01\\references\\pinterest_satin_flatlay.jpg",
+      "camera": "Vista próxima de cima em leve diagonal.",
+      "lighting": "Janela lateral suave; sombras de dobras e reflexos alongados.",
+      "composition": "Joias sobre tecido acetinado blush com espaço entre peças.",
+      "pose": "Objetos deitados com correntes apoiadas; sem modelo.",
+      "environment": "Tecido sobre superfície de apoio.",
+      "why_selected": "Closes coerentes com paleta Nina e leitura dos itens.",
+      "limitations": [
+        "Não copiar joias da referência como produtos selecionados.",
+        "Material anunciado e autenticidade não são provados por imagem."
+      ],
+      "source": "Pinterest",
+      "date_collected": "2026-10-16T02:29:19.970078+00:00",
+      "sha256": "f5a29cb3cf9c6a301dbb911e0dd34c363f383732ec08e0ed1abd8b9cb978cada",
+      "review_status": "VISUALLY_INSPECTED",
+      "category": [
+        "jewelry",
+        "carousel"
+      ],
+      "authenticity": "UNKNOWN; aparência observada, sem autenticação de captura",
+      "usage": "Somente direção interna; sem cópia de pixels, identidade ou watermark"
+    },
+    {
+      "reference_id": "P_NINA_JEWEL_NECK_20261015",
+      "source_url": "https://dk.pinterest.com/pin/312578030370240490/",
+      "local_path": "output\\nina_accessories_20261015_01\\references\\pinterest_necklace_close.jpg",
+      "camera": "Close diagonal de colo e pingente.",
+      "lighting": "Luz lateral forte com pontos especulares no cristal e metal.",
+      "composition": "Pingente protagonista apoiado no tecido, cabelo na margem.",
+      "pose": "Recorte de corpo, sem rosto.",
+      "environment": "Roupa escura como fundo.",
+      "why_selected": "Direção de close de acessórios usados no corpo.",
+      "limitations": [
+        "Não copiar watermark, cristal, marca ou tecido preto como invariantes."
+      ],
+      "source": "Pinterest",
+      "date_collected": "2026-10-16T02:29:20.163238+00:00",
+      "sha256": "085ea0ce47785dff6492d1cc706a45c6892f7a53bd03691192d7d24550288541",
+      "review_status": "VISUALLY_INSPECTED",
+      "category": [
+        "jewelry",
+        "carousel"
+      ],
+      "authenticity": "UNKNOWN; aparência observada, sem autenticação de captura",
+      "usage": "Somente direção interna; sem cópia de pixels, identidade ou watermark"
+    },
+    {
+      "reference_id": "U_NINA_COVER_20261019",
+      "source": "User",
+      "source_url": null,
+      "date_collected": "2026-10-19T14:59:20.874630+00:00",
+      "local_path": "output\\nina_caseiro_post_20261019_01\\references\\approved_cover.png",
+      "sha256": "c5de1b5ac6eb12590a1e082600fa8b3aa07c5ebcbfc6c80a7e42d60aa2680042",
+      "category": [
+        "carousel_covers"
+      ],
+      "priority": "USER_APPROVED_PHOTO",
+      "review_status": "VISUALLY_INSPECTED",
+      "authenticity": "User-supplied image; source camera/authorship not authenticated.",
+      "analysis": {
+        "keep": "entire photograph; graphic edits only",
+        "adapt": "text and small profile elements",
+        "not_copy": "not a new identity source"
+      }
+    },
+    {
+      "reference_id": "U_NINA_CASEIRO_POV_20261019",
+      "source": "User",
+      "source_url": null,
+      "date_collected": "2026-10-19T14:59:20.881759+00:00",
+      "local_path": "output\\nina_caseiro_post_20261019_01\\references\\casual_capture.png",
+      "sha256": "60bb4e2f3ba08195ce1289d177b14e53ea19778931524a4b9cf5b6a4fc366374",
+      "category": [
+        "product_scenes/casual",
+        "compositions/POV"
+      ],
+      "priority": "USER_CAPTURE_STYLE",
+      "review_status": "VISUALLY_INSPECTED",
+      "authenticity": "User-supplied image; source camera/authorship not authenticated.",
+      "analysis": {
+        "VISUAL_DNA": "Ordinary personal snapshot with natural textures, no catalog polish",
+        "COMPOSITION_DNA": "POV downwards, diagonal/off-center product, modest empty ground",
+        "LIGHTING_DNA": "Broad ambient light, subdued highlights and contact shadows",
+        "CAMERA_DNA": "Reachable handheld smartphone position, no extreme wide angle or studio shallow focus",
+        "POSE_DNA": "Product context and use, no posed model needed for these five scenes",
+        "ENVIRONMENT_DNA": "Ordinary home surfaces, black bedroom bedding and white dresser",
+        "TEXT_PLACEMENT_DNA": "Current photo has no text; profile brand supplies restrained serif/blush overlays",
+        "LIFESTYLE_DNA": "Personal wishlist discovery, no claim of purchase or testing"
+      }
+    },
+    {
+      "reference_id": "P_NINA_TRIO_BOB_20261112",
+      "source": "Pinterest",
+      "source_url": "https://pl.pinterest.com/pin/67202219432401056/",
+      "image_url": "https://i.pinimg.com/originals/80/52/a5/8052a59c6be27cc185ec2ee77c381cca.jpg",
+      "date_collected": "2026-11-12",
+      "date_note": "Collection date, not publication date",
+      "local_path": "output/nina_trio_marcas_20261112_01/references/espelho_pijama_bob.jpg",
+      "category": [
+        "carousel_covers",
+        "beauty",
+        "mirror_selfie"
+      ],
+      "asset_type": [
+        "photographic_scene_reference"
+      ],
+      "priority": "SCENE_SECONDARY",
+      "visual_style": "Casual phone photo in a neutral bedroom; blush pajama, single roller, daylight",
+      "camera": "Vertical close-medium mirror selfie, phone at face height, observed close crop; EXIF unknown",
+      "lighting": "Window visible camera right; diffuse side daylight and room fill; no source specs claimed",
+      "composition": "Seated three-quarter upper body in middle-right, bed left, window right, phone in front of face",
+      "pose": "Three-quarter side, one elbow bent holding phone near face, other arm relaxed and mostly cropped",
+      "environment": "Bedroom with cream duvet, taupe upholstered headboard and right-hand window/radiator",
+      "why_selected": "The hair roller introduces beauty/arrume-se comigo without showing the three products before the reveal; pastel styling matches user DNA",
+      "review_status": "VISUALLY_INSPECTED",
+      "reviewed_at": "2026-11-12",
+      "authenticity": "Pixels inspected; subject identity, authorship and capture settings not authenticated",
+      "usage": "Direction only: do not publish source pixels, duplicate the person, labels or logos",
+      "limitations": [
+        "Most face hidden; slight lateral phone adjustment requested for Nina recognition",
+        "Adapt 459:590 source to portrait feed 4:5 without stretching or widening the person"
+      ],
+      "sha256": "a9a42db52bc4c89f52cc19869810323d198a5e64c85385d963217f88c827a59b",
+      "dimensions": [
+        459,
+        590
+      ]
+    }
+  ],
+  "identity_authorities": [
+    "data/personas/nina_v1/references/persona_master.png",
+    "data/personas/nina_v1/references/nina_360_master.png"
+  ],
+  "product_authority": "Imagem oficial Shopee do item validado; Pinterest não define produto.",
+  "legacy_candidates": "data/research/lifestyle_story/pinterest_references.json: links históricos não selecionados sem inspeção.",
+  "indexes": {
+    "carousel_covers": [
+      "P01_MIRROR",
+      "U_FEED_COVER",
+      "P07_SPA_MIRROR"
+    ],
+    "carousel_cta": [
+      "P02_VANITY"
+    ],
+    "carousel_inner": [
+      "U_FEED_INNER"
+    ],
+    "compositions": [
+      "P03_GRWM"
+    ],
+    "lifestyle/afternoon": [
+      "P05_AFTERNOON"
+    ],
+    "lifestyle/bedroom": [
+      "P06_NIGHT",
+      "U_BED"
+    ],
+    "lifestyle/gym": [
+      "U_FITNESS"
+    ],
+    "lifestyle/makeup": [
+      "U_VANITY"
+    ],
+    "lifestyle/mirror": [
+      "P01_MIRROR",
+      "U_PEACE",
+      "P07_SPA_MIRROR"
+    ],
+    "lifestyle/morning": [
+      "P04_MORNING"
+    ],
+    "lifestyle/night": [
+      "P06_NIGHT",
+      "U_TOWEL"
+    ],
+    "lifestyle/skincare": [
+      "U_TOPDOWN",
+      "U_CLEANSER"
+    ],
+    "product_scenes/beauty": [
+      "P01_MIRROR",
+      "P02_VANITY",
+      "P03_GRWM",
+      "P07_SPA_MIRROR"
+    ],
+    "product_scenes/organization": [
+      "P02_VANITY"
+    ],
+    "product_story": [
+      "U_STORY"
+    ]
+  }
+}

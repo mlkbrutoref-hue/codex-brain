@@ -1,0 +1,12 @@
+{
+  "classification": "PRIVATE_UNTIL_ALL_BLIND_SCORES_ARE_LOCKED",
+  "execution_order": ["E01-R01", "E01-R02", "E01-R03", "E01-R04"],
+  "runs": [
+    {"candidate_id": "E01-R01", "block": 1, "condition": "ATOMIC", "prompt": "prompts/atomic.txt", "output": "outputs/E01-R01.mp4"},
+    {"candidate_id": "E01-R02", "block": 1, "condition": "MULTI_STEP", "prompt": "prompts/multistep.txt", "output": "outputs/E01-R02.mp4"},
+    {"candidate_id": "E01-R03", "block": 2, "condition": "MULTI_STEP", "prompt": "prompts/multistep.txt", "output": "outputs/E01-R03.mp4"},
+    {"candidate_id": "E01-R04", "block": 2, "condition": "ATOMIC", "prompt": "prompts/atomic.txt", "output": "outputs/E01-R04.mp4"}
+  ],
+  "unblind_rule": "Do not open or disclose this file to the evaluator until all four scorecards are complete, signed and hash-locked."
+}
+

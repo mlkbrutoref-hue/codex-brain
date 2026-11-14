@@ -1,0 +1,15 @@
+{
+  "handoff_transport": "SENT",
+  "delivery_status": "FAILED_NO_ARTIFACTS",
+  "fallback": "PREPARED",
+  "health_check": "healthy=true",
+  "branch": "antigravity/performance-learning",
+  "worktree": "output/worktrees/antigravity-performance",
+  "attempts": [
+    {"task_id":"8813f275-8430-49f1-94a5-27d4887931b9","bridge_status":"completed","result":"","files_created":0},
+    {"task_id":"2f9c857c-658d-43c8-8e95-be5f999110c9","bridge_status":"completed","result":"","files_created":0}
+  ],
+  "merge_performed": false,
+  "meaning": "Bridge completion is not implementation success. Both returned empty result and no performance code/tests/docs. Cause unknown; do not claim analytics is implemented.",
+  "manual_prompt": "Leia docs/handoffs/antigravity_performance_tracker.md e docs/handoffs/antigravity_performance_request.txt na árvore principal. Execute o Prompt exato de execução do handoff exclusivamente no worktree output/worktrees/antigravity-performance, branch antigravity/performance-learning. Implemente, teste e documente app/performance, tests/performance e docs/performance; não altere outros arquivos, não faça commit nem merge. Entregue assinaturas públicas, arquivos e resultados reais dos testes. Se não conseguir executar, informe o erro concreto."
+}

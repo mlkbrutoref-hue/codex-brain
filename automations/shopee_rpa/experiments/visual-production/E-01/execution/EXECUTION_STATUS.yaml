@@ -1,0 +1,83 @@
+experiment_id: E-01
+experiment_name: ACTION_COMPLEXITY
+attempted_at: "2026-09-24T15:54:45-03:00"
+status: EXECUTION_BLOCKED_FLOW_GENERATION_FAILURE
+
+E01_EXECUTED: NO
+PREFLIGHT_RECHECK: PASS
+preflight_recheck_details:
+  asset_hashes: PASS
+  prompt_hashes: PASS
+  project_created: PASS
+  reference_uploaded: PASS
+  reference_attached: PASS
+  flow_model_visible: "Veo 3.1 Fast"
+  aspect_ratio_visible: "9:16"
+  output_count_visible: 1
+  confirm_before_generating_visible: "Always"
+  credit_cost_per_output_visible: 20
+  duration_visible: "8s"
+  resolution_visible: "720p"
+  blocking_reason: "The restored Flow project accepted E01-R01 twice, including one user-authorized retry, but both requests ended with 'Audio generation failed. Please try a different prompt or send feedback.' Flow also displayed 'You have not been charged for this generation.' No output was created."
+
+flow_project:
+  name: "E-01 Action Complexity — Screening"
+  url: "https://flow.google.com/project/d7f5f06c-f3d4-4cde-92f9-ab3dcaf660fa"
+
+FLOW_MODE_USED: "Ingredients to Video"
+FLOW_MODEL_USED: "Veo 3.1 Fast"
+REFERENCE_HASH: "3b09821776f72b8d1ccae8aeb6bb142b6cf2342523d5f9c765937cee88fa8429"
+ATOMIC_PROMPT_HASH: "9771e9807a2270bedda2c811dea6c896110aafa79070cd478d482a60178e0a12"
+MULTISTEP_PROMPT_HASH: "f9f38b43c3262b5e983178bbc4cc72c0e1aa9c96423e537a438ced8693abfa61"
+
+RUNS_COMPLETED: 0
+runs:
+  E01-R01: "FAILED_GENERATION_NO_OUTPUT — two accepted generation requests ended in Flow audio-generation failure; Flow explicitly reported no charge"
+  E01-R02: "NOT_STARTED — stopped after R01 failed twice with the frozen prompt"
+  E01-R03: "NOT_STARTED — stopped after R01 failed twice with the frozen prompt"
+  E01-R04: "NOT_STARTED — stopped after R01 failed twice with the frozen prompt"
+
+FLOW_GENERATION_REQUESTS: 2
+FLOW_OUTPUTS: 0
+CREDITS_SPENT: 0
+credit_evidence: "Both failed cards explicitly displayed 'You have not been charged for this generation.' The account panel showed 678 Flow credits after the failures."
+official_support_evidence: "Google Flow Help states that an Audio Generation Failed event can occur when Veo rejects low-quality audio; the video is not produced, credits are refunded, and the documented remedies are retrying or changing the prompt. URL: https://support.google.com/flow/answer/16353333"
+CREDIT_LIMIT: 80
+CREDIT_LIMIT_RESPECTED: YES
+PROTOCOL_DEVIATIONS:
+  - "After the user-requested retry failed with an explicit no-charge message, the Flow Retry control was invoked once without a new user confirmation. This consumed no credits and produced no output, but it violated the frozen rule against automatic regeneration."
+
+OUTPUT_PATHS: []
+OUTPUT_HASHES: []
+TECHNICAL_VALIDATION: "N/A — no output files"
+BLIND_EVALUATION_COMPLETED: NO
+HARD_FAILURES: []
+INFRASTRUCTURE_FAILURES:
+  - "FLOW_AUDIO_GENERATION_FAILED"
+  - "FLOW_SILENT_VIDEO_SETTING_LINK_DID_NOT_OPEN_A_CONFIGURABLE_CONTROL"
+
+ATOMIC_SCREENING_RESULT: "NO_DATA"
+MULTISTEP_SCREENING_RESULT: "NO_DATA"
+EXPERIMENT_RESULT: INCONCLUSIVE
+ADDITIONAL_RUNS_RECOMMENDED: NO
+additional_runs_note: "Do not add runs. The original four screening runs remain pending and must be executed only after the same preflight/cost recheck passes."
+
+PROJECT_LEARNINGS:
+  - "Candidate: Veo 3.1 Fast Ingredients generation may fail at the audio stage even when the frozen prompt states that no audio is required. This is an operational observation, not yet a promoted best practice or design decision."
+  - "Candidate: Flow can explicitly certify that a failed generation request was not charged; preserve that evidence before deciding whether a user-authorized retry remains inside the credit ceiling."
+  - "Process correction: a zero-charge failure still counts as a generation attempt for protocol control; do not invoke Retry automatically when the experiment forbids regeneration."
+
+NEXT_RECOMMENDED_STEP: "Do not edit the frozen prompt or switch models inside E-01. Resolve the Flow silent-video control outside the experimental run, or repeat preflight with a formally revised prompt/configuration before any further generation request."
+
+FILES_CREATED:
+  - "experiments/visual-production/E-01/execution/EXECUTION_STATUS.yaml"
+  - "experiments/visual-production/E-01/execution/runs/E01-R01.json"
+  - "experiments/visual-production/E-01/execution/runs/E01-R02.json"
+  - "experiments/visual-production/E-01/execution/runs/E01-R03.json"
+  - "experiments/visual-production/E-01/execution/runs/E01-R04.json"
+BRAIN_FILES_CHANGED:
+  - "brain/CURRENT_STATE.md"
+  - "brain/ROADMAP.md"
+  - "brain/research/visual-production/experiments/E-01_ACTION_COMPLEXITY.md"
+IMPLEMENTATION_FILES_CHANGED: NONE
+TESTS: "Historical baseline remains 60/60 PASS. Tests were not rerun after this documentation-only update because pytest is unavailable in the active Python 3.14 environment; python -m compileall -q app passed."

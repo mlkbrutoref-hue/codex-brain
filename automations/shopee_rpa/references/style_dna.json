@@ -1,0 +1,24 @@
+{
+  "analyzed_at": "2026-09-27T17:08:16.851588+00:00",
+  "user_references": [
+    "U_STORY",
+    "U_VANITY",
+    "U_TOWEL",
+    "U_BED",
+    "U_FITNESS",
+    "U_TOPDOWN",
+    "U_PEACE",
+    "U_CLEANSER",
+    "U_FEED_COVER",
+    "U_FEED_INNER"
+  ],
+  "scope_note": "Analisados 8 exemplos canônicos e 2 exemplos do feed. Não alegamos revisão integral dos 61 arquivos.",
+  "VISUAL_DNA": "Fotografia doméstica com textura, blush/creme/madeira; peças comerciais com serifas brancas e acentos rosas, lifestyle discreto.",
+  "COMPOSITION_DNA": "Feed: pessoa ou produto grande, profundidade doméstica e espaços para copy. Story produto: hero centro/inferior. Lifestyle: cortes casuais e objetos vividos.",
+  "LIGHTING_DNA": "Janela difusa de dia; lâmpadas quentes à noite; preservar sombras naturais e variação doméstica, sem pele plastificada.",
+  "CAMERA_DNA": "Celular plausível, espelho coerente ou temporizador declarado; sem ultra-wide excessivo, sem rosto/braço ampliado nem torso comprimido.",
+  "POSE_DNA": "Gestos de uso e descanso, mão no telefone/caneca ou apoio simples; anatomia natural, sem impor corpo da referência externa.",
+  "ENVIRONMENT_DNA": "Quarto, banheiro/penteadeira, cozinha e mesa com sinais de uso; rosa como detalhe, não cenário artificial totalmente rosa.",
+  "TEXT_PLACEMENT_DNA": "Produto/feed: serif branca, pill blush, subheadline, box claro, doodles pequenos fora de rosto/produto. Lifestyle: frase curta/horário, sem estrutura de anúncio. O selo da série não é obrigatório e é omitido nos Stories.",
+  "LIFESTYLE_DNA": "Sensação de momento cotidiano fotografado; roupa confortável, pequenas assimetrias e objetos afetivos; Nina sempre pelas duas referências canônicas."
+}

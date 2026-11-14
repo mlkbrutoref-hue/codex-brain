@@ -1,0 +1,131 @@
+{
+  "product": "Escova de Limpeza Elétrica Portátil 12 em 1 com Cabo Epsilon Preto",
+  "product_provider": "LIVE",
+  "product_score": {
+    "visual_proof": {"score": 8, "max": 25, "reason": "Há imagem oficial, mas apresentação estática não comprova funcionamento nem resultado visual."},
+    "problem_clarity": {"score": 16, "max": 20, "reason": "A finalidade de limpeza aparece no título oficial, sem superfície ou resultado específico."},
+    "curiosity": {"score": 13, "max": 15, "reason": "A descrição 12 em 1 no título cria curiosidade, sem detalhar acessórios ausentes."},
+    "audience_breadth": {"score": 8, "max": 10, "reason": "A categoria de limpeza é compreensível para público amplo."},
+    "compressibility": {"score": 10, "max": 10, "reason": "O produto pode ser apresentado com clareza em um único take curto."},
+    "originality": {"score": 8, "max": 10, "reason": "A execução pode usar enquadramento e atuação próprios da Nina."},
+    "reliability": {"score": 7, "max": 10, "reason": "Registro LIVE oficial e atual com identidade, imagem e dados comerciais; faltam descrição e atributos técnicos."},
+    "total": 70
+  },
+  "reliability_status": "PASS",
+  "decision": "RESEARCH_REQUIRED",
+  "recommend_reel": false,
+  "profile_coherence_status": "FAIL",
+  "visual_proof_basis": "NONE",
+  "flow_prompt_ready": false,
+  "research_required": ["Confirmar em referência oficial a operação visual do produto e o resultado que pode ser mostrado."],
+  "selected_format": "ACHADINHO_RAPIDO",
+  "format_reasoning": "Rascunho narrativo de problema e solução; a aprovação depende de confirmar a demonstração e o payoff visual.",
+  "video_duration_target": "30–45 s",
+  "flow_take_duration_target": "5–10 s",
+  "scene_count": 5,
+  "multi_take_justification": "Cinco takes sustentam problema, descoberta, demonstração, payoff e CTA; cada bloco avança o argumento e respeita a duração curta de geração do Flow.",
+  "hook_type": "PERGUNTA",
+  "hook": "Tem cantinho da casa que dá trabalho demais?",
+  "script_structure": [
+    {"beat": "HOOK", "purpose": "Abrir com uma dor cotidiana reconhecível."},
+    {"beat": "IDENTIFICACAO", "purpose": "Dar contexto suficiente para a pessoa se reconhecer."},
+    {"beat": "DESCOBERTA", "purpose": "Revelar o produto como achado, sem interromper a narrativa."},
+    {"beat": "DEMONSTRACAO", "purpose": "Mostrar operação confirmada em etapas; bloqueado até pesquisa."},
+    {"beat": "PAYOFF", "purpose": "Comparar o resultado no mesmo enquadramento; bloqueado até pesquisa."},
+    {"beat": "CTA", "purpose": "Encerrar com uma única ação."}
+  ],
+  "script_word_count": 85,
+  "final_script": "Tem cantinho da casa que dá trabalho demais? Então presta atenção neste achado. O anúncio identifica este modelo como escova de limpeza elétrica 12 em 1. A história começa mostrando o problema de perto, revela o produto, acompanha a ação e compara o resultado no mesmo enquadramento. Como o funcionamento e o resultado deste modelo ainda não foram confirmados, essa demonstração continua bloqueada para pesquisa. Quando a prova estiver validada, o vídeo termina com o resultado e uma única ação: quer o link? Comenta QUERO.",
+  "scene_plan": [
+    {
+      "scene": 1,
+      "timing": "0–6 s",
+      "narrative_role": "HOOK_E_IDENTIFICACAO",
+      "action": "Mostrar um problema doméstico reconhecível ainda a confirmar; Nina reage ao contexto, sem apresentar o produto como catálogo.",
+      "framing": "Vertical 9:16, detalhe do problema e reação curta de Nina.",
+      "environment_light": "Ambiente doméstico original e neutro, luz natural lateral suave, estética UGC fotorealista.",
+      "audio_speech": "Tem cantinho da casa que dá trabalho demais?",
+      "flow_prompt": "",
+      "fact_keys": []
+    },
+    {
+      "scene": 2,
+      "timing": "6–13 s",
+      "narrative_role": "DESCOBERTA_DO_PRODUTO",
+      "action": "Revelar o produto exato da referência oficial em close e conectá-lo ao problema.",
+      "framing": "Close funcional; produto domina o quadro e Nina permanece como curadora.",
+      "environment_light": "Mesmo ambiente e continuidade de luz natural.",
+      "audio_speech": "Então presta atenção neste achado. O anúncio identifica este modelo como escova de limpeza elétrica 12 em 1.",
+      "flow_prompt": "",
+      "fact_keys": ["shopee_api_product_title"]
+    },
+    {
+      "scene": 3,
+      "timing": "13–23 s",
+      "narrative_role": "DEMONSTRACAO",
+      "action": "BLOQUEADO: definir a ação somente depois de confirmar operação e acessórios deste modelo.",
+      "framing": "Close nas mãos e no mecanismo, com continuidade espacial.",
+      "environment_light": "Mesmo ambiente; leitura clara do produto.",
+      "audio_speech": "Explicação da ação será escrita após confirmação factual.",
+      "flow_prompt": "",
+      "fact_keys": []
+    },
+    {
+      "scene": 4,
+      "timing": "23–34 s",
+      "narrative_role": "PAYOFF_E_RESULTADO",
+      "action": "BLOQUEADO: comparar o resultado no mesmo enquadramento sem inventar desempenho.",
+      "framing": "Mesmo ângulo do problema inicial para comparação legível.",
+      "environment_light": "Continuidade visual e luz natural.",
+      "audio_speech": "Benefício e objeção serão definidos a partir da prova confirmada.",
+      "flow_prompt": "",
+      "fact_keys": []
+    },
+    {
+      "scene": 5,
+      "timing": "34–42 s",
+      "narrative_role": "CTA",
+      "action": "Nina retoma o produto e encerra olhando para a câmera; o resultado permanece visível.",
+      "framing": "Plano próximo com produto dominante.",
+      "environment_light": "Mesmo ambiente e continuidade de luz.",
+      "audio_speech": "Quer o link? Comenta QUERO.",
+      "flow_prompt": "",
+      "fact_keys": []
+    }
+  ],
+  "on_screen_text_start": "ESCOVA ELÉTRICA 12 EM 1?",
+  "on_screen_text_end": "COMENTA QUERO",
+  "cta": "Quer o link? Comenta QUERO.",
+  "caption": "Escova de limpeza elétrica 12 em 1: um achado para conhecer.\n\nQuer o link? Comenta QUERO.\n\n#escovaeletrica #escovadelimpeza #limpeza #utilidadesdomesticas #achadinhos #ninaachadinhos",
+  "hashtags": ["#escovaeletrica", "#escovadelimpeza", "#limpeza", "#utilidadesdomesticas", "#achadinhos", "#ninaachadinhos"],
+  "cover_concept": {
+    "cover_title": "ESCOVA 12 EM 1?",
+    "cover_subtitle": "OLHA ESTE ACHADO",
+    "product_position": "Produto central em close, ocupando aproximadamente dois terços da capa.",
+    "nina_position": "Nina lateral em segundo plano, apontando sem cobrir o produto."
+  },
+  "flow_prompt": "",
+  "negative_prompt": "CGI, 3D render, plastic skin, doll appearance, deformed hands, extra fingers, product deformation, floating objects, impossible motion, AI-looking background, unreadable text, logos not present in reference, invented buttons, invented accessories, invented rotation, unverified before-and-after result, exaggerated cleaning performance",
+  "confirmed_facts": {
+    "shopee_api_product_title": "Escova de Limpeza Elétrica Portátil 12 em 1 com Cabo Epsilon Preto",
+    "shopee_api_price": "Preço atual de R$ 72.90",
+    "shopee_api_discount": "Desconto de 27% ativo no anúncio",
+    "shopee_api_sales": "49 unidades vendidas",
+    "shopee_api_rating": "Avaliação média de 4.9 estrelas"
+  },
+  "facts_used": ["shopee_api_product_title"],
+  "fact_ledger": [{
+    "claim": "O título oficial identifica o produto como Escova de Limpeza Elétrica Portátil 12 em 1 com Cabo Epsilon Preto.",
+    "source_key": "shopee_api_product_title",
+    "used_in": ["product", "final_script", "scene_plan", "caption", "cover_concept"]
+  }],
+  "unknown_facts": ["detalhes dos acessórios", "mecanismo de operação", "desempenho de limpeza"],
+  "fact_safety": "PASS",
+  "nina_safety": "PASS",
+  "posts_manual": true,
+  "carousels_manual": true,
+  "reels_creative_skill_ready": true,
+  "reels_pipeline_integrated": true,
+  "flow_integrated_with_skill": false,
+  "flow_generations": 0
+}

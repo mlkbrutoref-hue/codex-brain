@@ -1,0 +1,96 @@
+{
+  "scope": "OFFLINE_ONLY; synthetic reproductions are not Shopee behavior",
+  "unrelated_single_add_match": [
+    "Mochila esperada"
+  ],
+  "unreviewed_preview": {
+    "visual_preview_reviewed": false,
+    "media_matches": true,
+    "validation": {
+      "video_selected": true,
+      "caption_exact": true,
+      "hashtags_present": true,
+      "product_linked": true,
+      "no_visible_error": true,
+      "automatic_sharing_disabled": true,
+      "caption_overlay_closed": true,
+      "post_enabled": true
+    }
+  },
+  "previous_attempt_new_job": {
+    "actions_before_block": [
+      "select_media",
+      "fill_caption",
+      "select_product",
+      "ensure_shopee_only"
+    ],
+    "error": "PREVIOUS_PUBLISH_ATTEMPT_REQUIRES_RECONCILIATION"
+  },
+  "source_sha256": {
+    "app/mobile/shopee_video.py": "ca4d2aebba18fd3851f60994e4d1ac4b4174f7bab67dd42f5bfca8db389867b2",
+    "app/mobile/discovery.py": "ecaf29588c6cdd45a3f1eb4519cd9e0d5de61d7a106ea1398cf23c88f0e44fab",
+    "scripts/publish_shopee_android.py": "ba62f12ef5a0c5c9b5000e66a859c0d0aebcbc02dd560b3af610ccd80b30f496",
+    "scripts/probe_shopee_android.py": "85562ec64e84034521f4dd69b1ef55850eb4ff74b64b8476ce781a35df6e42c4",
+    "scripts/research_shopee_hashtags.py": "eaa10de270e75aa87ca7d7e6ddb89e3ed14a0135c90119560ea13953a0d6d963",
+    "scripts/prepare_shopee_android_resume.py": "067c111a81db85220c4cd93aa235aa11903ece26f2d4bfe19985c0cfb70acaa0",
+    "app/providers/shopee/client.py": "b7f0b7b3a216401b02483769af24e6e4acdfbd913629eabf5dedad8a64d6ce46",
+    "app/providers/shopee/live.py": "7e16c6181bab43e98d95d5f7a734de6f5c4acabd484e94341a8e891c4162fa62",
+    "app/providers/shopee/queries.py": "fb17fbf156fa810f8da8094e9ad66aa445a6a8242560484dfee69c92965f87fd",
+    "scripts/execute_kbeauty_research.py": "d624c9bee2dbc87a3fc7ae4e77232be8f53ba740c4e76b771465354add047a52",
+    "scripts/research_bolsas_shopee.py": "8c9ab237d7f4ee76be36c85fa66b90eb9233990d5df1d1e491049fbd965844c3",
+    "app/validation/media.py": "2342334da8df533c1661255e2e21a35a94da78175bc8cc2c9c7a63cf1d9a0182",
+    "app/platforms/shopee_video/exporter.py": "d9a820fab737e6af90aea8b5cd4d4170d9e08575e89bf9084bfd4bc8977c8a63",
+    "app/publishing/assisted.py": "9d39c479d52a7205f3924cd945228463443e8cb8f57523c1e23d815d4859f62f",
+    "tests/publishing/test_shopee_android.py": "d3c4c5ee46954831f8e768b68682b11df5cc289ec35d8b1f197335080e809bfa",
+    "tests/publishing/test_assisted.py": "0ccca09cb7412a93579b2cd80c7564c0c800a695c426557deeeed975eee0ccb0"
+  },
+  "recorded_attempt": {
+    "job_id": "shopee_android_usb_20261006_01",
+    "state": "ERROR",
+    "publish_attempted": true,
+    "profile_return_observed": true,
+    "publication_confirmation": null,
+    "validation": {
+      "video_selected": true,
+      "caption_exact": true,
+      "hashtags_present": true,
+      "product_linked": true,
+      "no_visible_error": true,
+      "automatic_sharing_disabled": true,
+      "caption_overlay_closed": true,
+      "post_enabled": true
+    },
+    "last_error": "PUBLICATION_UNCONFIRMED_DO_NOT_REPOST",
+    "session_sha256": "065e78a8878f00baf175edbdef4cce00fd9c283493bb63d85e2407673a1b62e8"
+  },
+  "user_reported_success": "User stated 'Ok mano deu tudo'; external post ID and exact content not independently reconciled.",
+  "media_probe": {
+    "status": "OBSERVED_LOCAL_FILE",
+    "sha256": "c4d7bdea9d2ff771a76444bf3877cfef04887521aa6ce6e7c31ce74912621561",
+    "metadata": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 1280,
+          "avg_frame_rate": "25/1",
+          "bit_rate": "962633"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0",
+          "bit_rate": "128726"
+        }
+      ],
+      "format": {
+        "duration": "15.022993",
+        "size": "2060661",
+        "bit_rate": "1097337"
+      }
+    }
+  }
+}

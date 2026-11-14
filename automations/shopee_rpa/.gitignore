@@ -1,0 +1,47 @@
+# Environment & Secrets
+.env
+.env.local
+*.secret
+
+# Python & Cache
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+.coverage
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+
+# Project Outputs & Cache (preserving structure)
+output/*
+!output/.gitkeep
+data/cache/*
+!data/cache/.gitkeep
+data/jobs/*
+!data/jobs/.gitkeep
+
+# Logs & Temp
+logs/
+debug/shopee_android/
+temp/
+tmp/
+*.log
+
+# Tools & Local Binaries (prevent indexing 400MB+ executables)
+tools/
+
+# Telemetry
+data/telemetry/*
+!data/telemetry/.gitkeep
+
+# OS Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Attachments & temporary files
+.codex-attachments/
+

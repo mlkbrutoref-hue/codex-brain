@@ -1,0 +1,34 @@
+{
+  "overall_compound_risk": "HIGH",
+  "critical_risk_present": false,
+  "common_risks": {
+    "product_morph": "HIGH",
+    "physics": "HIGH",
+    "continuity": "HIGH",
+    "identity": "NONE",
+    "occlusion": "MEDIUM"
+  },
+  "condition_delta": {
+    "ATOMIC": {"hand": "MEDIUM", "prop_interaction": "NONE"},
+    "MULTI_STEP": {"hand": "HIGH", "prop_interaction": "HIGH"}
+  },
+  "mitigations_frozen_for_both_conditions": [
+    "one right hand only; left hand and face excluded",
+    "static camera and uninterrupted take",
+    "exact black variant and byte-identical ingredient reference",
+    "outer front-left tray lip designated as the only tray grip zone",
+    "exactly three simple, unbranded, visually distinct props",
+    "product base, posts, upper tray and guide structure remain fixed",
+    "no numeric travel distance; only visible closed/open limits",
+    "no cuts, camera motion, speech, overlay or extra action"
+  ],
+  "hard_failure_stop_rules": [
+    "product changes color, tier count, post count, tray geometry or rail axis",
+    "hand passes through product/prop or changes identity unexpectedly",
+    "tray detaches, rotates, deforms or moves on a non-linear axis",
+    "prop duplicates, disappears, changes identity or is replaced in a different location",
+    "camera/lighting/reference/configuration differs between conditions",
+    "two repeated MULTI_STEP hard failures of the same type"
+  ]
+}
+

@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-06",
+  "timezone": "America/Sao_Paulo",
+  "runtime_changed": false,
+  "android_connected_by_audit": false,
+  "network_authenticated_actions": false,
+  "existing_tests": {
+    "command": "python -m unittest discover -s tests/publishing -v",
+    "count": 29,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds_reported": 5.147,
+    "result": "OK",
+    "warning": "Pillow getdata deprecation in app/mobile/shopee_video.py:92",
+    "scope_limitation": "Publishing unit tests only; no full factory suite or live publication tests"
+  },
+  "additional_checks": {
+    "command": "python docs/publishing/audit/collect_offline_evidence.py",
+    "result": "Three synthetic reproductions completed; ffprobe read local MP4",
+    "evidence": "offline-evidence-2026-10-06.json"
+  },
+  "independent_review": {
+    "status": "INDEPENDENT_REVIEW_DELIVERED",
+    "scope": [
+      "C02",
+      "C04",
+      "C05",
+      "C14",
+      "HIGH risk reasoning",
+      "conditional pilot and proposed versus implemented controls"
+    ],
+    "record": "antigravity-review-status-2026-10-06.json",
+    "artifact_hashes_verified": {
+      "antigravity-review-2026-10-06.md": true,
+      "antigravity-c14-2026-10-06.md": true
+    }
+  },
+  "final_integrity_check": {
+    "source_files_checked": 16,
+    "all_source_hashes_unchanged": true,
+    "previous_session_unchanged": true,
+    "numbered_report_sections": 12
+  }
+}

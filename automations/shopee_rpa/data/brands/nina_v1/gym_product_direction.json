@@ -1,0 +1,59 @@
+{
+  "updated_at": "2026-10-12",
+  "authority": "Explicit user correction in Nina content chat",
+  "theme": "Brand-led gym lifestyle and athleisure",
+  "selection_priority": [
+    "recognizable brands and logos",
+    "visual desirability",
+    "outfit styling",
+    "familiar models",
+    "real listing and reference image"
+  ],
+  "categories": [
+    "branded sneakers",
+    "branded sportswear",
+    "headphones",
+    "smartwatches",
+    "branded socks",
+    "gym bags"
+  ],
+  "preferred_brands": [
+    "ALO",
+    "Nike",
+    "Adidas"
+  ],
+  "other_recognizable_tech_brands": [
+    "JBL",
+    "Sony",
+    "Apple",
+    "Samsung",
+    "Amazfit"
+  ],
+  "not_the_requested_direction": [
+    "generic gym bottles",
+    "generic shakers",
+    "mini bands",
+    "gloves",
+    "jump ropes",
+    "exercise mats"
+  ],
+  "originality_filter": "User does not require authentic/original items as a discovery filter. Preserve the seller's actual description; do not invent verified authenticity, manufacturer specifications or quality guarantees for unverified listings.",
+  "style_authorities": [
+    "references/user/carousel/371960.png",
+    "references/user/carousel/371961.png"
+  ],
+  "checkpoint": "Show the actual product selection before generating this new post.",
+  "headphone_direction": {
+    "reference_brand": "Apple",
+    "reference_design": "AirPods Max",
+    "actual_selection": "Affordable similar over-ear model, e.g. P9/A1 Pro Max. User expressly rejected expensive Apple original.",
+    "price_direction": "Budget-friendly; prioritize candidates below R$100 for current preview, this is a working search range not an explicit permanent user price cap.",
+    "format": "Headband over-ear",
+    "authenticity_filter": "Not required; do not label a generic model as an Apple product."
+  },
+  "visual_execution": {
+    "provider": "BUILT_IN_IMAGEGEN",
+    "requirement": "All final lettering, decoration and photography from image generator. Do not compose design in Python, HTML or CSS. File handling, metadata, hashes and technical QA remain allowed.",
+    "authority": "Explicit user instruction on 2026-10-12"
+  }
+}

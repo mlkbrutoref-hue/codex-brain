@@ -1,0 +1,38 @@
+{
+  "mode": "OFFLINE_NO_DEVICE_NO_NETWORK",
+  "uiautomator2": "3.7.0",
+  "core_path": "C:\\Users\\GAMER\\AppData\\Roaming\\Python\\Python314\\site-packages\\uiautomator2\\core.py",
+  "core_sha256": "9be432219b652cc44b4c32750aa0525976b3fd212dcd0237447fbe087b1508cc",
+  "experiments": [
+    {
+      "id": "E01",
+      "hypothesis": "Installed client retries a mutating RPC after response timeout",
+      "status": "PASS_REPRODUCED",
+      "outer_calls": 1,
+      "simulated_transport_calls": 2,
+      "simulated_effects": 2,
+      "restart_operations": [
+        "stop",
+        "start"
+      ],
+      "limitation": "Synthetic response loss; does not establish real duplicate publication or latency"
+    },
+    {
+      "id": "E02",
+      "hypothesis": "Actual native product sheet contains duplicate title and defeats old predicate",
+      "status": "PASS_REPRODUCED",
+      "exact_title_occurrences": 2,
+      "old_predicate": false,
+      "current_predicate": true,
+      "exact_card_count": 1,
+      "source_xml_sha256": "4e7d5505117224251862446460bd7b568d4da3960128ff287bd2adf27959e63a"
+    },
+    {
+      "id": "E03",
+      "hypothesis": "Geometry-only reflow changes raw hash but not semantic hash",
+      "status": "PASS_REPRODUCED",
+      "real_incident_root_cause": "INFERRED_NOT_PROVEN",
+      "changed_title_rejected": true
+    }
+  ]
+}

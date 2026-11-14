@@ -1,0 +1,31 @@
+{
+  "product_id": "24568686640",
+  "product_name": "Base cushion com aplicador cogumelo",
+  "product_category": "maquiagem",
+  "confirmed_facts": [
+    "Aplicador em formato de cogumelo.",
+    "Micro-membrana elástica que dosa a base durante a aplicação."
+  ],
+  "story_type": "AUTO",
+  "content_goal": "DISCOVERY",
+  "product_reference_paths": [
+    "C:\\Users\\GAMER\\Documents\\SHOPEE AUTOMATION\\ai-commerce-content-factory\\output\\research\\kbeauty_carousel\\images\\slide_01_base_cushion_cogumelo.jpg"
+  ],
+  "use_nina": false,
+  "brand_palette": [
+    "creme quente",
+    "marrom espresso",
+    "blush suave"
+  ],
+  "style_notes": [
+    "editorial social limpo",
+    "atmosfera real e acolhedora",
+    "produto grande e facilmente reconhecível"
+  ],
+  "trend_signals": [
+    "rotina real",
+    "why-to-buy factual",
+    "menos perfeição artificial"
+  ],
+  "cta_text": ""
+}

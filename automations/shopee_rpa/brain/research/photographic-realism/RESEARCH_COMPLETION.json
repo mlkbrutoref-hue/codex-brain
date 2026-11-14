@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-12",
+  "research_delivery": "PASS",
+  "errors": [],
+  "report_sections": 20,
+  "taxonomy_entries": 33,
+  "qa_items": 27,
+  "documented_photo_cases": 9,
+  "pinterest_examples_authenticity_unknown": 2,
+  "fetched_sources_or_assets": 10,
+  "unavailable_candidates_not_analyzed": [
+    "R01",
+    "R04",
+    "P01",
+    "P02"
+  ],
+  "source_hashes_and_local_links_verified": true,
+  "generative_ab_executed": false,
+  "runtime_modified": false,
+  "capability_promoted_to_ready": false,
+  "report_word_count": 4883
+}

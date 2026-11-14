@@ -1,0 +1,24 @@
+{
+  "job_id": "dry_run_example",
+  "serial": "EXPLICIT_DEVICE_REQUIRED",
+  "caption": "Mochila para escola",
+  "hashtags": ["mochila"],
+  "product_query": "mochila",
+  "product_title": "EXPLICIT_PRODUCT_REQUIRED",
+  "video_path": "/storage/emulated/0/Download/explicit_asset.mp4",
+  "video_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "local_media_path": "EXPLICIT_LOCAL_MEDIA_REQUIRED.mp4",
+  "account": {"account_id": "EXPLICIT_ACCOUNT_REQUIRED", "username": "EXPLICIT_USERNAME_REQUIRED", "stable_profile_marker": "EXPLICIT_MARKER_REQUIRED"},
+  "operational": {"mode": "DRY_RUN", "allowed_app_versions": [], "session_seconds": 900, "rpc_seconds": 15, "approval_ttl": 1800, "dedup_window": 2592000, "limits": {"posts_per_day": 1, "posts_per_session": 1, "uploads_per_day": 1, "uploads_per_session": 1, "product_views_session": 5, "affiliate_requests_day": 30, "affiliate_requests_session": 10, "actions_worker": 500}},
+  "candidate": {
+    "account_id": "EXPLICIT_ACCOUNT_REQUIRED",
+    "media": {"logical_asset_id": "EXPLICIT_LOGICAL_ASSET_REQUIRED", "source_asset_hash": "0000000000000000000000000000000000000000000000000000000000000000", "prepared_asset_hash": "0000000000000000000000000000000000000000000000000000000000000000", "campaign_id": "", "generation_id": ""},
+    "product": {"shop_id": "UNKNOWN", "item_id": "UNKNOWN", "variant_id": null, "attributes": {}},
+    "product_title": "EXPLICIT_PRODUCT_REQUIRED",
+    "caption": "Mochila para escola",
+    "hashtags": ["mochila"],
+    "keywords": ["mochila"],
+    "provenance": {"rights_status": "UNKNOWN", "source": "", "license_type": "", "evidence_reference": "", "ai_generated": false, "ai_disclosure_required": false},
+    "media_quality": "UNKNOWN", "media_quality_hash": "", "media_product_match": "UNKNOWN", "caption_review": "UNKNOWN", "originality": "UNKNOWN", "ai_disclosure": false, "human_review": null
+  }
+}

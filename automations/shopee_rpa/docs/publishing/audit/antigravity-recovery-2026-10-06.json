@@ -1,0 +1,12 @@
+{
+  "conversation_id": "a2f2534b-741c-4a7c-a74d-9cdeea45d74d",
+  "method": "official agy CLI conversation recovery",
+  "started_at": "2026-10-06T18:27:02.849536+00:00",
+  "completed_at": "2026-10-06T18:27:49.473117+00:00",
+  "exit_code": 0,
+  "output_characters": 4585,
+  "independent_response_received": true,
+  "credits_used": null,
+  "path": "C:\\Users\\GAMER\\Documents\\SHOPEE AUTOMATION\\ai-commerce-content-factory\\docs\\publishing\\audit\\antigravity-review-2026-10-06.md",
+  "sha256": "6bea1337414d28f446a8851e6df65dcc049bc049c2bafae8035b2cff5045a7b2"
+}

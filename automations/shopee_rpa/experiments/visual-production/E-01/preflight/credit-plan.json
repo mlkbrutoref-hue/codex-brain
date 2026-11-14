@@ -1,0 +1,22 @@
+{
+  "plan": "Google AI Pro / non-Ultra rate",
+  "model": "Veo 3.1 - Fast",
+  "cost_unit": "credits per generation",
+  "outputs_per_generation": 1,
+  "credit_cost_per_output": 20,
+  "screening": {
+    "atomic_outputs": 2,
+    "multistep_outputs": 2,
+    "total_outputs": 4,
+    "total_generations": 4,
+    "total_credits": 80
+  },
+  "confirmation_not_authorized": {
+    "possible_additional_outputs": 2,
+    "possible_additional_credits": 40
+  },
+  "source": "https://support.google.com/flow/answer/16526234?hl=en",
+  "stop_rule": "Before every generation, if Flow displays a cost other than 20 credits for one x1 Veo 3.1 Fast output, stop and re-run the credit pre-flight. Do not spend credits under a mismatched display.",
+  "credits_spent_during_preflight": 0
+}
+

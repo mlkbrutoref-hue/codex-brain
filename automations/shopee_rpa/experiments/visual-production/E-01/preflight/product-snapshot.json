@@ -1,0 +1,56 @@
+{
+  "snapshot_id": "E01-REPEAT-PREFLIGHT-2026-09-24",
+  "captured_at": "2026-09-24T10:55:01-03:00",
+  "source": "Shopee Affiliate productOfferV2 via ShopeeLiveProductProvider; exact item_id_shop_id query",
+  "product": {
+    "title": "Prateleira Deslizante 2 Andares Organizador Armário Gaveta Corrediça Cozinha Banheiro Preto Branco",
+    "item_id": "58267960935",
+    "shop_id": "1234187269",
+    "seller_name": "Bravuuz Store",
+    "product_url": "https://shopee.com.br/product/1234187269/58267960935",
+    "affiliate_url_at_snapshot": "https://s.shopee.com.br/113AoOpC5c",
+    "api_main_image": "https://cf.shopee.com.br/file/sg-11134201-8259c-msztupjyr85cca",
+    "price_brl_at_snapshot": 95.9,
+    "discount_percentage_at_snapshot": 0.0,
+    "rating_star_at_snapshot": 0.0,
+    "sales_count_at_snapshot": 0,
+    "category_ids": [100636, 100721, 101258]
+  },
+  "revalidation": {
+    "identity_unchanged": true,
+    "title_unchanged": true,
+    "present_in_live_affiliate_catalog": true,
+    "official_media_urls_reachable": true,
+    "direct_pdp_ui_revalidated": false,
+    "direct_pdp_ui_note": "Shopee returned an anti-bot/traffic challenge. It was not bypassed. Current availability is therefore established by the live Affiliate catalog response, not by a second PDP UI observation."
+  },
+  "frozen_variant": {
+    "color": "black",
+    "reason": "The official listing provides two consistent black-variant geometry images and a black-variant mechanism video. The white grip image is evidence-only and may not be used as a Flow appearance reference."
+  },
+  "verified_mechanism": {
+    "moving_part": "lower sliding tray",
+    "static_parts": "upper tray, four posts and guide/base structure",
+    "grip_zone": "outer front-left lip of the lower tray, at the side/front junction",
+    "motion": "linear translation along the organizer depth axis, outward to open and inward to close",
+    "start_state": "lower tray visually retracted/aligned beneath the structure",
+    "end_state": "lower tray visibly extended along its guides",
+    "travel_distance": "UNKNOWN_NOT_INVENTED; use only the visibly supported retracted and extended limits"
+  },
+  "claim_boundary": {
+    "allowed": [
+      "two-tier organizer",
+      "lower tray slides linearly",
+      "black variant",
+      "visible open and retracted states"
+    ],
+    "forbidden_without_new_evidence": [
+      "load capacity",
+      "durability",
+      "water resistance",
+      "performance superiority",
+      "numeric travel distance"
+    ]
+  }
+}
+

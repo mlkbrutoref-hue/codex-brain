@@ -1,0 +1,38 @@
+[
+  {
+    "path": "data/brands/nina_lifestyle_v1/references/user_capture_style_20261012/01_phone_soft.png",
+    "original": "C:/Users/GAMER/AppData/Local/Temp/codex-clipboard-57819330-2269-4f7a-85ce-14ff51c6bc5f.png",
+    "sha256": "0b61a18ba107d4c3273964e85680189a8d4a123da8d624a10fe66ce950e293ef",
+    "dimensions": [
+      975,
+      1922
+    ],
+    "role": "USER_CAPTURE_STYLE_NOT_NINA_IDENTITY",
+    "pixels_inspected": true,
+    "date": "2026-10-12"
+  },
+  {
+    "path": "data/brands/nina_lifestyle_v1/references/user_capture_style_20261012/02_robe_routine.png",
+    "original": "C:/Users/GAMER/AppData/Local/Temp/codex-clipboard-42cd7550-7f3c-48dd-a078-d3f350bc5d3b.png",
+    "sha256": "5682945142ea123a86e33ad2659d97dfc5243fa74c52b2b0381bbeed3ede31a1",
+    "dimensions": [
+      720,
+      1275
+    ],
+    "role": "USER_CAPTURE_STYLE_NOT_NINA_IDENTITY",
+    "pixels_inspected": true,
+    "date": "2026-10-12"
+  },
+  {
+    "path": "data/brands/nina_lifestyle_v1/references/user_capture_style_20261012/03_mirror_pose.png",
+    "original": "C:/Users/GAMER/AppData/Local/Temp/codex-clipboard-7fb759fc-fea3-4714-ae82-f92e25e52f04.png",
+    "sha256": "bfed626ae0970e205ee4090a9d5a66b3257888ce6d7d19cdd6e194f194c7702d",
+    "dimensions": [
+      736,
+      1308
+    ],
+    "role": "USER_CAPTURE_STYLE_NOT_NINA_IDENTITY",
+    "pixels_inspected": true,
+    "date": "2026-10-12"
+  }
+]

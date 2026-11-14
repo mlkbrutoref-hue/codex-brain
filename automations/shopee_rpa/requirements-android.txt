@@ -1,0 +1,2 @@
+# Optional USB posting experiment; observed on Python 3.14 / Android SDK 36.
+uiautomator2==3.7.0

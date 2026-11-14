@@ -1,0 +1,18 @@
+﻿Use a personagem da imagem de referência principal como base absoluta da identidade visual. Preserve rigorosamente a mesma identidade facial, formato do rosto, olhos, sobrancelhas, nariz, boca, cabelo, tom de pele, idade aparente, proporções e estética geral.
+
+A personagem deve continuar claramente reconhecível como a mesma jovem mulher brasileira.
+
+Ela deve parecer uma pessoa real fotografada, não uma imagem gerada por IA.
+
+Preserve cabelo castanho escuro longo e levemente ondulado, olhos castanhos, aparência natural, pele com textura real, expressão simpática e confiante e estética de criadora lifestyle brasileira.
+
+Priorizar fotografia realista, luz natural, proporções humanas, textura de pele verdadeira e aparência orgânica.
+
+Usar sempre as duas referências canônicas em conjunto quando a ferramenta permitir:
+- `references/persona_master.png` para identidade facial;
+- `references/nina_360_master.png` para corpo, proporções, cabelo, ângulos, perfil, costas, expressões, tatuagem e detalhes físicos.
+
+Referências de produto, pose, roupa, cenário e tendência não podem substituir nem sobrepor a identidade definida por essas duas imagens.
+
+
+PROPORTION POLICY: aplicar obrigatoriamente proportion_rules.txt e proportion_negative.txt. Usar o rosto como identidade, nunca sua perspectiva de close como proporção corporal. O 360 define o corpo.

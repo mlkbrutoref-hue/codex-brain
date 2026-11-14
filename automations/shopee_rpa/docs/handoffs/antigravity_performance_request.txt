@@ -1,0 +1,527 @@
+Quero que você agora DIVIDA O TRABALHO com o Antigravity para economizar uso do Codex.
+
+OBJETIVO:
+Você continua trabalhando nas partes que dependem do meu PC, do Phone Link, da integração final e da operação real.
+
+Enquanto isso, delegue ao Antigravity as partes de infraestrutura, analytics e aprendizado.
+
+IMPORTANTE:
+NÃO fique parado esperando o Antigravity terminar.
+
+Quero trabalho em paralelo.
+
+==================================================
+1. SUA FUNÇÃO — CODEX
+==================================================
+
+Você fica responsável por:
+
+- integração final do projeto;
+- Mobile Publisher;
+- Phone Link / Vincular ao Celular;
+- controle do Instagram/TikTok pelo Windows;
+- fluxo de publicação;
+- pre-publish QA;
+- verificação visual;
+- integração com conteúdo real;
+- integração posterior com o módulo de analytics criado pelo Antigravity.
+
+Comece trabalhando nisso AGORA.
+
+==================================================
+2. FUNÇÃO DO ANTIGRAVITY
+==================================================
+
+Delegue ao Antigravity a construção de:
+
+PERFORMANCE TRACKER
++
+TIME OPTIMIZER
++
+POST PERFORMANCE DATABASE
++
+LEARNING ENGINE
+
+Ele deve criar a infraestrutura que aprende quais horários e tipos de conteúdo funcionam melhor para a Nina.
+
+==================================================
+3. O QUE O ANTIGRAVITY DEVE IMPLEMENTAR
+==================================================
+
+Criar algo equivalente a:
+
+app/performance/
+    models.py
+    tracker.py
+    metrics.py
+    storage.py
+    learning.py
+    time_optimizer.py
+
+Adaptar ao padrão real do repositório.
+
+==================================================
+4. PERFORMANCE RECORD
+==================================================
+
+Cada publicação deve poder registrar:
+
+post_id
+platform
+content_type
+category
+campaign_id
+publish_datetime
+day_of_week
+publish_hour
+theme
+hook_type
+cta_type
+story_type
+product_ids
+publish_method
+followers_at_publish
+
+==================================================
+5. MÉTRICAS
+==================================================
+
+Permitir snapshots em:
+
++1h
++6h
++24h
++72h
+
+Com métricas como:
+
+views
+reach
+likes
+comments
+shares
+saves
+profile_visits
+follows
+link_clicks
+
+Se alguma métrica não estiver disponível:
+usar null/unknown.
+
+Nunca inventar valor.
+
+==================================================
+6. TIME OPTIMIZER
+==================================================
+
+Criar um sistema que aprenda com histórico próprio.
+
+Objetivo:
+
+NÃO usar apenas “melhores horários da internet”.
+
+Aprender:
+
+CONTENT_TYPE
++
+CATEGORY
++
+DAY_OF_WEEK
++
+TIME
++
+PERFORMANCE
+
+Exemplo:
+
+BEAUTY_CAROUSEL
+Tuesday
+18:00-20:00
+
+pode ter comportamento diferente de:
+
+LIFESTYLE_STORY
+Monday
+08:00-10:00
+
+==================================================
+7. EXPLORATION VS EXPLOITATION
+==================================================
+
+Não deixar o sistema sempre repetir o horário campeão.
+
+Criar estratégia equivalente a:
+
+80%:
+horários já promissores
+
+20%:
+horários ainda pouco testados
+
+Esses valores devem ser configuráveis.
+
+==================================================
+8. NÃO CRIAR ML COMPLEXO AGORA
+==================================================
+
+Primeira versão deve ser:
+
+simples
+explicável
+determinística quando possível
+baseada em dados observados.
+
+Não criar rede neural, modelo externo ou infraestrutura exagerada.
+
+Primeiro:
+
+estatística
+scoring
+médias
+normalização
+confidence
+sample size
+
+==================================================
+9. CONFIDENCE
+==================================================
+
+O sistema precisa diferenciar:
+
+HIGH_CONFIDENCE
+MEDIUM_CONFIDENCE
+LOW_CONFIDENCE
+INSUFFICIENT_DATA
+
+Exemplo:
+
+1 post às 19h não significa:
+“19h é o melhor horário”.
+
+Exigir amostra mínima antes de conclusões fortes.
+
+==================================================
+10. MÉTRICAS NORMALIZADAS
+==================================================
+
+Evitar comparar apenas números absolutos.
+
+Quando possível, calcular:
+
+engagement_rate
+save_rate
+share_rate
+comment_rate
+follow_conversion
+click_rate
+
+Usando denominadores adequados quando disponíveis.
+
+==================================================
+11. CONTENT LEARNING
+==================================================
+
+Além de horário, permitir futuramente aprender por:
+
+category
+hook_type
+CTA
+content_type
+theme
+product_category
+
+Mas NÃO expandir demais nessa primeira implementação.
+
+O foco da v1:
+
+TIME OPTIMIZATION.
+
+==================================================
+12. RECOMENDAÇÃO
+==================================================
+
+Criar saída como:
+
+{
+  "recommended_time": "...",
+  "confidence": "...",
+  "reason": "...",
+  "samples": ...,
+  "alternatives": [...]
+}
+
+==================================================
+13. TESTES
+==================================================
+
+Antigravity deve criar testes para:
+
+- registro de publicação;
+- snapshots;
+- métricas desconhecidas;
+- cálculo de taxas;
+- comparação de horários;
+- sample size;
+- confidence;
+- exploration;
+- recommendation;
+- persistência;
+- ausência de dados.
+
+==================================================
+14. DOCUMENTAÇÃO
+==================================================
+
+Criar documentação clara explicando:
+
+como registrar post
+como registrar métricas
+como obter recomendação
+como o scoring funciona
+limitações
+como o Codex deverá integrar depois.
+
+==================================================
+15. CONTRATO DE INTEGRAÇÃO
+==================================================
+
+IMPORTANTE:
+
+Crie um contrato claro para o Codex consumir.
+
+Algo equivalente a:
+
+record_publication(...)
+record_metrics(...)
+recommend_publish_time(...)
+
+Não acoplar ao Mobile Publisher.
+
+O Codex fará essa integração depois.
+
+==================================================
+16. ISOLAMENTO
+==================================================
+
+Antigravity NÃO deve editar:
+
+mobile publisher
+Phone Link
+Instagram automation
+TikTok automation
+content generation
+carousel
+single story
+lifestyle story
+
+Ele fica somente em:
+
+performance
+analytics
+time optimization
+learning
+
+==================================================
+17. TRABALHO PARALELO
+==================================================
+
+Enquanto o Antigravity trabalha:
+
+VOCÊ, CODEX, deve continuar.
+
+Não aguarde.
+
+Comece a preparar:
+
+MOBILE_PUBLISHER
+
+em modo seguro.
+
+==================================================
+18. MOBILE PUBLISHER — CODEX
+==================================================
+
+Primeira versão deve funcionar em:
+
+ASSISTED_MODE.
+
+Fluxo:
+
+CONTENT_READY
+↓
+TIME_RECOMMENDATION
+↓
+OPEN_PHONE_LINK
+↓
+OPEN_TARGET_APP
+↓
+SELECT_CONTENT
+↓
+PREPARE_POST
+↓
+PRE_PUBLISH_QA
+↓
+STOP_BEFORE_FINAL_PUBLISH
+
+Ainda NÃO quero publicação totalmente automática.
+
+==================================================
+19. PHONE LINK DISCOVERY
+==================================================
+
+Primeiro descubra no meu ambiente Windows:
+
+- se Phone Link está instalado;
+- se o aparelho está conectado;
+- se screen mirroring/apps estão disponíveis;
+- se Instagram pode ser aberto;
+- se TikTok pode ser aberto.
+
+Não faça login novo automaticamente.
+
+Não alterar contas.
+
+==================================================
+20. PRE-PUBLISH QA
+==================================================
+
+Criar checklist:
+
+CORRECT_ACCOUNT
+CORRECT_PLATFORM
+CORRECT_MEDIA
+CORRECT_ORDER
+CORRECT_CAPTION
+CORRECT_CTA
+CORRECT_DISCLOSURE
+CORRECT_TIME
+PREVIEW_OK
+
+Em ASSISTED_MODE:
+
+parar antes do botão final de publicação.
+
+==================================================
+21. NÃO PUBLICAR NADA AGORA
+==================================================
+
+Esta etapa é apenas:
+
+infraestrutura
+integração
+descoberta
+teste seguro.
+
+Não postar nada.
+
+==================================================
+22. HANDOFF PARA ANTIGRAVITY
+==================================================
+
+Se o seu ambiente permitir comunicação direta com Antigravity:
+
+envie a tarefa diretamente.
+
+Se NÃO permitir:
+
+crie imediatamente:
+
+docs/handoffs/antigravity_performance_tracker.md
+
+contendo:
+- contexto necessário;
+- tarefa completa;
+- arquivos permitidos;
+- arquivos proibidos;
+- contrato esperado;
+- critérios de sucesso.
+
+E me entregue também o prompt exato para eu enviar ao Antigravity.
+
+==================================================
+23. EVITAR CONFLITOS
+==================================================
+
+Defina ownership:
+
+ANTIGRAVITY OWNS:
+app/performance/*
+tests/performance/*
+docs/performance/*
+
+CODEX OWNS:
+app/publishing/*
+app/mobile/*
+tests/publishing/*
+docs/publishing/*
+
+Se os diretórios reais forem diferentes,
+adapte mantendo separação equivalente.
+
+Não editar os mesmos arquivos em paralelo.
+
+==================================================
+24. GIT
+==================================================
+
+Se Git estiver disponível:
+
+usar branch/worktree separado para o Antigravity.
+
+Sugestão:
+
+antigravity/performance-learning
+
+Codex continua na branch atual ou em:
+
+codex/mobile-publisher
+
+Não fazer merge automaticamente até ambos terminarem e testes passarem.
+
+==================================================
+25. RESULTADO DESTA ETAPA
+==================================================
+
+Depois de iniciar as duas frentes, me responda:
+
+ANTIGRAVITY_HANDOFF:
+SENT / PREPARED / FAILED
+
+ANTIGRAVITY_TASK:
+...
+
+ANTIGRAVITY_FILES_OWNED:
+...
+
+CODEX_PARALLEL_WORK_STARTED:
+YES/NO
+
+CODEX_TASK:
+...
+
+PHONE_LINK_FOUND:
+YES/NO/NOT_CHECKED
+
+PHONE_CONNECTED:
+YES/NO/UNKNOWN
+
+INSTAGRAM_ACCESSIBLE:
+YES/NO/NOT_TESTED
+
+TIKTOK_ACCESSIBLE:
+YES/NO/NOT_TESTED
+
+MOBILE_PUBLISHER_STATUS:
+...
+
+CONFLICT_RISK:
+LOW/MEDIUM/HIGH
+
+GIT_ISOLATION:
+...
+
+NEXT_CODEX_STEP:
+...
+
+Depois continue apenas com a sua frente.
+Não espere o Antigravity terminar.

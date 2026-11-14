@@ -1,0 +1,22 @@
+{
+  "research_date": "2026-10-08",
+  "document_count": 7,
+  "local_link_errors": [],
+  "existing_experiment_results": "3 PASS_REPRODUCED",
+  "source_sha256": {
+    "app/mobile/ui.py": "a6bb9d8ac43ef9e8b32fffb39a5887b01e43c5db53925f857594bf5498b365fd",
+    "app/mobile/shopee_video.py": "cb2c4ed3ac58ef1269423ba73f40f9e42793d7196dd371cac5cef8d2d0f47246",
+    "app/mobile/safety_runtime.py": "f419d5e0ed101603eba666961b24a9191a45f4f78fe6f4e78cfb1273a653a483",
+    "app/publishing/ledger.py": "8ad868d6730252e3c37c03dcc3ac2f214dc457be3a24551c26b395321369a479",
+    "app/publishing/reconciliation.py": "e329862bd5fbc04b1dc6d0b8f5a4e962d4115e3a1c118abd7e26992549a7df53",
+    "app/operational/action_budget.py": "2ac0fc6b23e7ca1b0f190cf6fcfaae9570529f1f2ebf65d1e4ed56896de20b2d",
+    "app/operational/circuit_breaker.py": "1e474873d1ee94c0a885cd38ab6c57ed1ffb0f5a3ca82de1191f07979396263c",
+    "app/operational/store.py": "21caf9c6bb6c89f4f126c99cb531b7fc7f020d8e5772bd9e31240ab0300fa521",
+    "app/observability/operation_logger.py": "f13a05cbddd6a659a89bf370751ab370cfb38d4f13f84d7d7081b6b6d2da0fc9",
+    "requirements-android.txt": "9a670ea1ee780db36a2aa09d789b3c1a096c742f2ebcdaca2125c85f6f4f6d02",
+    "output/preparation_abandonment_20261008/latency-analysis.json": "90f8493c58b36b2688e1277ce6d886c3969fede646398768e5f1041b014badff",
+    "output/preparation_abandonment_20261008/manual-publication-report.json": "f04204260c00023ac0e7ddfae0024676954e49556ec6cb1c224936dde0cacc7e",
+    "output/preparation_abandonment_20261008/manual-publication-audit.json": "57a44d3111115ca762f39e39d03079e95538badecb8e7ba549c4a44b0deb7730"
+  },
+  "limitation": "Snapshot at research completion; not a before/after integrity audit or live-device test"
+}

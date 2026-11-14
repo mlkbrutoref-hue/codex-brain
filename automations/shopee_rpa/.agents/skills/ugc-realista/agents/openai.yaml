@@ -1,0 +1,4 @@
+interface:
+  display_name: "UGC Realista"
+  short_description: "Selfies e fotos casuais com aparência de celular"
+  default_prompt: "Use $ugc-realista para gerar uma selfie descontraída no espelho, em casa, com pele natural e luz de janela."

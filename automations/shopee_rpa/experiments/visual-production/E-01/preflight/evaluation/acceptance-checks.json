@@ -1,0 +1,37 @@
+{
+  "rating_scale": ["PASS", "REVIEW", "FAIL", "N/A"],
+  "observations": [
+    "visible hand-to-lip contact",
+    "lower tray opens by linear translation on its guide axis",
+    "open stop is reached without detachment or deformation",
+    "tray is released or not released",
+    "P1 is touched, removed, replaced or left untouched",
+    "P2 and P3 remain stationary",
+    "tray closes or remains open",
+    "final state is held and legible"
+  ],
+  "scored_criteria": [
+    "PRODUCT_FIDELITY",
+    "PHYSICAL_PLAUSIBILITY",
+    "ACTION_ADHERENCE",
+    "CAMERA_PLAUSIBILITY",
+    "LIGHTING_PLAUSIBILITY",
+    "TEMPORAL_COHERENCE",
+    "UGC_BELIEVABILITY",
+    "AI_ARTIFACTS",
+    "HAND_CORRECTNESS",
+    "CONTINUITY",
+    "OVERALL_USABILITY"
+  ],
+  "identity_fidelity": "N/A — no face or Nina identity reference is present",
+  "hard_failures": [
+    "no visible grip/contact before drawer motion",
+    "tray moves off-axis, detaches, rotates, deforms or penetrates the structure",
+    "product color, tier count, post count, tray geometry or rail structure changes",
+    "hand anatomy breaks or hand identity/count changes",
+    "prop duplicates, disappears, changes identity or passes through another object",
+    "camera cuts/reframes/moves or product/guide path becomes unreadable",
+    "reference/configuration mismatch or candidate file/hash mismatch"
+  ],
+  "blindness_note": "The evaluator records observed events without seeing required-event counts. ACTION_ADHERENCE and completion are resolved against the private execution key only after blind scores are locked."
+}

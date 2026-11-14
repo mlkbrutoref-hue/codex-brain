@@ -1,0 +1,12 @@
+Create one continuous 8-second vertical 9:16 photorealistic smartphone-UGC product demonstration using the supplied ingredient image only as the exact geometry and black-color reference for the two-tier organizer. Ignore the ingredient image's pictured room, brand labels and pictured products. Do not copy or invent readable brand text.
+
+Scene: a minimal laundry/utility countertop with a warm-neutral wall and a softly blurred washer in the background. The black organizer is fixed on the countertop, centered slightly right. Its full base, four posts, upper tray, lower-tray outer front-left lip and the entire linear guide path stay visible. The upper tray, posts and base never move. The lower tray starts fully retracted beneath the structure and may move only in a straight line along its real guide axis. Do not invent a numeric travel distance.
+
+Exactly three unbranded props stand upright in the lower tray: P1, a small opaque matte-white rectangular bottle with a plain face and blue cap at front-center, facing camera; P2, a small teal cylindrical bottle at back-left; P3, a small beige rectangular carton at back-right. Their identities, count, scale and starting poses remain stable.
+
+Only one adult feminine right hand and forearm may enter from frame-left. Short neutral nails, no jewelry. Face, torso, left hand and identifying features remain out of frame. The same right hand performs every contact. The hand may grip the lower tray only at the outer front-left lip and must not hide the guide axis.
+
+Camera: static medium-close three-quarter front-left view at lower-tray height, approximately 0.9 m from the product, continuous stable focus, moderate depth of field, no zoom, pan, tilt, reframing, cuts or transitions. Lighting: one soft daylight source from camera-left around 45 degrees, weak ambient fill, soft stable shadows, no flicker or exposure shift. No speech, no audio requirement, no captions, no graphics and no added logos.
+
+Preserve product proportions, black color, two-tier construction, four posts, tray walls and rails throughout. Preserve plausible contact, gravity, collision and occlusion. No extra hands, fingers, props or gestures.
+

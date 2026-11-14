@@ -1,0 +1,73 @@
+E01_PREFLIGHT_READY: YES
+PRODUCT_REVALIDATED: YES
+
+SELECTED_PRODUCT: "Prateleira Deslizante 2 Andares Organizador Armário Gaveta Corrediça Cozinha Banheiro Preto Branco"
+ITEM_ID: "58267960935"
+SHOP_ID: "1234187269"
+FROZEN_VARIANT: "preta"
+FROZEN_COLOR: "preto"
+ASSETS_FROZEN: YES
+ASSET_HASHES:
+  product-primary-black.jpg: "3b09821776f72b8d1ccae8aeb6bb142b6cf2342523d5f9c765937cee88fa8429"
+  product-secondary-black.jpg: "86312eab4eb313edbb66de39aa7968bef78ef15da412dc6736e44e8928ace6e3"
+  product-grip-extended-white.jpg: "bc98789aabb9ca9a1b5e734f258c0c1ae3eed5e259e3a39793b03f9e4b8791d8"
+  mechanism-reference-black.mp4: "ab34052ada741b9cda565061d6401977e95413486c13ad75e93d7b729edd6ca5"
+
+WHY_THIS_PRODUCT: "Único candidato com identidade, geometria, função, parte móvel/estática, eixo, grip e estados fechado/aberto verificados por dados live e mídia oficial."
+FACTS_VALIDATED: YES
+MECHANISM_VERIFIED: YES
+MECHANISM_VALIDATED: YES
+MOVING_PART: "bandeja inferior corrediça"
+STATIC_PARTS: "bandeja superior, quatro montantes e estrutura/base-guia"
+TRAVEL_DISTANCE: "UNKNOWN_NOT_INVENTED"
+
+BASE_SCENE: "lavanderia/área de serviço minimalista; organizador preto fixo em bancada; câmera 3/4 frontal-esquerda estática; luz suave da esquerda; exatamente três props sem marca; somente mão/antebraço direito"
+ATOMIC_ACTION: "recolhida -> grip na borda frontal-esquerda -> puxar linearmente até limite aberto visível -> sustentar aberta"
+MULTISTEP_ACTIONS: "recolhida -> grip -> abrir -> soltar -> retirar P1 -> recolocar o mesmo P1 na mesma pose -> regrip -> fechar -> sustentar fechada"
+MULTISTEP_SEQUENCE: "recolhida -> grip -> abrir -> soltar -> retirar P1 -> recolocar o mesmo P1 na mesma pose -> regrip -> fechar -> sustentar fechada"
+FROZEN_PROP: "P1: frasco pequeno retangular branco-fosco, sem marca, tampa azul, vertical no centro-frontal da bandeja inferior"
+NINA_VISIBILITY: "somente mão e antebraço direitos; rosto, torso, identidade e referência da Nina ausentes porque GS-C mede mecanismo/física"
+HAND_ASSIGNMENT: "RIGHT_HAND_ROLE: todos os contatos, abertura, P1, regrip e fechamento; LEFT_HAND_ROLE: ausente"
+CAMERA_SPEC: "UGC fotorealista vertical; medium-close; altura da bandeja inferior; 3/4 frontal-esquerda; ~0,9 m; posição fixa; zero movimento/handheld; foco estável; produto ~60% da altura do quadro"
+LIGHTING_SPEC: "fonte daylight suave e difusa à esquerda ~45°; preenchimento ambiente neutro fraco; sombras suaves/estáveis; sem flicker; bordas e guias pretas legíveis"
+VARIABLES_FROZEN: YES
+
+REFERENCE_INPUTS:
+  FLOW_INGREDIENT: "assets/original/product-primary-black.jpg | sha256 3b09821776f72b8d1ccae8aeb6bb142b6cf2342523d5f9c765937cee88fa8429"
+  OPTIONAL_FRAME_REFERENCE: NONE
+  NINA_REFERENCE: NONE
+  QA_ONLY:
+    - "assets/original/product-secondary-black.jpg"
+    - "assets/original/product-grip-extended-white.jpg"
+    - "assets/original/mechanism-reference-black.mp4"
+
+FLOW_MODE: "Ingredients to Video"
+FLOW_MODEL: "Veo 3.1 Fast"
+REFERENCE_CONFIGURATION: "um único ingredient byte-idêntico: assets/original/product-primary-black.jpg; sem frame inicial/final e sem Nina reference; igual nos quatro runs"
+FLOW_DURATION_SECONDS: 8
+FLOW_ASPECT_RATIO: "9:16"
+FLOW_OUTPUTS_PER_GENERATION: 1
+FLOW_CONFIRM_BEFORE_GENERATING: "Always"
+
+CREDIT_COST_PER_OUTPUT: 20
+SCREENING_OUTPUTS: 4
+SCREENING_TOTAL_COST: 80
+CREDITS_SPENT: 0
+
+ATOMIC_PROMPT_PATH: "experiments/visual-production/E-01/preflight/prompts/atomic.txt"
+MULTISTEP_PROMPT_PATH: "experiments/visual-production/E-01/preflight/prompts/multistep.txt"
+SEMANTIC_DIFF_PATH: "experiments/visual-production/E-01/preflight/prompts/semantic-diff.md"
+PROMPT_DIFF_VALID: YES
+
+RISK_PROFILE: "HIGH compound; product morph HIGH; physics HIGH; continuity HIGH; identity NONE; occlusion MEDIUM; atomic hand MEDIUM/prop NONE; multistep hand HIGH/prop HIGH; no CRITICAL risk"
+STORAGE_PATH: "experiments/visual-production/E-01/preflight/"
+BLIND_RUNS: ["E01-R01", "E01-R02", "E01-R03", "E01-R04"]
+EVALUATION_READY: YES
+
+FLOW_OPENED: YES
+FLOW_GENERATIONS: 0
+GENERATION_STARTED: NO
+TESTS: "60/60 PASS; compileall PASS"
+
+BLOCKERS: "Nenhum bloqueio técnico de pre-flight. A execução continua condicionada a autorização humana explícita para gastar até 80 créditos e a rechecagem imediata de configuração/custo no Flow."
+SAFE_TO_EXECUTE_E01: YES

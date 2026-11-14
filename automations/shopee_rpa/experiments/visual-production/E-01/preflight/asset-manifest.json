@@ -1,0 +1,53 @@
+{
+  "manifest_version": "1.0",
+  "frozen_at": "2026-09-24T10:55:01-03:00",
+  "preservation_policy": "Files under assets/original are immutable originals. No derivative is used in this pre-flight.",
+  "flow_input_reference": "assets/original/product-primary-black.jpg",
+  "optional_frame_reference": null,
+  "nina_reference": null,
+  "assets": [
+    {
+      "path": "assets/original/product-primary-black.jpg",
+      "filename": "product-primary-black.jpg",
+      "source_url": "https://down-br.img.susercontent.com/file/sg-11134201-8258t-mszturpw6k94b2",
+      "mime_type": "image/jpeg",
+      "dimensions": "1024x1024",
+      "bytes": 189672,
+      "sha256": "3b09821776f72b8d1ccae8aeb6bb142b6cf2342523d5f9c765937cee88fa8429",
+      "role": "ONLY Flow ingredient input; product geometry and black color reference only; pictured environment, brands and props are not output requirements"
+    },
+    {
+      "path": "assets/original/product-secondary-black.jpg",
+      "filename": "product-secondary-black.jpg",
+      "source_url": "https://down-br.img.susercontent.com/file/sg-11134201-82592-msztuv5n5gy086",
+      "mime_type": "image/jpeg",
+      "dimensions": "1024x1024",
+      "bytes": 195231,
+      "sha256": "86312eab4eb313edbb66de39aa7968bef78ef15da412dc6736e44e8928ace6e3",
+      "role": "QA-only black-variant geometry and extended-state reference; never upload to Flow for E-01"
+    },
+    {
+      "path": "assets/original/product-grip-extended-white.jpg",
+      "filename": "product-grip-extended-white.jpg",
+      "source_url": "https://down-br.img.susercontent.com/file/sg-11134201-825bb-msztut8obw90b7",
+      "mime_type": "image/jpeg",
+      "dimensions": "500x500",
+      "bytes": 58070,
+      "sha256": "bc98789aabb9ca9a1b5e734f258c0c1ae3eed5e259e3a39793b03f9e4b8791d8",
+      "role": "QA/evidence-only grip-zone and extended-state reference; white variant must not influence output color; never upload to Flow"
+    },
+    {
+      "path": "assets/original/mechanism-reference-black.mp4",
+      "filename": "mechanism-reference-black.mp4",
+      "source_url": "https://mms.vod.susercontent.com/api/v4/11110106/mms/sg-11110106-6vcbv-msztv15xlfr4da.16000081789145929.mp4",
+      "mime_type": "video/mp4",
+      "dimensions": "704x1280",
+      "duration_seconds": 15,
+      "bytes": 894505,
+      "sha256": "ab34052ada741b9cda565061d6401977e95413486c13ad75e93d7b729edd6ca5",
+      "role": "QA/evidence-only motion, retracted/extended state and fixed-structure reference; never upload to Flow"
+    }
+  ],
+  "derivatives": []
+}
+

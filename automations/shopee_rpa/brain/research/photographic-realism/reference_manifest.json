@@ -1,0 +1,288 @@
+[
+  {
+    "id": "R01",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Portrait_with_natural_light_(Creative_Commons).jpg",
+    "access_date": "2026-10-12",
+    "kind": "commons",
+    "pixels_inspected": false,
+    "status": "UNAVAILABLE",
+    "error": "429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/6/6f/Portrait_with_natural_light_%28Creative_Commons%29.jpg"
+  },
+  {
+    "id": "R02",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Natural_Light_Portrait_of_Rosie_(20710648621).jpg",
+    "access_date": "2026-10-12",
+    "kind": "commons",
+    "pixels_inspected": true,
+    "asset_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Natural_Light_Portrait_of_Rosie_%2820710648621%29.jpg",
+    "path": "evidence/R02.jpg",
+    "sha256": "3fd1cf6b8f3c08ff2598207e1b9738a4aef4a50485d5c10686ac67ce13f57961",
+    "bytes": 2039447,
+    "status": "FETCHED",
+    "dimensions": [
+      3000,
+      4048
+    ],
+    "exif": {
+      "Make": "SONY",
+      "Model": "ILCE-7R",
+      "Software": "Adobe Photoshop CC 2015 (Macintosh)",
+      "DateTimeOriginal": "2014:05:09 15:16:10",
+      "Flash": "16",
+      "FocalLength": "85.0",
+      "ExposureTime": "0.0025",
+      "FNumber": "3.5",
+      "ISOSpeedRatings": "100",
+      "WhiteBalance": "0",
+      "LensModel": "85mm F1.4 ZA",
+      "FocalLengthIn35mmFilm": "85"
+    },
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": []
+  },
+  {
+    "id": "R03",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Freckles_(1351739811).jpg",
+    "access_date": "2026-10-12",
+    "kind": "commons",
+    "pixels_inspected": true,
+    "status": "FETCHED",
+    "path": "evidence/R03.jpg",
+    "asset_url": "https://live.staticflickr.com/1295/1351739811_3f6903ecf1_o.jpg",
+    "sha256": "a8a1279b00c99f18b329c5f3bab22b014cf585124651b4a8dd95f0c6d7860e0f",
+    "dimensions": [
+      2448,
+      3264
+    ],
+    "bytes": 780812,
+    "exif": {
+      "WhiteBalance": "0",
+      "Make": "SONY",
+      "Model": "DSC-H7",
+      "Software": "Adobe Photoshop CS2 Windows",
+      "DateTimeOriginal": "2007:09:08 16:21:49",
+      "Flash": "16",
+      "FocalLength": "48.9",
+      "ExposureTime": "0.002",
+      "FNumber": "5.0",
+      "ISOSpeedRatings": "100"
+    },
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": []
+  },
+  {
+    "id": "R04",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FrecklesCloseup.jpg",
+    "access_date": "2026-10-12",
+    "kind": "commons",
+    "pixels_inspected": false,
+    "status": "UNAVAILABLE",
+    "error": "429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/8/82/FrecklesCloseup.jpg"
+  },
+  {
+    "id": "P01",
+    "source_url": "https://www.pinterest.com/pin/photo-by-philip-white-on-unsplash-in-2024--1097330265444341450/",
+    "access_date": "2026-10-12",
+    "kind": "pinterest",
+    "pixels_inspected": false,
+    "status": "UNAVAILABLE",
+    "error": "No original/og:image found"
+  },
+  {
+    "id": "P02",
+    "source_url": "https://uk.pinterest.com/pin/a-window-light-portrait-on-a-very-sunny-day--374502525235873685/",
+    "access_date": "2026-10-12",
+    "kind": "pinterest",
+    "pixels_inspected": false,
+    "status": "UNAVAILABLE",
+    "error": "No original/og:image found"
+  },
+  {
+    "id": "R05",
+    "source_url": "https://www.fimeko.fi/pdf/Creating_long_and_even_highlights_with_softboxes.pdf",
+    "access_date": "2026-10-12",
+    "kind": "pdf",
+    "pixels_inspected": true,
+    "asset_url": "https://www.fimeko.fi/pdf/Creating_long_and_even_highlights_with_softboxes.pdf",
+    "path": "evidence/R05.pdf",
+    "sha256": "e72a124712950df91a035e3cac967eca2fcad45d43999330e8b32a8be29566a4",
+    "bytes": 1120055,
+    "status": "FETCHED",
+    "pages": 1,
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": [
+      {
+        "path": "evidence/R05_page_1.png",
+        "sha256": "50871bd449e1ef52e5549f6736a64e37677089954a4fd7d387d71501cfe6041b",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "id": "R06",
+    "source_url": "https://people.csail.mit.edu/hasinoff/pubs/HasinoffEtAl16-hdrplus-preprint.pdf",
+    "access_date": "2026-10-12",
+    "kind": "pdf",
+    "pixels_inspected": true,
+    "asset_url": "https://people.csail.mit.edu/hasinoff/pubs/HasinoffEtAl16-hdrplus-preprint.pdf",
+    "path": "evidence/R06.pdf",
+    "sha256": "2a2be3d0da006daacf042e123e8daa71ab71b046cf8ef83b2e9e0245acf2a373",
+    "bytes": 21179232,
+    "status": "FETCHED",
+    "pages": 12,
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": [
+      {
+        "path": "evidence/R06_page_1.png",
+        "sha256": "e42aa6e6043418425a61f174f40b7e2e54bee34d17e0ba09fa0d47f4a464cf7a",
+        "page": 1
+      },
+      {
+        "path": "evidence/R06_page_6.png",
+        "sha256": "62b1b1267abdeddc0feb26bdea98cc200ee00f5eb073d53f4ccbee15e7fcdaad",
+        "page": 6
+      },
+      {
+        "path": "evidence/R06_page_7.png",
+        "sha256": "c217135e1335c044a6376f53cae0bc0cc0709e9254a5108e4922d4fd75cda980",
+        "page": 7
+      },
+      {
+        "path": "evidence/R06_page_8.png",
+        "sha256": "3f7ad15a34d0d9371f689b666ad47038670c523e17e73599ae569517aa1c6ae1",
+        "page": 8
+      },
+      {
+        "path": "evidence/R06_page_10.png",
+        "sha256": "523ba8c8886e6f257dcbf7f1be3f052f2b28faccae5b6d2e1ca4fd016ae7ea9c",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "T01",
+    "source_url": "https://www.pauldebevec.com/Research/LS/debevec-siggraph2000-high.pdf",
+    "access_date": "2026-10-12",
+    "kind": "pdf",
+    "pixels_inspected": true,
+    "asset_url": "https://www.pauldebevec.com/Research/LS/debevec-siggraph2000-high.pdf",
+    "path": "evidence/T01.pdf",
+    "sha256": "6ad9e31597fdeb81ebcea6d1f246bdf1275ec855019238e24d310aefb442c4ba",
+    "bytes": 3666172,
+    "status": "FETCHED",
+    "pages": 12,
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": [
+      {
+        "path": "evidence/T01_page_1.png",
+        "sha256": "13490bf0dedadd59b7d8fa0681f92aef1eb02d2a891db1f5f20a8244170ba060",
+        "page": 1
+      },
+      {
+        "path": "evidence/T01_page_7.png",
+        "sha256": "33fedb047b50b48c9194cc9e1486157514e6706d03ea8fe9ab5fec555b13cadf",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "id": "T02",
+    "source_url": "https://www.cs.cornell.edu/~srm/publications/SG03-hair.pdf",
+    "access_date": "2026-10-12",
+    "kind": "pdf",
+    "pixels_inspected": true,
+    "asset_url": "https://www.cs.cornell.edu/~srm/publications/SG03-hair.pdf",
+    "path": "evidence/T02.pdf",
+    "sha256": "eddf0a047638a2e68643ebcd253b78e86d9130d74296cb02dfc5d8b5753dc97d",
+    "bytes": 3098301,
+    "status": "FETCHED",
+    "pages": 12,
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": [
+      {
+        "path": "evidence/T02_page_1.png",
+        "sha256": "c72983756477c09f47e19ea37e8c63adbca98e764c3658c77f3bc4290f958c24",
+        "page": 1
+      },
+      {
+        "path": "evidence/T02_page_9.png",
+        "sha256": "0719c012968c5c1a0c25b301f727fc54bd98f8b5a5747469d6cb442bd8a91047",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "P03",
+    "source_url": "https://uk.pinterest.com/pin/mirror-selfie--794111346795483355/",
+    "asset_url": "https://i.pinimg.com/736x/6d/1a/e1/6d1ae12a3ea489fbccd31feb8a9c4db9.jpg",
+    "access_date": "2026-10-12",
+    "kind": "pinterest_existing",
+    "status": "FETCHED",
+    "path": "../../../references/pinterest/beauty/mirror.jpg",
+    "sha256": "0e15bbb3e4314bf251477e87e63b9d672cf6bef2db54be21bc214d81147cb8f8",
+    "dimensions": [
+      736,
+      981
+    ],
+    "pixels_inspected": true,
+    "authenticity": "Aparência fotográfica observada; origem/câmera e ausência de IA não autenticadas.",
+    "library_reference_id": "P01_MIRROR",
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": []
+  },
+  {
+    "id": "P04",
+    "source_url": "https://www.pinterest.com/pin/my-absolute-favorite--1759287346258436/",
+    "asset_url": "https://i.pinimg.com/originals/29/21/3d/29213d9c13396c44559fb4bbbb04d211.jpg",
+    "access_date": "2026-10-12",
+    "kind": "pinterest_existing",
+    "status": "FETCHED",
+    "path": "../../../references/pinterest/beauty/vanity.jpg",
+    "sha256": "5db3f41a113f8f63abf177abfdaf9e15e8419883a33e3bc8ed3e537e1e068e4f",
+    "dimensions": [
+      900,
+      1200
+    ],
+    "pixels_inspected": true,
+    "authenticity": "Aparência fotográfica observada; origem/câmera e ausência de IA não autenticadas.",
+    "library_reference_id": "P02_VANITY",
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": []
+  },
+  {
+    "id": "R07A",
+    "source_url": "https://www.cambridgeincolour.com/tutorials/depth-of-field.htm",
+    "asset_url": "https://cdn.cambridgeincolour.com/images/tutorials/dof_image1-f80.jpg",
+    "access_date": "2026-10-12",
+    "kind": "photographic_test",
+    "status": "FETCHED",
+    "path": "evidence/R07A.jpg",
+    "sha256": "9d76f3c46bc28a5fda2272a3157f3779ddc1fa238b243263870fbda79ef23f01",
+    "pixels_inspected": true,
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": []
+  },
+  {
+    "id": "R07B",
+    "source_url": "https://www.cambridgeincolour.com/tutorials/depth-of-field.htm",
+    "asset_url": "https://cdn.cambridgeincolour.com/images/tutorials/dof_image1-f28.jpg",
+    "access_date": "2026-10-12",
+    "kind": "photographic_test",
+    "status": "FETCHED",
+    "path": "evidence/R07B.jpg",
+    "sha256": "a148b5a8b54c25aa6766c10879986e1de4f9c343e76b6fda08e79af7067e5b29",
+    "pixels_inspected": true,
+    "review_date": "2026-10-12",
+    "review_kind": "MANUAL_VISUAL_RESEARCH_NOT_AUTHENTICITY_CERTIFICATION",
+    "inspected_artifacts": []
+  }
+]

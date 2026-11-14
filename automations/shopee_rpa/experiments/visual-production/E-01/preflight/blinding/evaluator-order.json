@@ -1,0 +1,8 @@
+{
+  "classification": "EVALUATOR_VISIBLE",
+  "presentation_order": ["E01-R03", "E01-R01", "E01-R04", "E01-R02"],
+  "condition_labels_included": false,
+  "block_labels_included": false,
+  "instructions": "Evaluate each candidate independently using the matching blank scorecard and acceptance-checks.json. Record only observed events. Do not infer the intended condition."
+}
+
