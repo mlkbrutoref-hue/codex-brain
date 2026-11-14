@@ -349,12 +349,12 @@ def extract_preview_frame(video_path: Path, preview_path: Path, timestamp: float
     return preview_path
 
 def upload_file_to_gdrive(local_file: Path, parent_id: str) -> Optional[str]:
-    """Envia o arquivo para o Google Drive na nuvem via CLI oficial gdrive."""
+    """Envia o arquivo para o Google Drive na nuvem via CLI oficial gdrive (com timeout seguro)."""
     try:
         gdrive_cmd = shutil.which("gdrive") or "gdrive.cmd"
         res = subprocess.run(
             [gdrive_cmd, "mutate", "upload", str(local_file.resolve()), "--parent", parent_id],
-            capture_output=True, text=True, shell=True
+            capture_output=True, text=True, shell=True, timeout=15
         )
         if res.returncode == 0:
             match = re.search(r"\(ID:\s*([^\)]+)\)", res.stdout)
