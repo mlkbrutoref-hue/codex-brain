@@ -1,0 +1,31 @@
+# Environment & Secrets
+.env
+*.env
+.env.*
+!*.env.example
+tokens.json
+credentials.json
+*_cookies.txt
+insta_cookies.txt
+
+# Media & Heavy Binary Assets
+*.mp4
+*.mov
+*.avi
+*.webm
+*.mkv
+*.onnx
+
+# Browser Profiles & Local Cache
+instagram_profile/
+chrome_profile/
+.playwright/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary and test artifacts
+test_*
+insta_debug.png
+collected_reels.json
+all_reels_og.json
